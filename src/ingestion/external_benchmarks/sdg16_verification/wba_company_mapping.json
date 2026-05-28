@@ -1,0 +1,22 @@
+{
+  "Bayerische Motoren Werke AG": {
+    "wba_name": "BMW",
+    "notes": "Listed as 'BMW' in WBA CSI-2025."
+  },
+  "Mercedes-Benz Group AG": {
+    "wba_name": "Mercedes-Benz",
+    "notes": "Listed as 'Mercedes-Benz' in CSI-2025 (previously 'Daimler' in older data)."
+  },
+  "Volkswagen AG": {
+    "wba_name": "Volkswagen",
+    "notes": "Listed as 'Volkswagen' in WBA CSI-2025."
+  },
+  "Tesla Inc": {
+    "wba_name": "Tesla",
+    "notes": "Lowest Acting Ethically score in corpus."
+  },
+  "Toyota Industries Corp": {
+    "wba_name": null,
+    "notes": "Not in WBA Social Benchmark. Toyota Motor is assessed but Toyota Industries is a separate legal entity (industrial equipment)."
+  }
+}

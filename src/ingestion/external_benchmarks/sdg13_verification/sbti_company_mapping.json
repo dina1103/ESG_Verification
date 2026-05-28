@@ -1,0 +1,38 @@
+{
+  "Bayerische Motoren Werke AG": {
+    "sbti_name": "BMW Group",
+    "is_intensity": true,
+    "intensity_unit": "per vehicle produced",
+    "status": "Targets set",
+    "notes": "Intensity-based scope 1+2 target. Validated 2022-02-24."
+  },
+  "Mercedes-Benz Group AG": {
+    "sbti_name": "Mercedes-Benz AG",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute scope 1+2 target. Validated 2019-11-22."
+  },
+  "Volkswagen AG": {
+    "sbti_name": "Volkswagen AG",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute scope 1+2 target. Validated 2022-04-21."
+  },
+  "Tesla Inc": {
+    "sbti_name": "Tesla Inc.",
+    "is_intensity": null,
+    "intensity_unit": null,
+    "status": "Commitment removed",
+    "commitment_removed_year": 2023,
+    "notes": "Committed 2021-10, removed 2023 after 24-month window expired."
+  },
+  "Toyota Industries Corp": {
+    "sbti_name": "Toyota Industries Corporation",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute FY-basis scope 1+2 target. Validated 2024-10-31. Industrial equipment sector."
+  }
+}
