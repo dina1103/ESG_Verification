@@ -18,7 +18,7 @@ print("Segmentation script running...")
 HEADING_PATTERNS = [
     re.compile(r"^[A-Z][A-Z\s\-&/]{4,60}$"),              # ALL CAPS
     re.compile(r"^\d+(\.\d+)*\s+[A-Z][A-Za-z\s]{3,60}$"), # 1.2 Numbered
-    re.compile(r"^[A-Z][a-z].*:$"),                         # Title ending with colon
+    re.compile(r"^[A-Z][a-z].*:$"),                       # Title ending with colon
 ]
 
 

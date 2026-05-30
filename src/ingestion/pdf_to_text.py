@@ -111,14 +111,13 @@ class DocumentRecord:
 def clean_text(text):
     # normalize unicode
     text = unicodedata.normalize("NFKC", text)
-    # collapse spaced-out characters like "A N N U A L" → "ANNUAL"
-    text = re.sub(r"(?<=[A-Z])\s(?=[A-Z])", "", text)
     # remove download watermarks
     text = re.sub(r"Downloaded from\s+\S+\s*\|.*", "", text)
-    # fix excessive whitespace
+    # collapse all whitespace to single spaces first
     text = re.sub(r"\s+", " ", text)
+    # normal all-caps words keep their spaces ("ANNUAL REPORT" stays two words)
+    text = re.sub(r"\b(?:[A-Z] )+[A-Z]\b", lambda m: m.group().replace(" ", ""), text)
     return text.strip()
-
 
 def _extract_tables_from_page(plumber_page):
     # extract tables from an already-open pdfplumber page
