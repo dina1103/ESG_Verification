@@ -1,7 +1,9 @@
 import argparse
 import json
+import os
 import re
 import unicodedata
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
@@ -9,7 +11,6 @@ import pymupdf
 import pdfplumber
 import pytesseract
 from PIL import Image
-import io
 from tqdm import tqdm
 
 INPUT_DIR = "data/reports"
@@ -20,6 +21,14 @@ OCR_FALLBACK_THRESHOLD = 80
 
 # pages below this after OCR are skipped entirely
 MIN_CHARS_FINAL = 30
+
+# pages whose native text layer is more than this fraction control characters
+# are treated as garbled (subset font with no ToUnicode map) and sent to OCR
+GARBLE_RATIO_THRESHOLD = 0.02
+
+# pages with more vector edges than this are infographics/charts, not data tables;
+# pdfplumber's find_tables() can stall on them, so table extraction is skipped (tunable)
+MAX_PAGE_EDGES = 4000
 
 pymupdf.TOOLS.mupdf_display_errors(False)
 
@@ -108,6 +117,15 @@ class DocumentRecord:
         return asdict(self)
 
 
+def is_garbled(text):
+    # a real text layer is almost all printable; a glyph-code dump (subset font
+    # with no ToUnicode map) is full of control bytes below 0x20
+    if not text:
+        return False
+    bad = sum(1 for c in text if ord(c) < 32 and c not in "\n\t\r")
+    return bad / len(text) > GARBLE_RATIO_THRESHOLD
+
+
 def clean_text(text):
     # normalize unicode
     text = unicodedata.normalize("NFKC", text)
@@ -115,13 +133,18 @@ def clean_text(text):
     text = re.sub(r"Downloaded from\s+\S+\s*\|.*", "", text)
     # collapse all whitespace to single spaces first
     text = re.sub(r"\s+", " ", text)
+    # collapse ONLY genuine letter-spacing ("A N N U A L" -> "ANNUAL");
     # normal all-caps words keep their spaces ("ANNUAL REPORT" stays two words)
     text = re.sub(r"\b(?:[A-Z] )+[A-Z]\b", lambda m: m.group().replace(" ", ""), text)
     return text.strip()
 
+
 def _extract_tables_from_page(plumber_page):
     # extract tables from an already-open pdfplumber page
     rows = []
+    # skip pathological vector-heavy pages that stall find_tables()
+    if len(plumber_page.edges) > MAX_PAGE_EDGES:
+        return rows
     try:
         for table in plumber_page.find_tables():
             extracted = table.extract()
@@ -140,7 +163,8 @@ def _ocr_page(fitz_page):
     try:
         mat = pymupdf.Matrix(300 / 72, 300 / 72)
         pix = fitz_page.get_pixmap(matrix=mat, alpha=False)
-        img = Image.open(io.BytesIO(pix.tobytes("png")))
+        # build PIL image straight from raw pixels (no PNG encode/decode round-trip)
+        img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
         return pytesseract.image_to_string(img, lang="eng").strip()
     except Exception:
         return ""
@@ -190,8 +214,13 @@ def extract_pdf(pdf_path, metadata=None, use_ocr=True, use_tables=True, max_page
         raw_text = fitz_page.get_text("text").strip()
         is_ocr = False
 
-        # fall back to OCR if page is sparse or scanned
-        if use_ocr and len(raw_text) < OCR_FALLBACK_THRESHOLD:
+        # OCR decision:
+        #  - garbled layer (bad font encoding) is worthless -> take OCR unconditionally
+        #  - sparse/scanned page -> OCR only if it yields more text than the native layer
+        if use_ocr and is_garbled(raw_text):
+            raw_text = _ocr_page(fitz_page)
+            is_ocr = True
+        elif use_ocr and len(raw_text) < OCR_FALLBACK_THRESHOLD:
             ocr_text = _ocr_page(fitz_page)
             if len(ocr_text) > len(raw_text):
                 raw_text = ocr_text
@@ -248,49 +277,67 @@ def write_json(doc, output_path):
     )
 
 
-def process(use_ocr=True, use_tables=True, max_pages=None, skip_existing=True):
+def _process_one(pdf_path_str, use_ocr, use_tables, max_pages, skip_existing):
+    # runs in a worker process: extract one PDF and write its outputs
+    pdf_path = Path(pdf_path_str)
+    relative = pdf_path.relative_to(INPUT_DIR)
+    company_folder = pdf_path.parent.name      # folder = company
+    stem = relative.with_suffix("")
+
+    # mirror folder structure for both output formats
+    json_out = Path(OUTPUT_DIR) / "json" / stem.with_suffix(".json")
+    txt_out  = Path(OUTPUT_DIR) / "text" / stem.with_suffix(".txt")
+
+    json_out.parent.mkdir(parents=True, exist_ok=True)
+    txt_out.parent.mkdir(parents=True, exist_ok=True)
+
+    if skip_existing and json_out.exists():
+        return f"⏭ Skipping (already done): {pdf_path.name}"
+
+    metadata = parse_filename(pdf_path.name, company_folder)
+    doc = extract_pdf(
+        pdf_path,
+        metadata=metadata,
+        use_ocr=use_ocr,
+        use_tables=use_tables,
+        max_pages=max_pages,
+    )
+
+    write_json(doc, json_out)
+    write_txt(doc, txt_out)
+
+    return (
+        f"Done: {pdf_path.name} — "
+        f"{doc.pages_extracted}/{doc.total_pages} pages "
+        f"({doc.pages_ocr} OCR, {doc.pages_skipped} skipped)"
+    )
+
+
+def process(use_ocr=True, use_tables=True, max_pages=None, skip_existing=True, workers=4):
     pdf_paths = list(Path(INPUT_DIR).rglob("*.pdf"))
     if not pdf_paths:
         print(f"No PDFs found in {INPUT_DIR}")
         return
 
-    print(f"Found {len(pdf_paths)} PDF(s) to process.\n")
+    print(f"Found {len(pdf_paths)} PDF(s) to process across {workers} worker(s).\n")
 
-    for pdf_path in tqdm(pdf_paths, desc="Extracting PDFs"):
-        relative = pdf_path.relative_to(INPUT_DIR)
-        company_folder = pdf_path.parent.name      # folder = company
-        stem = relative.with_suffix("")
-
-        # mirror folder structure for both output formats
-        json_out = Path(OUTPUT_DIR) / "json" / stem.with_suffix(".json")
-        txt_out  = Path(OUTPUT_DIR) / "text" / stem.with_suffix(".txt")
-
-        json_out.parent.mkdir(parents=True, exist_ok=True)
-        txt_out.parent.mkdir(parents=True, exist_ok=True)
-
-        if skip_existing and json_out.exists():
-            tqdm.write(f"⏭ Skipping (already done): {pdf_path.name}")
-            continue
-
-        # parse metadata from filename
-        metadata = parse_filename(pdf_path.name, company_folder)
-
-        doc = extract_pdf(
-            pdf_path,
-            metadata=metadata,
-            use_ocr=use_ocr,
-            use_tables=use_tables,
-            max_pages=max_pages,
-        )
-
-        write_json(doc, json_out)
-        write_txt(doc, txt_out)
-
-        tqdm.write(
-            f"Done: {pdf_path.name} — "
-            f"{doc.pages_extracted}/{doc.total_pages} pages "
-            f"({doc.pages_ocr} OCR, {doc.pages_skipped} skipped)"
-        )
+    # each PDF is independent, so process them in parallel; outputs are identical to serial
+    with ProcessPoolExecutor(max_workers=workers) as ex:
+        futures = {
+            ex.submit(_process_one, str(p), use_ocr, use_tables, max_pages, skip_existing): p
+            for p in pdf_paths
+        }
+        try:
+            for fut in tqdm(as_completed(futures), total=len(futures), desc="Extracting PDFs"):
+                p = futures[fut]
+                try:
+                    tqdm.write(fut.result())
+                except Exception as e:
+                    tqdm.write(f"FAILED {p.name}: {e}")   # one bad file won't abort the batch
+        except KeyboardInterrupt:
+            tqdm.write("\nInterrupted — killing workers...")
+            ex.shutdown(wait=False, cancel_futures=True)
+            raise
 
     print("\nDone.")
 
@@ -301,6 +348,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-tables", action="store_true")
     parser.add_argument("--max-pages", type=int, default=None)
     parser.add_argument("--reprocess", action="store_true")
+    parser.add_argument("--workers", type=int, default=4)
     args = parser.parse_args()
 
     process(
@@ -308,4 +356,5 @@ if __name__ == "__main__":
         use_tables=not args.no_tables,
         max_pages=args.max_pages,
         skip_existing=not args.reprocess,
+        workers=args.workers,
     )

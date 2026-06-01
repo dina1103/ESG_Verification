@@ -283,59 +283,6 @@ Comments
 [PAGE 42]
 1 2 4 5 3 6 9 8 7 10 11 12 13 14 15 16 19 20 21 23 22 17 18 42 BMW Group Report 2024 To Our Stakeholders Combined Management Report Group Financial Statements Responsibility Statement and Auditor’s Report Remuneration Report Other Information Overview of the BMW Group LOC ATION S IN EUR OP E ■ Production in Europe BMW Group plant Berlin BMW Group plant Dingolfing BMW Group plant Eisenach BMW Group plant Landshut BMW Group plant Leipzig BMW Group plant Munich BMW Group plant Regensburg BMW Group plant Wackersdorf BMW Group plant Steyr, Austria BMW Group plant Hams Hall, UK BMW Group plant Oxford, UK BMW Group plant Swindon, UK Rolls-Royce Manufacturing Plant, Goodwood, UK BMW Group plant Debrecen, Hungary □ Partner plants in Europe Partner plant, Born, the Netherlands (contract manufacturing) Partner plant, Graz, Austria (contract manufacturing) ▲ Research and Development in Europe BMW Group Research and Innovation Centre (FIZ), Munich, Germany BMW Car IT, Munich, Germany BMW Group Autonomous Driving Campus, Unterschleißheim, Germany BMW Group Designworks, Munich, Germany BMW Group Lightweight Construction and Technology Center, Landshut, Germany BMW Group Diesel Competence Center, Steyr, Austria Critical TechWorks S.A., Porto/Lisbon, Portugal BMW France, S. A. S., Miramas, France Rolls-Royce Motor Cars Ltd., Goodwood, UK BMW Group Vehicle Testing, Arjeplog, Sweden BMW Group Vehicle Testing, Granada, Spain BMW Group Vehicle Testing, Sokolov, Czech Republic BMW Group IT DevOps Hub, Bukarest, Romania
 
-[TABLE] 42 BMW Group Report 2024 To Our Stakeholders Combined Management Report Group Fin
-Overview of the BMW Group
-LOCATIONS IN EUROPE
-8
-7 6
-9
-10
-14
-15 | ancial Statements Responsibility Statement and Auditor’s Report Remuneration Report Other Information
-■ Production in Europe
-BMW Group plant Berlin
-BMW Group plant Dingolfing
-BMW Group plant Eisenach
-BMW Group plant Landshut
-BMW Group plant Leipzig
-BMW Group plant Munich
-BMW Group plant Regensburg
-BMW Group plant Wackersdorf
-BMW Group plant Steyr, Austria
-BMW Group plant Hams Hall, UK
-BMW Group plant Oxford, UK
-BMW Group plant Swindon, UK
-Rolls-Royce Manufacturing Plant, Goodwood, UK
-5
-2 BMW Group plant Debrecen, Hungary
-4
-□ Partner plants in Europe
-Partner plant, Born, the Netherlands (contract manufacturing)
-3 Partner plant, Graz, Austria (contract manufacturing)
-▲ Research and Development in Europe
-17 BMW Group Research and Innovation Centre (FIZ), Munich,
-Germany
-16
-BMW Car IT, Munich, Germany
-1
-18 19 BMW Group Autonomous Driving Campus, Unterschleißheim,
-11 20
-Germany
-13
-12
-21 BMW Group Designworks, Munich, Germany
-BMW Group Lightweight Construction and Technology Center,
-22
-Landshut, Germany
-BMW Group Diesel Competence Center, Steyr, Austria
-23 Critical TechWorks S.A., Porto/Lisbon, Portugal
-BMW France, S. A. S., Miramas, France
-Rolls-Royce Motor Cars Ltd., Goodwood, UK
-BMW Group Vehicle Testing, Arjeplog, Sweden
-BMW Group Vehicle Testing, Granada, Spain
-BMW Group Vehicle Testing, Sokolov, Czech Republic
-BMW Group IT DevOps Hub, Bukarest, Romania
-
 [PAGE 43]
 43 BMW Group Report 2024 To Our Stakeholders Combined Management Report Group Financial Statements Responsibility Statement and Auditor’s Report Remuneration Report Other Information Overview of the BMW Group THE BMW GROUP STRATEGY » For the BMW Group, the further development of the corporate strategy is a continuous process that begins with the environ- mental analysis. There, trends of significant importance for the automotive industry are regularly examined, evaluated and the underlying assumptions are reviewed. The overarching corpo- rate strategy and the strategic goals of the BMW Group serve as the reference point for the departments to define specific direc- tions and implementation measures. This is done based on stra- tegic fields of action and success-critical tasks. The flexible strategy process enables planning in scenarios that take into account the increasingly complex business environ- ment. The strategy of the BMW Group is also based on funda- mental values. ↗ Compliance A feedback-based planning and control system translates the strategy into an annually revised, long-term corporate planning. A target system encompassing aspects of finance, customers, processes, learning, and development monitors the implemen- tation of the strategy. ↗ Performance Indicators and Performance Management « ENVIRONMENTAL ANALYSIS * » The success of a company largely depends on its ability to rec- ognise changes in the environment early, consider alternative development scenarios, effectively manage risks and seize op- portunities that may arise from changes ↗ Risks and Opportunities. To achieve this, the BMW Group consistently observes the con- ditions in key regions and analyses trends and developments that may impact future business operations. This is grounded in a regularly updated environmental analysis focused on selected thematic areas. The regular ↗ Dialogue with Stakeholders conducted by the company through the established BMW Group XChange formats, enhances the insights gained from the environmental analysis. In addition to the existing development directions, several trends are increasingly gaining momentum, particularly regarding digi- tal technologies, consumer behavior, and the political environ- ment. The currently most significant trends with long-term im- pacts on the business model of the BMW Group are categorized based on the influencing factors of society, technology, economy, ecology and politics. « Society » Individual mobility remains a fundamental human need. Vehi- cle ownership continues to depend significantly on income, household size and location. Particularly in urban areas, on-de- mand mobility (ODM) services are still primarily used as comple- mentary offerings. Supported by the use of digital technologies, new usage concepts are gaining importance. In this context, ve- hicles are increasingly being understood as living spaces. « Technology » For the BMW Group, as a technology-oriented company, trends and developments in this area are of particular im- portance. Changes occur continuously, the market environment is evolving very dynamically and new forms of collaboration are emerging. Offerings related to artificial intelligence expand pos- sibilities in almost all areas of life. Today, modern vehicles are already among the most complex digital products in consumer hands. Customers are shaping their requirements for vehicles with regard to the digital ecosystems they use daily. Automobiles are expected to provide reliable support in everyday life, seam- lessly integrate into personal living environments and create a holistic experience. Software updates and upgrades are becom- ing the standard. ↗ Innovations and Product Technologies Alongside digitalisation, the shift towards automated and auton- omous driving remains one of the key expectation for the future of mobility. There are varying development speeds and func- tional characteristics observed across different regions, with the use of AI being a significant driver of this development. Globally, electromobility is an important step towards climate neutrality. However, varying speeds of adoption can still be ob- served in different countries. Therefore, it can be expected that both electric vehicles and vehicles with internal combustion en- gines will continue to be offered in the long term. A key factor for the success of electromobility is addressing the existing uncer- tainties. These include issues related to regulation, the wide- spread and sufficiently rapid development of charging infrastruc- ture, the evolution of electricity versus fuel prices, and the availa- bility of raw materials. « * This chapter contains disclosures in line with ESRS 2 SBM-1.40e)-g); 42a)-c); ESRS 2 SBM-3.48b), f).
 
@@ -659,37 +606,6 @@ and detection including training
 
 [PAGE 107]
 107 BMW Group Report 2024 To Our Stakeholders Combined Management Report Group Financial Statements Responsibility Statement and Auditor’s Report Remuneration Report Other Information Sustainability Statement Dummy 2 Politics Media Networks Civil society Suppliers Dummy 1 Dummy 2 Dummy 3 Employees Partners Financial world Customers Science Stakeholder groups and exemplary forms of dialogue * Affected stakeholders. BMW Group in dialogue Supplier theme days BMW Group award for social responsibility Participation of company experts in committees and working groups, memberships in initiatives and associations Trade fairs/ press conferences, press information/ press releases, presentations Discussions with consumer bodies, customer satisfaction surveys and market research (e.g. Corporate Reputation Study), My BMW App Conferences for/with investors and analysts, financial statement press conference Various dialogue formats Internal communication, dialogues with managers, idea management process, employee survey, BMW Group Academy, works council meeting, collective agreements and employment contracts with trade unions Dialogues with dealership organizations of the markets and importers, partner academy Discussion rounds/ round tables, working groups/mobility council, association meeting Lectures at and cooperation with schools and universities/chairs, mobility council, ISMO Dialogue tools for all stakeholder groups: Dialogues, one-to-one meetings, BMW Welt/BMW museum/plant tours, events, general meeting press releases, company website, brand website, Social Media, rankings, conferences, industry/sector dialogues, studies Speak-up Hotline, policies und statements, quarterly and annual report
-
-[TABLE] Politics Media Networks Civil society Suppliers Dummy 1 Dummy 2
-Discussion rounds/ round tables, working groups/mobility council, Lectures at and cooperation with schools and universities/chairs,
-Dummy 3 Employees Partneasrssociation meetingF inancial womrolbdility couCncuils, tISoMmOe rs Science
-[TABLE] Politics Media Networks Civil society Suppliers Dummy 1 Dummy 2
-Discussion rounds/ round tables, working groups/mobility council, Lectures at and cooperation with schools and universities/chairs,
-Dummy 3 Employees Partneasrssociation meetingF inancial womrolbdility couCncuils, tISoMmOe rs Science
-Trade fairs/ press conferences, press information/ Discussions with consumer bodies,
-press releases, presentations customer satisfaction surveys and market research
-(e.g. Corporate Reputation Study), My BMW App
-Participation of company experts in committees and working Conferences for/with investors and analysts,
-groups, memberships in initiatives and associations financial statement press conference
-BMW Group in
-dialogue
-BMW Group award for social responsibility Dialogues with dealership organizations of the markets and
-importers, partner academy
-Dummy
-Dialogue tools for all stakeholder groups: Various dialogue formats
-Supplier theme days Dialogues, one-to-one meetings,
-2 BMW Welt/BMW museum/plant tours,
-events, general meeting
-press releases, company website,
-Internal communication, dialogues with managers,
-brand website, Social Media, rankings,
-idea management process, employee survey, BMW Group
-conferences, industry/sector dialogues, studies
-Academy, works council meeting, collective agreements and
-Speak-up Hotline,
-employment contracts with trade unions
-policies und statements, quarterly and annual report
-[TABLE] *
 
 [PAGE 108]
 108 BMW Group Report 2024 To Our Stakeholders Combined Management Report Group Financial Statements Responsibility Statement and Auditor’s Report Remuneration Report Other Information Sustainability Statement PRINCIPLES OF GOVERNANCE BY THE BOARD OF MANAGEMENT AND SUPERVISORY BOARD BMW AG is a stock corporation (Aktiengesellschaft) within the meaning of the German Stock Corporation Act. It has an execu- tive Board of Management and a Supervisory Board that moni- tors how the Company is managed by the Board of Manage- ment. Board of Management – Duties, diversity, expertise The Board of Management has overall responsibility for the management of BMW AG. It defines the strategy and resource framework and takes actions to implement the strategy. The Board of Management decides on product and customer-related issues of particular importance and consequence to the BMW Group, as well as on automobile product strategy. The Board of Management incorporates various sustainability matters into the decisions taken at its meetings and addresses the material im- pacts, risks and opportunities associated with the Company’s course of business. It also monitors the key sustainability-related indicators and targets as well as department-specific sustaina- bility activities and developments. Details are available in the ↗ Rules of Procedure of the Board of Management of BMW AG. As at 31 December 2024, 14% of the seven members of the Board of Management were female and 86% were male based on the composition principles and taking into account the ESRS reporting obligations. In addition to the overall responsibility of the Board of Manage- ment, each member of the Board of Management is inde- pendently responsible for the material impacts, risks and oppor- tunities in their respective department. To ensure that the Board of Management has the necessary level of competence and diversity, the Supervisory Board has adopted a competency and diversity policy for the composition of the Board of Management, which is also aligned with the recom- mendations contained in the German Corporate Governance Code (DCGK). In view of the fact that the Board of Management is a representative body of the Company, the Supervisory Board is careful to consider diversity-related issues when assessing which candidates are most suitable for a seat on the Board of Management. “Diversity” in the context of the decision-making process is understood by the Supervisory Board to encompass various complementary individual profiles and work and life ex- periences at both national and international level, as well as the appropriate representation of genders. In reaching its decisions, the Supervisory Board also considers the following factors: — Board of Management members need to have a long- standing track record of management experience, ideally in a variety of professional fields. An adequate mix of different professional and management skills is sought here. — At least two members should have international manage- ment experience. — At least two members of the Board of Management should have a technical background. — Collectively, the Board of Management should have exten- sive experience in the fields of individual mobility, develop- ment, production, sales, finances and personnel manage- ment. The Board of Management must comprise at least one man and one woman. The Board of Management deals with the impacts, risks and opportunities arising from business development on a continuous basis. In addition to addressing reports related to the latest business developments, the Board of Management regu- larly discusses the current market environment, financial and non-financial risks, the Group risk strategy and the effectiveness of the risk management system and the internal control system. The Board of Management also deals with the development of the workforce, diversity, and ongoing qualification and retraining measures several times a year as part of the transformation pro- cess ↗ Just Transition - Developing expertise for the future. The Board of Management is kept up to date about ongoing compliance activ- ities and potential risks at regular intervals via the Chief Compli- ance Officer’s compliance reports. In addition to discussing the audit results regarding the appropriateness and effectiveness of the Compliance Management System (CMS), the Board of Man- agement also discusses the structural and organisational devel- opment of the Group Compliance Management System (CMS) and the implementation status of corporate due diligence re- quirements relating to respect for human rights and associated environmental standards along the value chain. In addition, the Board of Management holds regular discussions on the pro- cesses and actions involved in implementing new regulatory re- quirements and ensuring compliance with external reporting re- quirements in the area of sustainability, including the extent to which CSRD/ESRS requirements have been implemented. Sustainability considerations are therefore integrated into the BMW Group’s corporate structures and processes in a compre- hensive and holistic manner which involves decision makers at various levels. A decentralised approach is taken to integrate the Company’s strategic objectives. Defined specialist functions in each of the Board departments are responsible for anchoring the targets within the respective organisational structure, measuring their achievement, and ensuring compliance with the strategy. The strategy is translated into an annually revised, long-term corporate plan using a control loop-based planning and man- agement system. A target system monitors their progress, and reports on the targets and performance indicators agreed for the reporting year are submitted to the Board of Management and Supervisory Board on a regular basis. The Board of Manage- ment defines the BMW Group’s strategic objectives related to the sustainability topics. The Sustainability and Mobility function en- sures the high level management of sustainability topics as part of the Group strategy. It identifies areas where the Company po- tentially needs to take action, defines the targets to be achieved, and prepares corresponding resolutions to the Board of Man- agement. The function is also responsible for ensuring that sus- tainability issues and all relevant material impacts, risks and op- portunities are considered in all material decisions made by the Company, including at the level of the Board of Management. This includes significant transactions. The function submits pro- gress reports on the BMW Group’s overarching sustainability tar- gets to the Board of Management at least three times a year. The targets and measures with regard to reducing CO2e emissions in all scopes, the circular economy, environmental and social stand- ards and social sustainability are presented, and the strategic and operational implementation status is discussed. When tar- gets are not met, suitable actions are discussed and approved if

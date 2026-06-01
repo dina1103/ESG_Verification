@@ -352,71 +352,6 @@ common stockholders | $ | 12,141 | $ | 5,210 | $ | 1,120
 [PAGE 51]
 Tesla, Inc. Consolidated Statements of Redeemable Noncontrolling Interests and Equity (in millions, except per share data) Accumulate d (Accumulat ed Redeemable Additio nal Other Deficit) Total Noncontrolli ng Noncontroll ing Common Stock Paid-In Comprehens ive Retained Stockholde rs’ Interests in Total Interests Shares (1) Amount (1) Capital (Loss) Income Earnings (1) Equity Subsidiaries Equity Balance as of December 31, 2019 $ 643 2,716 $ 3 $ 12,73 6 $ (36 ) $ (6,085 ) $ 6,618 $ 849 $ 7,46 7 Adjustments for prior periods from adopting ASU 2016-13 — — — — — (37 ) (37 ) — (37 ) Reclassification between equity and mezzanine equity for convertible senior notes — — — (51 ) — — (51 ) — (51 ) Exercises of conversion feature of convertible senior notes — 5 0 59 — — 59 — 59 Issuance of common stock for equity incentive awards — 55 0 417 — — 417 — 417 Issuance of common stock in public offerings, net of issuance costs of $68 — 103 0 12,26 9 — — 12,269 — 12,2 69 Stock-based compensation — — — 1,861 — — 1,861 — 1,86 1 Contributions from noncontrolling interests 7 — — — — — — 17 17 Distributions to noncontrolling interests (67 ) — — — — — — (132 ) (132 ) Buy-outs of noncontrolling interests (4 ) — — (31 ) — — (31 ) — (31 ) Net income 25 — — — — 721 721 116 837 Other comprehensive income — — — — 399 — 399 — 399 Balance as of December 31, 2020 $ 604 2,879 $ 3 $ 27,26 0 $ 363 $ (5,401 ) $ 22,225 $ 850 $ 23,0 75 Adjustments for prior periods from adopting ASU 2020-06 — — — (474 ) — 211 (263 ) — (263 ) Exercises of conversion feature of convertible senior notes — 2 0 6 — — 6 — 6 Settlements of warrants — 112 0 — — — — — — Issuance of common stock for equity incentive awards — 107 0 707 — — 707 — 707 Stock-based compensation — — — 2,299 — — 2,299 — 2,29 9 Contributions from noncontrolling interests 2 — — — — — — — — Distributions to noncontrolling interests (66 ) — — — — — — (106 ) (106 ) Buy-outs of noncontrolling interests (15 ) — — 5 — — 5 — 5 Net income 43 — — — — 5,519 5,519 82 5,60 1 Other comprehensive loss — — — — (309 ) — (309 ) — (309 ) Balance as of December 31, 2021 $ 568 $ 3,100 $ 3 $ 29,80 3 $ 54 $ 329 $ 30,189 $ 826 $ 31,0 15 Exercises of conversion feature of convertible senior notes — 0 0 0 — — — — — Settlements of warrants — 37 0 0 — — — — — Issuance of common stock for equity incentive awards — 27 0 541 — — 541 — 541 Stock-based compensation — — — 1,806 — — 1,806 — 1,80 6 Distributions to noncontrolling interests (46 ) — — — — — — (113 ) (113 ) Buy-outs of noncontrolling interests (11 ) — — 27 — — 27 (61 ) (34 ) Net (loss) income (102 ) — — — — 12,556 12,556 133 12,6 89 Other comprehensive loss — — — — (415 ) — (415 ) — (415 ) Balance as of December 31, 2022 $ 409 3,164 $ 3 $ 32,17 7 $ (361 ) $ 12,885 $ 44,704 $ 785 $ 45,4 89 (1) Prior period results have been adjusted to reflect the three-for-one stock split effected in the form of a stock dividend in August 2022. See Note 1, Overview, for details. The accompanying notes are an integral part of these consolidated financial statements. 51
 
-[TABLE] Accumulate
-d | (Accumulat
-ed
-[TABLE] Redeemable | Additio
-nal | Other | Deficit) | Total | Noncontrolli
-ng
-[TABLE] Noncontroll
-ing | Common Stock | Paid-In | Comprehens
-ive | Retained | Stockholde
-rs’ | Interests in | Total
-[TABLE] Interests | Shares
-(1) | Amount
-(1) | Capital | (Loss)
-Income | Earnings
-(1) | Equity | Subsidiaries | Equity
-[TABLE] Balance as of December 31, 2019 | $ | 643 | 2,716 | $ | 3 | $ | 12,73
-6 | $ | (36 | ) | $ | (6,085 | ) | $ | 6,618 | $ | 849 | $ | 7,46
-7
-[TABLE] Adjustments for prior periods from adopting ASU 2016-13 | — | — | — | — | — | (37 | ) | (37 | ) | — | (37 | )
-[TABLE] Reclassification between equity and mezzanine equity for convertible senior
-notes | — | — | — | (51 | ) | — | — | (51 | ) | — | (51 | )
-[TABLE] Exercises of conversion feature of convertible senior notes | — | 5 | 0 | 59 | — | — | 59 | — | 59
-[TABLE] Issuance of common stock for equity incentive awards | — | 55 | 0 | 417 | — | — | 417 | — | 417
-[TABLE] Issuance of common stock in public offerings, net of issuance costs of $68 | — | 103 | 0 | 12,26
-9 | — | — | 12,269 | — | 12,2
-69
-[TABLE] Stock-based compensation | — | — | — | 1,861 | — | — | 1,861 | — | 1,86
-1
-[TABLE] Contributions from noncontrolling interests | 7 | — | — | — | — | — | — | 17 | 17
-[TABLE] Distributions to noncontrolling interests | (67 | ) | — | — | — | — | — | — | (132 | ) | (132 | )
-[TABLE] Buy-outs of noncontrolling interests | (4 | ) | — | — | (31 | ) | — | — | (31 | ) | — | (31 | )
-[TABLE] Net income | 25 | — | — | — | — | 721 | 721 | 116 | 837
-[TABLE] Other comprehensive income | — | — | — | — | 399 | — | 399 | — | 399
-[TABLE] Balance as of December 31, 2020 | $ | 604 | 2,879 | $ | 3 | $ | 27,26
-0 | $ | 363 | $ | (5,401 | ) | $ | 22,225 | $ | 850 | $ | 23,0
-75
-[TABLE] Adjustments for prior periods from adopting ASU 2020-06 | — | — | — | (474 | ) | — | 211 | (263 | ) | — | (263 | )
-[TABLE] Exercises of conversion feature of convertible senior notes | — | 2 | 0 | 6 | — | — | 6 | — | 6
-[TABLE] Settlements of warrants | — | 112 | 0 | — | — | — | — | — | —
-[TABLE] Issuance of common stock for equity incentive awards | — | 107 | 0 | 707 | — | — | 707 | — | 707
-[TABLE] Stock-based compensation | — | — | — | 2,299 | — | — | 2,299 | — | 2,29
-9
-[TABLE] Contributions from noncontrolling interests | 2 | — | — | — | — | — | — | — | —
-[TABLE] Distributions to noncontrolling interests | (66 | ) | — | — | — | — | — | — | (106 | ) | (106 | )
-[TABLE] Buy-outs of noncontrolling interests | (15 | ) | — | — | 5 | — | — | 5 | — | 5
-[TABLE] Net income | 43 | — | — | — | — | 5,519 | 5,519 | 82 | 5,60
-1
-[TABLE] Other comprehensive loss | — | — | — | — | (309 | ) | — | (309 | ) | — | (309 | )
-[TABLE] Balance as of December 31, 2021 | $ | 568 | $ | 3,100 | $ | 3 | $ | 29,80
-3 | $ | 54 | $ | 329 | $ | 30,189 | $ | 826 | $ | 31,0
-15
-[TABLE] Exercises of conversion feature of convertible senior notes | — | 0 | 0 | 0 | — | — | — | — | —
-[TABLE] Settlements of warrants | — | 37 | 0 | 0 | — | — | — | — | —
-[TABLE] Issuance of common stock for equity incentive awards | — | 27 | 0 | 541 | — | — | 541 | — | 541
-[TABLE] Stock-based compensation | — | — | — | 1,806 | — | — | 1,806 | — | 1,80
-6
-[TABLE] Distributions to noncontrolling interests | (46 | ) | — | — | — | — | — | — | (113 | ) | (113 | )
-[TABLE] Buy-outs of noncontrolling interests | (11 | ) | — | — | 27 | — | — | 27 | (61 | ) | (34 | )
-[TABLE] Net (loss) income | (102 | ) | — | — | — | — | 12,556 | 12,556 | 133 | 12,6
-89
-[TABLE] Other comprehensive loss | — | — | — | — | (415 | ) | — | (415 | ) | — | (415 | )
-[TABLE] Balance as of December 31, 2022 | $ | 409 | 3,164 | $ | 3 | $ | 32,17
-7 | $ | (361 | ) | $ | 12,885 | $ | 44,704 | $ | 785 | $ | 45,4
-89
-
 [PAGE 52]
 Tesla, Inc. Consolidated Statements of Cash Flows (in millions) Year Ended December 31, 2022 2021 2020 Cash Flows from Operating Activities Net income $ 12,587 $ 5,644 $ 862 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation, amortization and impairment 3,747 2,911 2,322 Stock-based compensation 1,560 2,121 1,734 Inventory and purchase commitments write-downs 177 140 202 Foreign currency transaction net unrealized loss (gain) 81 (55 ) 114 Non-cash interest and other operating activities 340 245 525 Digital assets loss (gain), net 140 (27 ) — Changes in operating assets and liabilities: Accounts receivable (1,124 ) (130 ) (652 ) Inventory (6,465 ) (1,709 ) (422 ) Operating lease vehicles (1,570 ) (2,114 ) (1,072 ) Prepaid expenses and other current assets (1,417 ) (271 ) (251 ) Other non-current assets (2,551 ) (1,291 ) (344 ) Accounts payable and accrued liabilities 6,029 4,578 2,102 Deferred revenue 1,131 793 321 Customer deposits 155 186 7 Other long-term liabilities 1,904 476 495 Net cash provided by operating activities 14,724 11,497 5,943 Cash Flows from Investing Activities Purchases of property and equipment excluding finance leases, net of sales (7,158 ) (6,482 ) (3,157 ) Purchases of solar energy systems, net of sales (5 ) (32 ) (75 ) Purchases of digital assets — (1,500 ) — Proceeds from sales of digital assets 936 272 — Purchase of intangible assets (9 ) — (10 ) Purchases of investments (5,835 ) (132 ) — Proceeds from maturities of investments 22 — — Receipt of government grants 76 6 123 Business combinations, net of cash acquired — — (13 ) Net cash used in investing activities (11,973 ) (7,868 ) (3,132 ) Cash Flows from Financing Activities Proceeds from issuances of common stock in public offerings, net of issuance costs — — 12,269 Proceeds from issuances of debt — 8,883 9,713 Repayments of convertible and other debt (3,364 ) (14,167 ) (11,623 ) Collateralized lease repayments — (9 ) (240 ) Proceeds from exercises of stock options and other stock issuances 541 707 417 Principal payments on finance leases (502 ) (439 ) (338 ) Debt issuance costs — (9 ) (6 ) Proceeds from investments by noncontrolling interests in subsidiaries — 2 24 Distributions paid to noncontrolling interests in subsidiaries (157 ) (161 ) (208 ) Payments for buy-outs of noncontrolling interests in subsidiaries (45 ) (10 ) (35 ) Net cash (used in) provided by financing activities (3,527 ) (5,203 ) 9,973 Effect of exchange rate changes on cash and cash equivalents and restricted cash (444 ) (183 ) 334 Net (decrease) increase in cash and cash equivalents and restricted cash (1,220 ) (1,757 ) 13,118 Cash and cash equivalents and restricted cash, beginning of period 18,144 19,901 6,783 Cash and cash equivalents and restricted cash, end of period $ 16,924 $ 18,144 $ 19,901 Supplemental Non-Cash Investing and Financing Activities Acquisitions of property and equipment included in liabilities $ 2,148 $ 2,251 $ 1,088 Supplemental Disclosures Cash paid during the period for interest, net of amounts capitalized $ 152 $ 266 $ 444 Cash paid during the period for taxes, net of refunds $ 1,203 $ 561 $ 115 The accompanying notes are an integral part of these consolidated financial statements. 52
 
@@ -715,43 +650,6 @@ Construction in progress is primarily comprised of construction of Gigafactory T
 
 [PAGE 72]
 Note 11 – Debt The following is a summary of our debt and finance leases as of December 31, 2022 (in millions): Unpaid Unused Net Carrying Value Principal Committed Contractual Contractual Current Long-Term Balance Amount (1) Interest Rates Maturity Date Recourse debt: 2024 Notes $ — $ 37 $ 37 $ — 2.00 % May 2024 Credit Agreement — — — 2,266 Not applicable July 2023 Solar Bonds — 7 7 — 4.70-5.75 % March 2025 - January 2031 Total recourse debt — 44 44 2,266 Non-recourse debt: Automotive Asset-backed Notes 984 613 1,603 — 0.36-4.64 % December 2023-September 2025 Solar Asset-backed Notes 4 13 17 — 4.80 % December 2026 Cash Equity Debt 28 359 397 — 5.25-5.81 % July 2033-January 2035 Automotive Lease-backed Credit Facilities — — — 151 Not applicable September 2024 Total non-recourse debt 1,016 985 2,017 151 Total debt 1,016 1,029 $ 2,061 $ 2,417 Finance leases 486 568 Total debt and finance leases $ 1,502 $ 1,597 The following is a summary of our debt and finance leases as of December 31, 2021 (in millions): Unpaid Unused Net Carrying Value Principal Committed Contractual Contractual Current Long-Term Balance Amount (1) Interest Rates Maturity Date Recourse debt: 2022 Notes $ 29 $ — $ 29 $ — 2.375 % March 2022 2024 Notes 1 89 91 — 2.00 % May 2024 Credit Agreement — 1,250 1,250 920 3.25 % July 2023 Solar Bonds 0 7 7 — 4.00-5.75 % January 2022-January 2031 Total recourse debt 30 1,346 1,377 920 Non-recourse debt: Automotive Asset-backed Notes 1,007 1,706 2,723 — 0.12-5.48 % September 2022-September 2025 Solar Asset and Loan-backed Notes 27 800 844 — 2.87-7.74 % September 2024-September 2049 Cash Equity Debt 24 388 422 — 5.25-5.81 % July 2033-January 2035 Automotive Lease-backed Credit Facilities — — — 167 Not applicable September 2023 Other Loans — 14 14 21 5.10 % February 2033 Total non-recourse debt 1,058 2,908 4,003 188 Total debt 1,088 4,254 $ 5,380 $ 1,108 Finance leases 501 991 Total debt and finance leases $ 1,589 $ 5,245 (1) There are no restrictions on draw-down or use for general corporate purposes with respect to any available committed funds under our credit facilities, except certain specified conditions prior to draw-down, including pledging to our lenders sufficient amounts of qualified receivables, inventories, leased vehicles and our interests in those leases or various other assets and as may be described below. Recourse debt refers to debt that is recourse to our general assets. Non-recourse debt refers to debt that is recourse to only assets of our subsidiaries. The differences between the unpaid principal balances and the net carrying values are due to debt discounts or deferred financing costs. As of December 31, 2022, we were in material compliance with all financial debt covenants. 2022 Notes, Bond Hedges and Warrant Transactions During the first quarter of 2022, the remaining $29 million in aggregate principal amount of the 2022 Notes was converted and settled in cash for their par amount, and 1.2 million shares of our common stock were issued for the applicable conversion premium, as adjusted to give effect to the 2022 Stock Split. The note hedges we entered into in connection with the issuance of the 2022 Notes were automatically settled with the respective conversions of the 2022 Notes, resulting in the receipt of 1.2 million shares of our common stock during the same period, as adjusted to give effect to the 2022 Stock Split. Additionally, during the year ended December 31, 2022, we fully settled the warrants entered into in connection with the issuance of the 2022 Notes, resulting in the issuance of 37.0 million shares of our common stock, as adjusted to give effect to the 2022 Stock Split. 2024 Notes, Bond Hedges and Warrant Transactions In May 2019, we issued $1.84 billion in aggregate principal amount of our 2024 Notes in a public offering. The net proceeds from the issuance, after deducting transaction costs, were $1.82 billion. 72
-
-[TABLE] Unpaid | Unused
-[TABLE] Net Carrying Value | Principal | Committed | Contractual | Contractual
-[TABLE] Current | Long-Term | Balance | Amount (1) | Interest Rates | Maturity Date
-[TABLE] Recourse debt:
-[TABLE] 2024 Notes | $ | — | $ | 37 | $ 37 | $ | — | 2.00 | % | May 2024
-[TABLE] Credit Agreement | — | — | — | 2,266 | Not applicable | July 2023
-[TABLE] Solar Bonds | — | 7 | 7 | — | 4.70-5.75 | % | March 2025 - January 2031
-[TABLE] Total recourse debt | — | 44 | 44 | 2,266
-[TABLE] Non-recourse debt:
-[TABLE] Automotive Asset-backed Notes | 984 | 613 | 1,603 | — | 0.36-4.64 | % | December 2023-September 2025
-[TABLE] Solar Asset-backed Notes | 4 | 13 | 17 | — | 4.80 | % | December 2026
-[TABLE] Cash Equity Debt | 28 | 359 | 397 | — | 5.25-5.81 | % | July 2033-January 2035
-[TABLE] Automotive Lease-backed Credit Facilities | — | — | — | 151 | Not applicable | September 2024
-[TABLE] Total non-recourse debt | 1,016 | 985 | 2,017 | 151
-[TABLE] Total debt | 1,016 | 1,029 | $ 2,061 | $ | 2,417
-[TABLE] Finance leases | 486 | 568
-[TABLE] Total debt and finance leases | $ | 1,502 | $ | 1,597
-[TABLE] Unpaid | Unused
-[TABLE] Net Carrying Value | Principal | Committed | Contractual | Contractual
-[TABLE] Current | Long-Term | Balance | Amount (1) | Interest Rates | Maturity Date
-[TABLE] Recourse debt:
-[TABLE] 2022 Notes | $ | 29 | $ | — | $ 29 | $ | — | 2.375 | % | March 2022
-[TABLE] 2024 Notes | 1 | 89 | 91 | — | 2.00 | % | May 2024
-[TABLE] Credit Agreement | — | 1,250 | 1,250 | 920 | 3.25 | % | July 2023
-[TABLE] Solar Bonds | 0 | 7 | 7 | — | 4.00-5.75 | % | January 2022-January 2031
-[TABLE] Total recourse debt | 30 | 1,346 | 1,377 | 920
-[TABLE] Non-recourse debt:
-[TABLE] Automotive Asset-backed Notes | 1,007 | 1,706 | 2,723 | — | 0.12-5.48 | % | September 2022-September 2025
-[TABLE] Solar Asset and Loan-backed Notes | 27 | 800 | 844 | — | 2.87-7.74 | % | September 2024-September 2049
-[TABLE] Cash Equity Debt | 24 | 388 | 422 | — | 5.25-5.81 | % | July 2033-January 2035
-[TABLE] Automotive Lease-backed Credit Facilities | — | — | — | 167 | Not applicable | September 2023
-[TABLE] Other Loans | — | 14 | 14 | 21 | 5.10 | % | February 2033
-[TABLE] Total non-recourse debt | 1,058 | 2,908 | 4,003 | 188
-[TABLE] Total debt | 1,088 | 4,254 | $ 5,380 | $ | 1,108
-[TABLE] Finance leases | 501 | 991
-[TABLE] Total debt and finance leases | $ | 1,589 | $ | 5,245
 
 [PAGE 73]
 As adjusted to give effect to the 2022 Stock Split, each $1,000 of principal of the 2024 Notes is now convertible into 48.4140 shares of our common stock, which is equivalent to a conversion price of approximately $20.66 per share, subject to adjustment upon the occurrence of specified events. Holders of the 2024 Notes may convert, at their option, on or after February 15, 2024. Further, holders of the 2024 Notes may convert, at their option, prior to February 15, 2024 only under the following circumstances: (1) during any calendar quarter commencing after September 30, 2019 (and only during such calendar quarter), if the last reported sale price of our common stock for at least 20 trading days (whether or not consecutive) during a period of 30 consecutive trading days ending on the last trading day of immediately preceding calendar quarter is greater than or equal to 130% of the conversion price on each trading day; (2) during the five-business day period after any five-consecutive trading day period in which the trading price per $1,000 principal amount of the 2024 Notes for each trading day of such period is less than 98% of the product of the last reported sale price of our common stock and the conversion rate on each such trading day, or (3) if specified corporate events occur. Upon conversion, the 2024 Notes will be settled in cash, shares of our common stock or a combination thereof, at our election. If a fundamental change occurs prior to the maturity date, holders of the 2024 Notes may require us to repurchase all or a portion of their 2024 Notes for cash at a repurchase price equal to 100% of the principal amount plus any accrued and unpaid interest. In addition, if specific corporate events occur prior to the maturity date, we would increase the conversion rate for a holder who elects to convert its 2024 Notes in connection with such an event in certain circumstances. Early conversion of notes which are scheduled to settle in the following quarter are classified as current in our consolidated balance sheets. In connection with the offering of the 2024 Notes, we entered into convertible note hedge transactions whereby we had the option to purchase 89.1 million shares of our common stock at a price of approximately $20.66 per share, as adjusted to give effect to the 2022 Stock Split. The cost of the convertible note hedge transactions was $476 million. In addition, we sold warrants whereby the holders of the warrants had the option to purchase 89.1 million shares of our common stock at a price of approximately $40.50 per share, as adjusted to give effect to the 2022 Stock Split. We received $174 million in cash proceeds from the sale of these warrants. Taken together, the purchase of the convertible note hedges and the sale of the warrants were intended to effectively increase the overall conversion price from approximately $20.66 to approximately $40.50 per share. As these transactions meet certain accounting criteria, the convertible note hedges and warrants were recorded in stockholders’ equity and were not accounted for as derivatives. The net cost incurred in connection with the convertible note hedge and warrant transactions was recorded as a reduction to additional paid-in capital on the consolidated balance sheet. The closing price of our common stock exceeded 130% of the applicable conversion price on at least 20 of the last 30 consecutive trading days of each quarter in 2022, causing the 2024 Notes to be convertible by their holders in the subsequent quarter. During the year ended December 31, 2022, $54 million in aggregate principal amount of the 2024 Notes was converted and settled in cash for their par amount, and 2.4 million shares of our common stock were issued for the applicable conversion premium, as adjusted to give effect to the 2022 Stock Split. The note hedges we entered into in connection with the issuance of the 2024 Notes were automatically settled with the respective conversions of the 2024 Notes, resulting in the receipt of 2.4 million shares of our common stock during the same period, as adjusted to give effect to the 2022 Stock Split. As of December 31, 2022, the if- converted value of the notes exceeds the outstanding principal amount by $186 million. Credit Agreement In June 2015, we entered into a senior asset-based revolving credit agreement (as amended from time to time, the “Credit Agreement”) with a syndicate of banks. Borrowed funds bear interest, at our option, at an annual rate of (a) 1% plus LIBOR or (b) the highest of (i) the federal funds rate plus 0.50%, (ii) the lenders’ “prime rate” or (iii) 1% plus LIBOR. The fee for undrawn amounts is 0.25% per annum. The Credit Agreement is secured by certain of our accounts receivable, inventory and equipment. Availability under the Credit Agreement is based on the value of such assets, as reduced by certain reserves. In January 2023, we entered into a 5-year senior unsecured revolving credit facility (the “RCF Credit Agreement”) with a syndicate of banks to replace the existing Credit Agreement, which was terminated. The RCF Credit Agreement contains two optional one-year extensions and has a total commitment of up to $5.00 billion, which could be increased up to $7.00 billion under certain circumstances. The underlying borrowings may be used for general corporate purposes. Borrowed funds accrue interest at a variable rate equal to: (i) for dollar-denominated loans, at our election, (a) Term SOFR (the forward-looking secured overnight financing rate) plus 0.10%, or (b) an alternate base rate; (ii) for loans denominated in pounds sterling, SONIA (the sterling overnight index average reference rate); or (iii) for loans denominated in euros, an adjusted EURIBOR (euro interbank offered rate); in each case, plus an applicable margin. The applicable margin will be based on the rating assigned to our senior, unsecured long-term indebtedness (the “Credit Rating”) from time to time. The fee for undrawn amounts is variable based on the Credit Rating and is currently 0.15% per annum. 73

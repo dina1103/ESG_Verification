@@ -14,9 +14,7 @@
     {
       "page_number": 1,
       "text": "2021 Annual Report Ford Motor Company",
-      "tables": [
-        "Ford\nMotor\nCompany\n2021\nAnnual\nReport\nFord Motor Company\nFord Motor Company\nOne American Road\nDearborn, MI 48126\nwww.corporate.ford.com\n2021\nPrinted in U.S.A. 10% post-consumer waste paper.\nAnnual\nPlease recycle.\nReport"
-      ],
+      "tables": [],
       "is_ocr": false,
       "char_count": 37
     },
@@ -3193,9 +3191,7 @@
     {
       "page_number": 218,
       "text": "Printed in U.S.A. 10% post-consumer waste paper. Please recycle. Ford Motor Company One American Road Dearborn, MI 48126 www.corporate.ford.com",
-      "tables": [
-        "Ford\nMotor\nCompany\n2021\nAnnual\nReport\nFord Motor Company\nFord Motor Company\nOne American Road\nDearborn, MI 48126\nwww.corporate.ford.com\n2021\nPrinted in U.S.A. 10% post-consumer waste paper.\nAnnual\nPlease recycle.\nReport"
-      ],
+      "tables": [],
       "is_ocr": false,
       "char_count": 143
     }

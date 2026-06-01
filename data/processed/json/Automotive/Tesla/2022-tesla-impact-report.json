@@ -7,17 +7,10 @@
   "report_type": "sustainability_report",
   "framework": "unknown",
   "total_pages": 224,
-  "pages_extracted": 196,
+  "pages_extracted": 195,
   "pages_ocr": 0,
-  "pages_skipped": 28,
+  "pages_skipped": 29,
   "pages": [
-    {
-      "page_number": 27,
-      "text": "\u0001\u0000\u0013\u0012 \u0011\u000e\u0012 \u0007\b \u000f \u0005\b\u0004\b \u0004\u0006 \u0003\b \u0003\u0011 \b\u0004\u0012 \u0012\u0007 \u000e \u0006\u0002\u000e \u0010 \u0006\u0007 \u0006\u0011 \u0006\u0005\u0011\u0003\u0004\u000e \u001b\u0007 \b\u0003\u0004 \u0012 \u0006 \u0004 \u0001 \u0001 We use primary data to calculate emissions from our products With data from over four million vehicles on the road and a fleet of solar and storage products, we can calculate our emissions at a much higher level of accuracy than most manufacturers and can therefore develop emissions-reduction solutions to match. This also means that we can calculate our use-of-product emissions year-over-year. We do not have to estimate emissions over the lifetime of the vehicle because we have primary data. See page 144-150, 156-159 in our Supply Chain section and page 207 in Appendix for more detail. Impact Report 2022 Environmental Impact ( ' • . , :;; :. -~?i: ,. ~,l~ _ .. ) .. !~ \\ ~~ . i • • ' :;;.:,· . .. : • ,. ,.. ... ._.,!~~ .'t,.~, r ~\" \\1 ': .') -ij.,...i ... 27",
-      "tables": [],
-      "is_ocr": false,
-      "char_count": 840
-    },
     {
       "page_number": 28,
       "text": "NEDC, WLTP or EPA testing cycles do not represent real- world fuel or electricity consumption 28 Impact Report 2022 70 tons NEDC, WLTP or EPA testing cycles do not represent real- world fuel or electricity consumption We used real-world energy consumption by Model 3 and Model Y to analyze EV energy consumption. For ICE fuel consumption, we used data provided by Consumer Reports, which reports model year 2021 mid-size premium sedans achieve 24.3 MPG on average. This translates to over 400 grams of CO2e per mile once we account for emissions generated through the extraction, refining and shipment of oil. New European Driving Cycle (NEDC) Worldwide Harmonized Light Vehicles Test Procedure (WL TP) U.S. Environmental Protection Agency (EPA) Impact Report 2022 Environmental Impact 0 70 tons Lifetime CO2e emitted by an avg. ICE vehicle (model year 2021) through its use phase.* *Sold in the U.S. and excluding CO2e emitted during the oil refining phase. 28",

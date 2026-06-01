@@ -1,8 +1,13 @@
-import pandas as pd
-df = pd.read_parquet("data/processed/segments.parquet")
+import json
+from pathlib import Path
 
-# segment counts per document — spot the F_2020 / GM_2020 anomalies in context
-print(df.groupby("source_document").size().sort_values().head(10))
-
-# confirm no empty/garbage text survived, and length distribution looks sane
-print(df["text"].str.len().describe())
+for f in sorted(Path("data/processed/json").rglob("*.json")):
+    d = json.loads(f.read_text(encoding="utf-8"))
+    total = bad = 0
+    for p in d["pages"]:
+        t = p["text"]
+        total += len(t)
+        bad += sum(1 for c in t if ord(c) < 32 and c not in "\n\t\r")
+    ratio = bad / max(total, 1)
+    if ratio > 0.02:
+        print(f"{ratio:6.1%}  {f.name}")

@@ -549,55 +549,6 @@ noncontrolling interests in subsidiaries | 141 | 87 | (87 | )
 [PAGE 57]
 Tesla, Inc. Consolidated Statements of Redeemable Noncontrolling Interests and Equity (in millions, except per share data) Accumulated Redeemable Additional Other Total Noncontrolling Noncontrolling Common Stock Paid-In Accumulated Comprehensive Stockholders' Interests in Total Interests Shares (1) Amount (1) Capital (1) Deficit Income (Loss) Equity Subsidiaries Equity Balance as of December 31, 2017 $ 398 844 $ 1 $ 9,177 $ (4,974) $ 33 $ 4,237 $ 997 $ 5,234 Adjustments for prior periods from adopting ASC 606 8 — — — 623 — 623 (89) 534 Adjustments for prior periods from adopting Accounting Standards Update No. 2017-05 — — — — 9 — 9 — 9 Exercises of conversion feature of convertible senior notes — 1 0 0 — — 0 — 0 Issuance of common stock for equity incentive awards — 18 0 296 — — 296 — 296 Stock-based compensation — — — 775 — — 775 — 775 Contributions from noncontrolling interests 276 — — — — — — 161 161 Distributions to noncontrolling interests (61) — — — — — — (210) (210) Other (3) — — — — — — — — Net loss (62) — — — (976) — (976) (25) (1,001) Other comprehensive loss — — — — — (41) (41) — (41) Balance as of December 31, 2018 $ 556 863 $ 1 $ 10,248 $ (5,318) $ (8) $ 4,923 $ 834 $ 5,757 Adjustments for prior periods from adopting ASC 842 — — — — 97 — 97 — 97 Conversion feature of 2.00% Convertible Senior Notes due in 2024 ("2024 Notes") — — — 491 — — 491 — 491 Purchase of convertible note hedges — — — (476) — — (476) — (476) Sales of warrants — — — 174 — — 174 — 174 Issuance of common stock for equity incentive awards and acquisitions, net of transaction costs — 24 0 482 — — 482 — 482 Issuance of common stock in May 2019 public offering at $48.60 per share (1), net of issuance costs of $15 — 18 0 848 — — 848 — 848 Stock-based compensation — — — 973 — — 973 — 973 Contributions from noncontrolling interests 105 — — — — — — 174 174 Distributions to noncontrolling interests (65) — — — — — — (198) (198) Other (1) — — (4) — — (4) — (4) Net income (loss) 48 — — — (862) — (862) 39 (823) Other comprehensive loss — — — — — (28) (28) — (28) Balance as of December 31, 2019 $ 643 905 $ 1 $ 12,736 $ (6,083) $ (36) $ 6,618 $ 849 $ 7,467 Adjustments for prior periods from adopting ASU 2016-13 — — — (37) — (37) — (37) Reclassification between equity and mezzanine equity for convertible senior notes — — — (51) — — (51) — (51) Exercises of conversion feature of convertible senior notes — 2 0 59 — — 59 — 59 Issuance of common stock for equity incentive awards — 19 0 417 — — 417 — 417 Issuance of common stock in public offerings, net of issuance costs of $68 (1) — 34 0 12,269 — — 12,269 — 12,269 Stock-based compensation — — — 1,861 — — 1,861 — 1,861 Contributions from noncontrolling interests 7 — — — — — — 17 17 Distributions to noncontrolling interests (67) — — — — — — (132) (132) Buy-outs of noncontrolling interests (4) — — (31) — — (31) — (31) Net income 25 — — — 721 — 721 116 837 Other comprehensive income — — — — — 399 399 — 399 Balance as of December 31, 2020 $ 604 960 $ 1 $ 27,260 $ (5,399) $ 363 $ 22,225 $ 850 $ 23,075 (1) Prior period results have been adjusted to reflect the five-for-one stock split effected in the form of a stock dividend in August 2020. See Note 1, Overview, for details regarding stock split and public offerings. The accompanying notes are an integral part of these consolidated financial statements. 57
 
-[TABLE] Accumulated
-[TABLE] Redeemable | Additional | Other | Total | Noncontrolling
-[TABLE] Noncontrolling | Common Stock | Paid-In | Accumulated | Comprehensive | Stockholders' | Interests in | Total
-[TABLE] Interests | Shares (1) | Amount (1) | Capital (1) | Deficit | Income (Loss) | Equity | Subsidiaries | Equity
-[TABLE] Balance as of December 31, 2017 | $ | 398 | 844 | $ | 1 | $ | 9,177 | $ | (4,974 | ) | $ | 33 | $ | 4,237 | $ | 997 | $ | 5,234
-[TABLE] Adjustments for prior periods from adopting ASC 606 | 8 | — | — | — | 623 | — | 623 | (89 | ) | 534
-[TABLE] Adjustments for prior periods from adopting Accounting Standards
-Update No. 2017-05 | — | — | — | — | 9 | — | 9 | — | 9
-[TABLE] Exercises of conversion feature of convertible senior notes | — | 1 | 0 | 0 | — | — | 0 | — | 0
-[TABLE] Issuance of common stock for equity incentive awards | — | 18 | 0 | 296 | — | — | 296 | — | 296
-[TABLE] Stock-based compensation | — | — | — | 775 | — | — | 775 | — | 775
-[TABLE] Contributions from noncontrolling interests | 276 | — | — | — | — | — | — | 161 | 161
-[TABLE] Distributions to noncontrolling interests | (61 | ) | — | — | — | — | — | — | (210 | ) | (210
-[TABLE] Other | (3 | ) | — | — | — | — | — | — | — | —
-[TABLE] Net loss | (62 | ) | — | — | — | (976 | ) | — | (976 | ) | (25 | ) | (1,001
-[TABLE] Other comprehensive loss | — | — | — | — | — | (41 | ) | (41 | ) | — | (41
-[TABLE] Balance as of December 31, 2018 | $ | 556 | 863 | $ | 1 | $ | 10,248 | $ | (5,318 | ) | $ | (8 | ) | $ | 4,923 | $ | 834 | $ | 5,757
-[TABLE] Adjustments for prior periods from adopting ASC 842 | — | — | — | — | 97 | — | 97 | — | 97
-[TABLE] Conversion feature of 2.00% Convertible Senior Notes due in 2024
-("2024 Notes") | — | — | — | 491 | — | — | 491 | — | 491
-[TABLE] Purchase of convertible note hedges | — | — | — | (476 | ) | — | — | (476 | ) | — | (476
-[TABLE] Sales of warrants | — | — | — | 174 | — | — | 174 | — | 174
-[TABLE] Issuance of common stock for equity incentive awards and
-acquisitions, net of transaction costs | — | 24 | 0 | 482 | — | — | 482 | — | 482
-[TABLE] Issuance of common stock in May 2019 public offering at $48.60 per
-share (1), net of
-issuance costs of $15 | — | 18 | 0 | 848 | — | — | 848 | — | 848
-[TABLE] Stock-based compensation | — | — | — | 973 | — | — | 973 | — | 973
-[TABLE] Contributions from noncontrolling interests | 105 | — | — | — | — | — | — | 174 | 174
-[TABLE] Distributions to noncontrolling interests | (65 | ) | — | — | — | — | — | — | (198 | ) | (198
-[TABLE] Other | (1 | ) | — | — | (4 | ) | — | — | (4 | ) | — | (4
-[TABLE] Net income (loss) | 48 | — | — | — | (862 | ) | — | (862 | ) | 39 | (823
-[TABLE] Other comprehensive loss | — | — | — | — | — | (28 | ) | (28 | ) | — | (28
-[TABLE] Balance as of December 31, 2019 | $ | 643 | 905 | $ | 1 | $ | 12,736 | $ | (6,083 | ) | $ | (36 | ) | $ | 6,618 | $ | 849 | $ | 7,467
-[TABLE] Adjustments for prior periods from adopting ASU 2016-13 | — | — | — | (37 | ) | — | (37 | ) | — | (37
-[TABLE] Reclassification between equity and mezzanine equity for convertible
-senior notes | — | — | — | (51 | ) | — | — | (51 | ) | — | (51
-[TABLE] Exercises of conversion feature of convertible senior notes | — | 2 | 0 | 59 | — | — | 59 | — | 59
-[TABLE] Issuance of common stock for equity incentive awards | — | 19 | 0 | 417 | — | — | 417 | — | 417
-[TABLE] Issuance of common stock in public offerings, net of
-issuance costs of $68 (1) | — | 34 | 0 | 12,269 | — | — | 12,269 | — | 12,269
-[TABLE] Stock-based compensation | — | — | — | 1,861 | — | — | 1,861 | — | 1,861
-[TABLE] Contributions from noncontrolling interests | 7 | — | — | — | — | — | — | 17 | 17
-[TABLE] Distributions to noncontrolling interests | (67 | ) | — | — | — | — | — | — | (132 | ) | (132
-[TABLE] Buy-outs of noncontrolling interests | (4 | ) | — | — | (31 | ) | — | — | (31 | ) | — | (31
-[TABLE] Net income | 25 | — | — | — | 721 | — | 721 | 116 | 837
-[TABLE] Other comprehensive income | — | — | — | — | — | 399 | 399 | — | 399
-[TABLE] Balance as of December 31, 2020 | $ | 604 | 960 | $ | 1 | $ | 27,260 | $ | (5,399 | ) | $ | 363 | $ | 22,225 | $ | 850 | $ | 23,075
-
 [PAGE 58]
 Tesla, Inc. Consolidated Statements of Cash Flows (in millions) Year Ended December 31, 2020 2019 2018 Cash Flows from Operating Activities Net income (loss) $ 862 $ (775) $ (1,063) Adjustments to reconcile net income (loss) to net cash provided by operating activities: Depreciation, amortization and impairment 2,322 2,154 1,901 Stock-based compensation 1,734 898 749 Amortization of debt discounts and issuance costs 180 188 159 Inventory and purchase commitments write-downs 202 193 85 Loss on disposals of fixed assets 117 146 162 Foreign currency transaction net loss (gain) 114 (48) (2) Non-cash interest and other operating activities 228 186 49 Operating cash flow related to repayment of discounted convertible senior notes — (188) — Changes in operating assets and liabilities, net of effect of business combinations: Accounts receivable (652) (367) (497) Inventory (422) (429) (1,023) Operating lease vehicles (1,072) (764) (215) Prepaid expenses and other current assets (251) (288) (82) Other non-current assets (344) 115 (207) Accounts payable and accrued liabilities 2,102 646 1,797 Deferred revenue 321 801 406 Customer deposits 7 (58) (96) Other long-term liabilities 495 (5) (25) Net cash provided by operating activities 5,943 2,405 2,098 Cash Flows from Investing Activities Purchases of property and equipment excluding finance leases, net of sales (3,157) (1,327) (2,101) Purchases of solar energy systems, net of sales (75) (105) (218) Receipt of government grants 123 46 — Purchase of intangible assets (10) (5) — Business combinations, net of cash acquired (13) (45) (18) Net cash used in investing activities (3,132) (1,436) (2,337) Cash Flows from Financing Activities Proceeds from issuances of common stock in public offerings, net of issuance costs 12,269 848 — Proceeds from issuances of convertible and other debt 9,713 10,669 6,176 Repayments of convertible and other debt (11,623) (9,161) (5,247) Repayments of borrowings issued to related parties — — (100) Collateralized lease repayments (240) (389) (559) Proceeds from exercises of stock options and other stock issuances 417 263 296 Principal payments on finance leases (338) (321) (181) Debt issuance costs (6) (37) (15) Purchase of convertible note hedges — (476) — Proceeds from issuance of warrants — 174 — Proceeds from investments by noncontrolling interests in subsidiaries 24 279 437 Distributions paid to noncontrolling interests in subsidiaries (208) (311) (227) Payments for buy-outs of noncontrolling interests in subsidiaries (35) (9) (6) Net cash provided by financing activities 9,973 1,529 574 Effect of exchange rate changes on cash and cash equivalents and restricted cash 334 8 (23) Net increase in cash and cash equivalents and restricted cash 13,118 2,506 312 Cash and cash equivalents and restricted cash, beginning of period 6,783 4,277 3,965 Cash and cash equivalents and restricted cash, end of period $ 19,901 $ 6,783 $ 4,277 Supplemental Non-Cash Investing and Financing Activities Equity issued in connection with business combination $ — $ 207 $ — Acquisitions of property and equipment included in liabilities $ 1,088 $ 562 $ 249 Estimated fair value of facilities under build-to-suit leases $ — $ — $ 94 Supplemental Disclosures Cash paid during the period for interest, net of amounts capitalized $ 444 $ 455 $ 381 Cash paid during the period for taxes, net of refunds $ 115 $ 54 $ 35 The accompanying notes are an integral part of these consolidated financial statements. 58
 
