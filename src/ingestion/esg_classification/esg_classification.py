@@ -201,16 +201,4 @@ def process():
 
 
 if __name__ == "__main__":
-    import time
-df = pd.read_parquet(INPUT_FILE).head(2000)
-texts = df["text"].tolist()
-e_clf, s_clf, g_clf = load_classifiers()
-
-t0 = time.time()
-for i in range(0, len(texts), BATCH_SIZE):
-    classify_batch(texts[i:i+BATCH_SIZE], e_clf, s_clf, g_clf)
-elapsed = time.time() - t0
-
-rate = len(texts) / elapsed
-print(f"{rate:.1f} segments/sec")
-print(f"full run estimate: {181802 / rate / 60:.0f} min ({181802 / rate / 3600:.1f} hr)")
+    process()
