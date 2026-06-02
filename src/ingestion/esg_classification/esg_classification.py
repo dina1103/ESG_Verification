@@ -4,23 +4,29 @@ from pathlib import Path
 from transformers import pipeline
 from tqdm import tqdm
 
-INPUT_FILE  = "data/processed/segmentation"
-OUTPUT_FILE = "data/processed/segmentation_esg"
+INPUT_FILE  = "data/processed/segments.parquet"
+OUTPUT_FILE = "data/processed/segments_esg.parquet"
+CHECKPOINT_FILE = "data/processed/segments_esg_checkpoint.parquet"
 
 # batch size — lower to 16 if you run out of memory
 BATCH_SIZE = 32
 
+# save progress every N batches so a crash doesn't lose the whole run
+CHECKPOINT_EVERY = 100
+
 # minimum confidence to assign a label, otherwise stays None
 MIN_SCORE = 0.5
 
-print("ESG classification running...")
+# a "none" segment is reconsidered for Governance only if keyword evidence is
+# this strong; promotes missed-governance cases without touching confident E/S
+GOV_BACKSTOP_MIN_MATCHES = 2
+GOV_BACKSTOP_SCORE = 0.5
+
+print(f"ESG classification running...")
 
 
 # Governance keywords from Baier, Berninger & Kiesel (2020), Table 3
 # DOI: 10.1111/fmii.12132
-# Applied verbatim to compensate for GovernanceBERT's lower recall (~89% vs ~93% for E and S).
-# Environmental and Social models receive no keyword boost — they already perform well on their own.
-
 GOVERNANCE_KEYWORDS = [
     "align", "aligned", "aligning", "alignment", "aligns", "bylaw", "bylaws",
     "charter", "charters", "culture", "death", "duly", "parents", "independent",
@@ -76,12 +82,10 @@ GOVERNANCE_KEYWORDS = [
     "compact", "ungc",
 ]
 
-# compile patterns once at module level
 GOVERNANCE_PATTERNS = [re.compile(rf"\b{re.escape(kw)}\b") for kw in GOVERNANCE_KEYWORDS]
 
 
 def load_classifiers():
-    # load all three ESGBERT models
     e_clf = pipeline("text-classification", model="ESGBERT/EnvironmentalBERT-environmental", truncation=True, max_length=512)
     s_clf = pipeline("text-classification", model="ESGBERT/SocialBERT-social",              truncation=True, max_length=512)
     g_clf = pipeline("text-classification", model="ESGBERT/GovernanceBERT-governance",      truncation=True, max_length=512)
@@ -89,20 +93,14 @@ def load_classifiers():
 
 
 def get_pillar_score(result, pillar_label):
-    # if model label matches the pillar, use score directly
-    # if model returned "none", flip the score (binary softmax: P(pillar) + P(none) = 1)
+    # binary models return {pillar, none}; flip the score when "none" is returned
     label = result["label"].lower()
     score = result["score"]
-    if label == pillar_label.lower():
-        return score
-    else:
-        return 1 - score
+    return score if label == pillar_label.lower() else 1 - score
 
 
-def governance_boost(text_lower):
-    # count G keyword matches, bounded additive boost to compensate for model's lower recall
-    matches = sum(1 for p in GOVERNANCE_PATTERNS if p.search(text_lower))
-    return min(matches * 0.15, 0.4)
+def count_gov_keywords(text_lower):
+    return sum(1 for p in GOVERNANCE_PATTERNS if p.search(text_lower))
 
 
 def classify_batch(texts, e_clf, s_clf, g_clf):
@@ -110,68 +108,109 @@ def classify_batch(texts, e_clf, s_clf, g_clf):
     s_results = s_clf(texts)
     g_results = g_clf(texts)
 
-    labels = []
-    scores = []
+    labels, scores = [], []
 
     for text, e, s, g in zip(texts, e_results, s_results, g_results):
-        text_lower = text.lower()
-        # G gets a keyword boost to compensate for GovernanceBERT's weaker recall
+        # raw per-pillar probabilities — no keyword interference in the argmax
         candidates = {
             "Environmental": get_pillar_score(e, "environmental"),
             "Social":        get_pillar_score(s, "social"),
-            "Governance":    min(get_pillar_score(g, "governance") + governance_boost(text_lower), 1.0),
+            "Governance":    get_pillar_score(g, "governance"),
         }
         best_label = max(candidates, key=candidates.get)
         best_score = candidates[best_label]
 
-        # only assign label if confidence is above threshold
         if best_score >= MIN_SCORE:
             labels.append(best_label)
             scores.append(round(best_score, 4))
         else:
-            labels.append(None)
-            scores.append(None)
+            # nothing cleared threshold -> recall backstop:
+            # promote to Governance only if keyword evidence is strong enough.
+            # compensates for GovernanceBERT's lower recall without overriding
+            # confident Environmental/Social predictions (which already won above)
+            if count_gov_keywords(text.lower()) >= GOV_BACKSTOP_MIN_MATCHES:
+                labels.append("Governance")
+                scores.append(GOV_BACKSTOP_SCORE)
+            else:
+                labels.append(None)
+                scores.append(None)
 
     return labels, scores
 
 
 def process():
-    # load segments
     df = pd.read_parquet(INPUT_FILE)
-    print(f"Loaded {len(df):,} segments\n")
+    print(f"Loaded {len(df):,} segments")
+
+    # resume from checkpoint if one exists
+    start_batch = 0
+    all_labels, all_scores = [], []
+    if Path(CHECKPOINT_FILE).exists():
+        ckpt = pd.read_parquet(CHECKPOINT_FILE)
+        done = ckpt["esg_label"].notna() | ckpt["_processed"].fillna(False)
+        n_done = int(ckpt["_processed"].fillna(False).sum())
+        if n_done > 0:
+            all_labels = ckpt.loc[:n_done-1, "esg_label"].tolist()
+            all_scores = ckpt.loc[:n_done-1, "esg_score"].tolist()
+            start_batch = n_done // BATCH_SIZE
+            print(f"Resuming from checkpoint: {n_done:,} segments already done")
 
     texts = df["text"].tolist()
-    all_labels = []
-    all_scores = []
 
-    # load models
     print("Loading ESGBERT models...")
     e_clf, s_clf, g_clf = load_classifiers()
     print("Models loaded\n")
 
-    # classify in batches
-    for i in tqdm(range(0, len(texts), BATCH_SIZE), desc="Classifying"):
+    batch_starts = list(range(0, len(texts), BATCH_SIZE))
+    for bi, i in enumerate(tqdm(batch_starts, desc="Classifying")):
+        if bi < start_batch:
+            continue
         batch = texts[i : i + BATCH_SIZE]
         labels, scores = classify_batch(batch, e_clf, s_clf, g_clf)
         all_labels.extend(labels)
         all_scores.extend(scores)
 
-    # fill in the placeholder columns
+        # periodic checkpoint
+        if (bi + 1) % CHECKPOINT_EVERY == 0:
+            n = len(all_labels)
+            ckpt = df.copy()
+            ckpt["esg_label"] = all_labels + [None] * (len(df) - n)
+            ckpt["esg_score"] = all_scores + [None] * (len(df) - n)
+            ckpt["_processed"] = [True] * n + [False] * (len(df) - n)
+            Path(CHECKPOINT_FILE).parent.mkdir(parents=True, exist_ok=True)
+            ckpt.to_parquet(CHECKPOINT_FILE, index=False)
+
     df["esg_label"] = all_labels
     df["esg_score"] = all_scores
 
-    # save
     Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(OUTPUT_FILE, index=False)
 
-    # summary
+    # clean up checkpoint on successful completion
+    if Path(CHECKPOINT_FILE).exists():
+        Path(CHECKPOINT_FILE).unlink()
+
     print(f"\nTotal segments: {len(df):,}")
     print(f"Labelled:       {df['esg_label'].notna().sum():,}")
     print(f"Unlabelled:     {df['esg_label'].isna().sum():,}")
     print("\nLabel distribution:")
     print(df["esg_label"].value_counts())
+    gov_backstop = (df["esg_score"] == GOV_BACKSTOP_SCORE).sum()
+    print(f"\n(of which promoted by governance backstop: {gov_backstop:,})")
     print(f"\nSaved to: {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
-    process()
+    import time
+df = pd.read_parquet(INPUT_FILE).head(2000)
+texts = df["text"].tolist()
+e_clf, s_clf, g_clf = load_classifiers()
+
+t0 = time.time()
+for i in range(0, len(texts), BATCH_SIZE):
+    classify_batch(texts[i:i+BATCH_SIZE], e_clf, s_clf, g_clf)
+elapsed = time.time() - t0
+
+rate = len(texts) / elapsed
+print(f"{rate:.1f} segments/sec")
+print(f"full run estimate: {181802 / rate / 60:.0f} min ({181802 / rate / 3600:.1f} hr)")
