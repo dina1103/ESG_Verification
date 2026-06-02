@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-JSON_DIR = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\json"
+JSON_DIR = r"C:\Users\dina_\Desktop\esg_verification\data\processed\json"
 
 json_paths = list(Path(JSON_DIR).rglob("*.json"))
 print(f"Found {len(json_paths)} JSON files\n")
@@ -38,7 +38,7 @@ for row in page["tables"][:5]:
 
 # check how many pages have structured tables vs how many have table-like text
 import json, glob
-json_files = glob.glob(r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\json\**\*.json", recursive=True)
+json_files = glob.glob(r"C:\Users\dina_\Desktop\esg_verification\data\processed\json\**\*.json", recursive=True)
 
 total_pages = 0
 pages_with_tables = 0
