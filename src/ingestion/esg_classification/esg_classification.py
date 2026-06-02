@@ -1,4 +1,3 @@
-import re
 import pandas as pd
 from pathlib import Path
 from transformers import pipeline
@@ -17,78 +16,14 @@ CHECKPOINT_EVERY = 100
 # minimum confidence to assign a label, otherwise stays None
 MIN_SCORE = 0.5
 
-# a "none" segment is reconsidered for Governance only if keyword evidence is
-# this strong; promotes missed-governance cases without touching confident E/S
-GOV_BACKSTOP_MIN_MATCHES = 2
-GOV_BACKSTOP_SCORE = 0.5
-
-print(f"ESG classification running...")
-
-
-# Governance keywords from Baier, Berninger & Kiesel (2020), Table 3
-# DOI: 10.1111/fmii.12132
-GOVERNANCE_KEYWORDS = [
-    "align", "aligned", "aligning", "alignment", "aligns", "bylaw", "bylaws",
-    "charter", "charters", "culture", "death", "duly", "parents", "independent",
-    "compliance", "conduct", "conformity", "governance", "misconduct",
-    "parachute", "parachutes", "perquisites", "plane", "planes", "poison",
-    "retirement",
-    "approval", "approvals", "approve", "approved", "approves", "approving",
-    "assess", "assessed", "assesses", "assessing", "assessment", "assessments",
-    "audit", "audited", "auditing", "auditor", "auditors", "audits", "control",
-    "controls", "coso", "detect", "detected", "detecting", "detection",
-    "evaluate", "evaluated", "evaluates", "evaluating", "evaluation",
-    "evaluations", "examination", "examinations", "examine", "examined",
-    "examines", "examining", "irs", "oversee", "overseeing", "oversees",
-    "oversight", "review", "reviewed", "reviewing", "reviews", "rotation",
-    "test", "tested", "testing", "tests", "treadway",
-    "backgrounds", "independence", "leadership", "nomination", "nominations",
-    "nominee", "nominees", "perspectives", "qualifications", "refreshment",
-    "skill", "skills", "succession", "tenure", "vacancies", "vacancy",
-    "appreciation", "award", "awarded", "awarding", "awards", "bonus",
-    "bonuses", "cd", "compensate", "compensated", "compensates",
-    "compensating", "compensation", "eip", "iso", "isos", "payout", "payouts",
-    "pension", "prsu", "prsus", "recoupment", "remuneration", "reward",
-    "rewarding", "rewards", "rsu", "rsus", "salaries", "salary", "severance",
-    "vest", "vested", "vesting", "vests",
-    "ballot", "ballots", "cast", "consent", "elect", "elected", "electing",
-    "election", "elections", "elects", "nominate", "nominated", "plurality",
-    "proponent", "proponents", "proposal", "proposals", "proxies", "quorum",
-    "vote", "voted", "votes", "voting",
-    "brother", "clicking", "conflict", "conflicts", "family", "grandchildren",
-    "grandparent", "grandparents", "inform", "insider", "insiders", "inspector",
-    "inspectors", "interlocks", "nephews", "nieces", "posting", "relatives",
-    "siblings", "sister", "son", "spousal", "spouse", "spouses", "stepchildren",
-    "stepparents", "transparency", "transparent", "visit", "visiting", "visits",
-    "webpage", "website",
-    "attract", "attracting", "attracts", "incentive", "incentives", "interview",
-    "interviews", "motivate", "motivated", "motivates", "motivating",
-    "motivation", "recruit", "recruiting", "recruitment", "retain", "retainer",
-    "retainers", "retaining", "retention", "talent", "talented", "talents",
-    "cobc", "ethic", "ethical", "ethically", "ethics", "honesty",
-    "bribery", "corrupt", "corruption", "crimes", "embezzlement",
-    "grassroots", "influence", "influences", "influencing", "lobbied",
-    "lobbies", "lobby", "lobbying", "lobbyist", "lobbyists",
-    "whistleblower",
-    "announce", "announced", "announcement", "announcements", "announces",
-    "announcing", "communicate", "communicated", "communicates",
-    "communicating", "erm", "fairly", "integrity", "liaison", "presentation",
-    "presentations", "sustainable",
-    "asc", "disclose", "disclosed", "discloses", "disclosing", "disclosure",
-    "disclosures", "fasb", "gaap", "objectivity", "press", "sarbanes",
-    "engagement", "engagements", "feedback", "hotline", "investor", "invite",
-    "invited", "mail", "mailed", "mailing", "mailings", "notice", "relations",
-    "stakeholder", "stakeholders",
-    "compact", "ungc",
-]
-
-GOVERNANCE_PATTERNS = [re.compile(rf"\b{re.escape(kw)}\b") for kw in GOVERNANCE_KEYWORDS]
+print("ESG classification running...")
 
 
 def load_classifiers():
+    # three independent binary ESGBERT models, each {pillar, none}
     e_clf = pipeline("text-classification", model="ESGBERT/EnvironmentalBERT-environmental", truncation=True, max_length=512)
-    s_clf = pipeline("text-classification", model="ESGBERT/SocialBERT-social",              truncation=True, max_length=512)
-    g_clf = pipeline("text-classification", model="ESGBERT/GovernanceBERT-governance",      truncation=True, max_length=512)
+    s_clf = pipeline("text-classification", model="ESGBERT/SocialBERT-social",               truncation=True, max_length=512)
+    g_clf = pipeline("text-classification", model="ESGBERT/GovernanceBERT-governance",       truncation=True, max_length=512)
     return e_clf, s_clf, g_clf
 
 
@@ -99,10 +34,6 @@ def get_pillar_score(result, pillar_label):
     return score if label == pillar_label.lower() else 1 - score
 
 
-def count_gov_keywords(text_lower):
-    return sum(1 for p in GOVERNANCE_PATTERNS if p.search(text_lower))
-
-
 def classify_batch(texts, e_clf, s_clf, g_clf):
     e_results = e_clf(texts)
     s_results = s_clf(texts)
@@ -110,8 +41,8 @@ def classify_batch(texts, e_clf, s_clf, g_clf):
 
     labels, scores = [], []
 
-    for text, e, s, g in zip(texts, e_results, s_results, g_results):
-        # raw per-pillar probabilities — no keyword interference in the argmax
+    for e, s, g in zip(e_results, s_results, g_results):
+        # raw per-pillar probabilities — each pillar competes on its own model score
         candidates = {
             "Environmental": get_pillar_score(e, "environmental"),
             "Social":        get_pillar_score(s, "social"),
@@ -124,16 +55,8 @@ def classify_batch(texts, e_clf, s_clf, g_clf):
             labels.append(best_label)
             scores.append(round(best_score, 4))
         else:
-            # nothing cleared threshold -> recall backstop:
-            # promote to Governance only if keyword evidence is strong enough.
-            # compensates for GovernanceBERT's lower recall without overriding
-            # confident Environmental/Social predictions (which already won above)
-            if count_gov_keywords(text.lower()) >= GOV_BACKSTOP_MIN_MATCHES:
-                labels.append("Governance")
-                scores.append(GOV_BACKSTOP_SCORE)
-            else:
-                labels.append(None)
-                scores.append(None)
+            labels.append(None)
+            scores.append(None)
 
     return labels, scores
 
@@ -147,7 +70,6 @@ def process():
     all_labels, all_scores = [], []
     if Path(CHECKPOINT_FILE).exists():
         ckpt = pd.read_parquet(CHECKPOINT_FILE)
-        done = ckpt["esg_label"].notna() | ckpt["_processed"].fillna(False)
         n_done = int(ckpt["_processed"].fillna(False).sum())
         if n_done > 0:
             all_labels = ckpt.loc[:n_done-1, "esg_label"].tolist()
@@ -194,9 +116,7 @@ def process():
     print(f"Labelled:       {df['esg_label'].notna().sum():,}")
     print(f"Unlabelled:     {df['esg_label'].isna().sum():,}")
     print("\nLabel distribution:")
-    print(df["esg_label"].value_counts())
-    gov_backstop = (df["esg_score"] == GOV_BACKSTOP_SCORE).sum()
-    print(f"\n(of which promoted by governance backstop: {gov_backstop:,})")
+    print(df["esg_label"].value_counts(dropna=False))
     print(f"\nSaved to: {OUTPUT_FILE}")
 
 
