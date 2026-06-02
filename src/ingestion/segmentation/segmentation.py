@@ -12,22 +12,36 @@ TABLES_FILE = "data/processed/tables.parquet"
 # segments shorter than this are dropped
 MIN_SEGMENT_CHARS = 60
 
+# segments longer than this are hard-wrapped so they fit ESGBERT's ~512-token window
+MAX_SEGMENT_CHARS = 1500
+
 print("Segmentation script running...")
 
 
-# heading patterns common in sustainability reports
-HEADING_PATTERNS = [
-    re.compile(r"^[A-Z][A-Z\s\-&/]{4,60}$"),              # ALL CAPS
-    re.compile(r"^\d+(\.\d+)*\s+[A-Z][A-Za-z\s]{3,60}$"), # 1.2 Numbered
-    re.compile(r"^[A-Z][a-z].*:$"),                         # Title ending with colon
-]
-
-
-def looks_like_heading(line):
-    line = line.strip()
-    if len(line) < 4 or len(line) > 80:
-        return False
-    return any(p.match(line) for p in HEADING_PATTERNS)
+def hard_wrap(sentence):
+    if len(sentence) <= MAX_SEGMENT_CHARS:
+        return [sentence]
+    clauses = re.split(r"(?<=[;:])\s+|(?<=,)\s+", sentence)
+    # if clause-splitting didn't help (no punctuation), fall back to word chunks
+    if max(len(c) for c in clauses) > MAX_SEGMENT_CHARS:
+        words = sentence.split()
+        clauses, buf = [], ""
+        for w in words:
+            if len(buf) + len(w) + 1 > MAX_SEGMENT_CHARS and buf:
+                clauses.append(buf); buf = w
+            else:
+                buf = f"{buf} {w}".strip()
+        if buf:
+            clauses.append(buf)
+    chunks, buf = [], ""
+    for c in clauses:
+        if len(buf) + len(c) + 1 > MAX_SEGMENT_CHARS and buf:
+            chunks.append(buf.strip()); buf = c
+        else:
+            buf = f"{buf} {c}".strip()
+    if buf:
+        chunks.append(buf.strip())
+    return chunks
 
 
 def split_sentences(text):
@@ -35,12 +49,17 @@ def split_sentences(text):
     text = re.sub(r"(\b(?:e\.g|i\.e|vs|Mr|Dr|Corp|Ltd|Inc|Fig|No|CO2|GHG))\.", r"\1<DOT>", text)
     text = re.sub(r"(\d+)\.(\d+)", r"\1<DOT>\2", text)
 
-    # split on sentence-ending punctuation followed by capital letter
-    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z])", text)
+    # split on sentence-ending punctuation OR bullet markers (lists lack terminal punctuation)
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z])|\s+•\s+", text)
 
-    # restore protected dots and drop very short fragments
     sentences = [p.replace("<DOT>", ".").strip() for p in parts]
-    return [s for s in sentences if len(s) > MIN_SEGMENT_CHARS]
+    sentences = [s for s in sentences if len(s) > MIN_SEGMENT_CHARS]
+
+    # hard-wrap any remaining over-long segment so the classifier never truncates
+    wrapped = []
+    for s in sentences:
+        wrapped.extend(hard_wrap(s))
+    return [s for s in wrapped if len(s) > MIN_SEGMENT_CHARS]
 
 
 def is_noise(text):
@@ -61,7 +80,6 @@ def is_noise(text):
 
 def segment_page(page, doc_meta, para_counter, sent_counter):
     segments = []
-    current_heading = "Preamble"
     current_paragraph = []
 
     def flush_paragraph():
@@ -93,7 +111,6 @@ def segment_page(page, doc_meta, para_counter, sent_counter):
                 "page_number":      page["page_number"],
                 "is_ocr":           page["is_ocr"],
                 # segment-level metadata
-                "section_heading":  current_heading,
                 "paragraph_id":     para_id,
                 "sentence_id":      sent_id,
                 "text":             sent,
@@ -109,9 +126,6 @@ def segment_page(page, doc_meta, para_counter, sent_counter):
         stripped = line.strip()
         if not stripped:
             flush_paragraph()
-        elif looks_like_heading(stripped):
-            flush_paragraph()
-            current_heading = stripped
         else:
             current_paragraph.append(stripped)
 
@@ -197,22 +211,22 @@ def process():
     print(f"Segment columns: {list(df.columns)}")
 
 
-# For Testing:
+if __name__ == "__main__":
+    process()
 
-# print sample of removed sentences
+
+# For Testing (run manually, not on import):
+
 removed_sample = []
-for json_path in list(Path(INPUT_DIR).rglob("*.json"))[:3]:  # just first 3 docs
+for json_path in list(Path(INPUT_DIR).rglob("*.json"))[:3]:
     with open(json_path, "r", encoding="utf-8") as f:
         doc = json.load(f)
     for page in doc["pages"]:
-        for sent in split_sentences(page["text"]):
-            if is_noise(sent):
-                removed_sample.append(sent)
+        for para in page["text"].split("\n"):
+            for sent in split_sentences(para):
+                if is_noise(sent):
+                    removed_sample.append(sent)
 
 print("\nSample of removed sentences:")
 for s in removed_sample[:20]:
     print(" -", s)
-
-
-if __name__ == "__main__":
-    process()
