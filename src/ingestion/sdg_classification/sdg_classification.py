@@ -13,11 +13,8 @@ BATCH_SIZE = 32
 # save progress every N batches
 CHECKPOINT_EVERY = 100
 
-# default minimum confidence to assign an SDG
+# minimum confidence to assign an SDG
 MIN_SCORE = 0.7
-
-# stricter threshold for the noisy Governance-SDG12 bucket
-G_SDG12_THRESHOLD = 0.85
 
 # SDGs in thesis scope — out-of-scope predictions are discarded
 IN_SCOPE_SDGS = {"sdg12", "sdg13", "sdg16"}
@@ -42,11 +39,15 @@ def normalize_sdg_label(raw_label):
     return f"sdg{digits}" if digits else raw_label.lower().replace(" ", "")
 
 
-def get_threshold(esg_label, sdg_label):
-    # pillar-aware: stricter cutoff for the known-noisy Governance-SDG12 bucket
-    if esg_label == "Governance" and sdg_label == "sdg12":
-        return G_SDG12_THRESHOLD
-    return MIN_SCORE
+def is_accepted(esg_label, sdg_label, score):
+    # must be in scope and clear the confidence threshold
+    if sdg_label not in IN_SCOPE_SDGS or score < MIN_SCORE:
+        return False
+    # SDG12 (responsible production/consumption) is an environmental goal; governance
+    # and social segments tagged SDG12 are sdgBERT catch-all misroutes, so reject them
+    if sdg_label == "sdg12" and esg_label != "Environmental":
+        return False
+    return True
 
 
 def classify_batch(texts, esg_labels, clf):
@@ -55,7 +56,7 @@ def classify_batch(texts, esg_labels, clf):
     for esg_label, r in zip(esg_labels, results):
         sdg = normalize_sdg_label(r["label"])
         score = r["score"]
-        if sdg in IN_SCOPE_SDGS and score >= get_threshold(esg_label, sdg):
+        if is_accepted(esg_label, sdg, score):
             labels.append(sdg)
             scores.append(round(score, 4))
         else:

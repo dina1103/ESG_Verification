@@ -17,6 +17,16 @@ print("=== SDG score stats ===")
 print(df.groupby("sdg_label")["sdg_score"].describe().round(4))
 print()
 
+# VERIFY the pillar restriction held: SDG12 must be Environmental-only,
+# so these two counts must both be 0
+g_sdg12 = len(df[(df["esg_label"] == "Governance") & (df["sdg_label"] == "sdg12")])
+s_sdg12 = len(df[(df["esg_label"] == "Social") & (df["sdg_label"] == "sdg12")])
+print("=== Pillar-restriction check (both must be 0) ===")
+print(f"Governance-SDG12: {g_sdg12}")
+print(f"Social-SDG12:     {s_sdg12}")
+print(f"  -> {'PASS' if g_sdg12 == 0 and s_sdg12 == 0 else 'FAIL — restriction did not apply'}")
+print()
+
 # sample each SDG to verify quality
 for sdg in ["sdg12", "sdg13", "sdg16"]:
     sample = df[df["sdg_label"] == sdg]
@@ -37,7 +47,7 @@ for s in no_sdg["text"].sample(min(10, len(no_sdg)), random_state=42).tolist():
 print()
 
 # cross-tab of ESG label vs SDG label
-# expected: E sentences -> mostly sdg13, G sentences -> mostly sdg16, S sentences -> spread
+# expected now: SDG12 column is Environmental-only; E -> sdg12/sdg13, G -> sdg16, S -> sdg16
 print("=== Cross-tab: ESG label x SDG label ===")
 print(pd.crosstab(df["esg_label"], df["sdg_label"].fillna("None"), dropna=False))
 print()
@@ -47,7 +57,7 @@ print("=== Cross-tab (row-normalized — % of each ESG pillar) ===")
 print(pd.crosstab(df["esg_label"], df["sdg_label"].fillna("None"), normalize="index").round(3))
 print()
 
-# climate vocabulary in SDG12 — these are likely SDG13 misclassifications
+# climate vocabulary in SDG12 — leakage of climate (SDG13) content into SDG12
 print("=== Climate vocabulary in SDG12-labelled sentences ===")
 print("(SDG12 sentences mentioning climate terms may be miscategorized SDG13 content)")
 sdg12 = df[df["sdg_label"] == "sdg12"]
@@ -64,44 +74,26 @@ for s in climate_in_sdg12["text"].sample(min(5, len(climate_in_sdg12)), random_s
     print(f"  - {s[:200]}")
 print()
 
-# distribution by report type — sustainability reports should have more SDG13
+# distribution by report type — sustainability reports should have more SDG content
 print("=== SDG distribution by report type ===")
-ct = pd.crosstab(df["report_type"], df["sdg_label"].fillna("None"), normalize="index").round(3)
-print(ct)
+print(pd.crosstab(df["report_type"], df["sdg_label"].fillna("None"), normalize="index").round(3))
 print()
 
 # distribution by company — sanity check for any anomalies
 print("=== SDG counts by company ===")
 print(pd.crosstab(df["company_name"], df["sdg_label"].fillna("None")))
-
-# look at G sentences tagged SDG12 — is this a misclassification or legitimate overlap?
-g_sdg12 = df[(df["esg_label"] == "Governance") & (df["sdg_label"] == "sdg12")]
-print(f"\n=== Governance sentences tagged SDG12 (n={len(g_sdg12):,}) ===")
-print("\nRandom samples:")
-for s in g_sdg12["text"].sample(min(15, len(g_sdg12)), random_state=42).tolist():
-    print(f"  - {s[:250]}")
 print()
 
-# look at S sentences tagged SDG12 — same question
-s_sdg12 = df[(df["esg_label"] == "Social") & (df["sdg_label"] == "sdg12")]
-print(f"=== Social sentences tagged SDG12 (n={len(s_sdg12):,}) ===")
-print("\nRandom samples:")
-for s in s_sdg12["text"].sample(min(15, len(s_sdg12)), random_state=42).tolist():
-    print(f"  - {s[:250]}")
+# SDG12 score distribution — now Environmental-only, single bucket
+print("=== Environmental-SDG12 score distribution ===")
+print(sdg12["sdg_score"].describe().round(4))
 print()
 
-# what's the SDG12 score distribution for G/S sentences vs E sentences?
-# if G/S sentences are getting lower scores, sdgBERT is genuinely uncertain about them
-print("=== SDG12 score distribution by ESG pillar ===")
-print(sdg12.groupby("esg_label")["sdg_score"].describe().round(4))
-
-# surviving G-SDG12 bucket after the 0.85 threshold
-print("\n=== Surviving G-SDG12 bucket ===")
-print(f"Count: {len(g_sdg12):,}")
-if len(g_sdg12) > 0:
-    print(f"Score range: {g_sdg12['sdg_score'].min():.4f} - {g_sdg12['sdg_score'].max():.4f}")
-    print(f"Mean score: {g_sdg12['sdg_score'].mean():.4f}")
-    print()
-    print("Random samples (should be legitimate sustainability/supply-chain governance, less financial boilerplate):")
-    for s in g_sdg12["text"].sample(min(15, len(g_sdg12)), random_state=42).tolist():
+# inspect the surviving Environmental-SDG12 bucket — should be responsible
+# production/consumption content (recycling, materials, procurement, resources)
+print("=== Surviving SDG12 bucket (Environmental pillar only) ===")
+print(f"Count: {len(sdg12):,}")
+if len(sdg12) > 0:
+    print("Random samples (expect recycling / circularity / procurement / resource use):")
+    for s in sdg12["text"].sample(min(15, len(sdg12)), random_state=42).tolist():
         print(f"  - {s[:250]}")
