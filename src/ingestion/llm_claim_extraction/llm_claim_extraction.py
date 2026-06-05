@@ -37,7 +37,7 @@ def call_llm(prompt_template, paragraph_text):
             "stream": False,
             "options": {
                 "temperature": 0.0,
-                "num_predict": 2048,
+                "num_predict": 4096,
                 "num_ctx": 8192,        # must fit prompt (~2200 tok) + paragraph + output
             },
         },

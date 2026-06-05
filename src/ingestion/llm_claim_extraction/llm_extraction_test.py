@@ -51,7 +51,7 @@ def call_llm(prompt_template, paragraph_text):
             "stream": False,
             "options": {
                 "temperature": 0.0,
-                "num_predict": 2048,
+                "num_predict": 4096,
                 "num_ctx": 8192,        # match the real corpus run
             },
         },
@@ -62,32 +62,49 @@ def call_llm(prompt_template, paragraph_text):
 
 
 def parse_llm_response(raw_text):
+    # try to extract a valid JSON object from the LLM response
+    # repair_status: None on clean parse, "repaired_from_truncation" if recovered,
+    # or an error string if unrecoverable
     text = raw_text.strip()
-    text = re.sub(r"^```(?:json)?\s*", "", text)
-    text = re.sub(r"\s*```$", "", text)
 
+    # strip any preamble before the first { and any markdown fences anywhere
+    text = text.replace("```json", "").replace("```", "")
+    brace = text.find("{")
+    if brace > 0:
+        text = text[brace:]  # drop "Here is the JSON..." preamble
+
+    # try direct parse
     try:
-        parsed = json.loads(text)
-        return parsed, None
+        return json.loads(text), None
     except json.JSONDecodeError as e:
         original_error = str(e)
 
+    # fallback 1: first balanced {...} block
     match = re.search(r"\{.*\}", text, re.DOTALL)
     if match:
         try:
-            parsed = json.loads(match.group(0))
-            return parsed, None
+            return json.loads(match.group(0)), None
         except json.JSONDecodeError:
             pass
 
-    last_complete = text.rfind("},")
+    # fallback 2: repair truncated output — find last complete claim object,
+    # close the claims array and the wrapper object
+    last_complete = text.rfind("}")
     if last_complete != -1:
-        repaired = text[:last_complete + 1] + "]}"
-        try:
-            parsed = json.loads(repaired)
-            return parsed, "repaired_from_truncation"
-        except json.JSONDecodeError:
-            pass
+        candidate = text[:last_complete + 1]
+        # try progressively: close array+object after the last complete claim
+        for suffix in ("]}", "}]}", "}"):
+            try:
+                return json.loads(candidate + suffix), "repaired_from_truncation"
+            except json.JSONDecodeError:
+                continue
+        # last resort: cut to last "}," (end of a claim), close array+object
+        last_claim = text.rfind("},")
+        if last_claim != -1:
+            try:
+                return json.loads(text[:last_claim + 1] + "]}"), "repaired_from_truncation"
+            except json.JSONDecodeError:
+                pass
 
     return None, f"JSON decode error: {original_error}"
 
