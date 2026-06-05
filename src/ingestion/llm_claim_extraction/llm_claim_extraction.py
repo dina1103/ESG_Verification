@@ -7,10 +7,10 @@ import pandas as pd
 from pathlib import Path
 from datetime import datetime, timedelta
 
-INPUT_PARQUET = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\llm_paragraphs"
-PROMPT_FILE   = r"C:\Users\dina_\Desktop\esg_verification_draft\src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
-OUTPUT_JSONL  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\llm_claim_extraction_result.jsonl"
-SUMMARY_FILE  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\llm_claim_extraction_summary.json"
+INPUT_PARQUET = r"C:\Users\dina_\Desktop\esg_verification\data\processed\llm_paragraphs.parquet"
+PROMPT_FILE   = r"C:\Users\dina_\Desktop\esg_verification\src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
+OUTPUT_JSONL  = r"C:\Users\dina_\Desktop\esg_verification\data\processed\llm_claim_extraction_result.jsonl"
+SUMMARY_FILE  = r"C:\Users\dina_\Desktop\esg_verification\data\processed\llm_claim_extraction_summary.json"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.1:8b"
@@ -25,8 +25,8 @@ MAX_PARAGRAPHS = None
 # overridable via --batch-size on the CLI. checkpointing means the next run resumes automatically.
 BATCH_SIZE = None
 
+
 def call_llm(prompt_template, paragraph_text):
-    # substitute paragraph into the prompt
     full_prompt = prompt_template.replace("{paragraph}", paragraph_text.replace('"', "'"))
 
     response = requests.post(
@@ -38,6 +38,7 @@ def call_llm(prompt_template, paragraph_text):
             "options": {
                 "temperature": 0.0,
                 "num_predict": 2048,
+                "num_ctx": 8192,        # must fit prompt (~2200 tok) + paragraph + output
             },
         },
         timeout=450,
@@ -47,38 +48,29 @@ def call_llm(prompt_template, paragraph_text):
 
 
 def parse_llm_response(raw_text):
-    # try to extract a valid JSON object from the LLM response
     # repair_status: None on clean parse, "repaired_from_truncation" if recovered,
     # or an error string if unrecoverable
     text = raw_text.strip()
-
-    # strip markdown code fences if present
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
 
-    # try direct parse
     try:
-        parsed = json.loads(text)
-        return parsed, None
+        return json.loads(text), None
     except json.JSONDecodeError as e:
         original_error = str(e)
 
-    # fallback 1: try to extract first {...} block (greedy match for nested braces)
     match = re.search(r"\{.*\}", text, re.DOTALL)
     if match:
         try:
-            parsed = json.loads(match.group(0))
-            return parsed, None
+            return json.loads(match.group(0)), None
         except json.JSONDecodeError:
             pass
 
-    # fallback 2: repair truncated output by finding last complete claim and closing json
     last_complete = text.rfind("},")
     if last_complete != -1:
         repaired = text[:last_complete + 1] + "]}"
         try:
-            parsed = json.loads(repaired)
-            return parsed, "repaired_from_truncation"
+            return json.loads(repaired), "repaired_from_truncation"
         except json.JSONDecodeError:
             pass
 
@@ -86,11 +78,9 @@ def parse_llm_response(raw_text):
 
 
 def load_processed_ids(output_path):
-    # read existing jsonl checkpoint, return set of already-processed block_ids
     processed = set()
     if not Path(output_path).exists():
         return processed
-
     with open(output_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -100,29 +90,24 @@ def load_processed_ids(output_path):
                 rec = json.loads(line)
                 processed.add(rec["block_id"])
             except (json.JSONDecodeError, KeyError):
-                # skip malformed lines
                 continue
     return processed
 
 
 def format_eta(seconds):
-    # format seconds as a human-readable duration
     return str(timedelta(seconds=int(seconds)))
 
 
 def main(batch_size=None):
-    # load prompt template
     print(f"Loading prompt from {PROMPT_FILE}...")
     with open(PROMPT_FILE, "r", encoding="utf-8") as f:
         prompt_template = f.read()
     print(f"  prompt: {len(prompt_template)} chars")
 
-    # load paragraphs
     print(f"\nLoading paragraphs from {INPUT_PARQUET}...")
     df = pd.read_parquet(INPUT_PARQUET)
     print(f"  loaded {len(df):,} paragraphs")
 
-    # check Ollama is reachable
     try:
         r = requests.get("http://localhost:11434/api/tags", timeout=5)
         r.raise_for_status()
@@ -130,7 +115,6 @@ def main(batch_size=None):
         print(f"\nERROR: cannot reach Ollama at localhost:11434 — {e}")
         return
 
-    # check for existing checkpoint and resume
     Path(OUTPUT_JSONL).parent.mkdir(parents=True, exist_ok=True)
     processed_ids = load_processed_ids(OUTPUT_JSONL)
     if processed_ids:
@@ -139,7 +123,6 @@ def main(batch_size=None):
     else:
         print(f"\nNo checkpoint found — starting fresh")
 
-    # test: cap the total target to first MAX_PARAGRAPHS of the corpus
     if MAX_PARAGRAPHS is not None:
         target_df = df.head(MAX_PARAGRAPHS)
         print(f"  SMOKE TEST: total target capped at {MAX_PARAGRAPHS} paragraphs")
@@ -153,14 +136,12 @@ def main(batch_size=None):
         print("\nAll paragraphs already processed. Nothing to do.")
         return
 
-    # cap this run to a batch — the next invocation will pick up via the checkpoint
     effective_batch = batch_size if batch_size is not None else BATCH_SIZE
     if effective_batch is not None and effective_batch < len(remaining):
         remaining = remaining.head(effective_batch).reset_index(drop=True)
         print(f"  batch cap: processing {len(remaining):,} this run "
               f"(rerun the script to continue)")
 
-    # run LLM on each remaining paragraph
     print(f"\nRunning LLM on each paragraph (appending to {OUTPUT_JSONL})...\n")
     run_start = time.time()
     n_processed_this_run = 0
@@ -170,7 +151,6 @@ def main(batch_size=None):
     n_llm_errors = 0
     total_claims_this_run = 0
 
-    # open jsonl in append mode so we never overwrite existing data
     with open(OUTPUT_JSONL, "a", encoding="utf-8") as out_f:
         for i, row in remaining.iterrows():
             t0 = time.time()
@@ -202,7 +182,6 @@ def main(batch_size=None):
                     parse_error = repair_status
                     n_failed += 1
 
-            # write record to jsonl checkpoint
             record = {
                 "block_id": row["block_id"],
                 "company_name": row["company_name"],
@@ -213,6 +192,7 @@ def main(batch_size=None):
                 "text_length": len(row["text"]),
                 "n_sentences": int(row["n_sentences"]),
                 "n_esg_sentences": int(row["n_esg_sentences"]),
+                "sentence_ids": list(row["sentence_ids"]),
                 "input_text": row["text"],
                 "raw_response": raw,
                 "parsed_claims": parsed_claims,
@@ -221,11 +201,10 @@ def main(batch_size=None):
                 "elapsed_seconds": elapsed,
             }
             out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
-            out_f.flush()  # ensure write is committed in case of crash
+            out_f.flush()
 
             n_processed_this_run += 1
 
-            # progress reporting
             if n_processed_this_run % PROGRESS_EVERY == 0 or n_processed_this_run == len(remaining):
                 elapsed_run = time.time() - run_start
                 avg_time = elapsed_run / n_processed_this_run
@@ -242,7 +221,6 @@ def main(batch_size=None):
                       f"avg={avg_time:.1f}s/p | "
                       f"eta={format_eta(eta_seconds)}")
 
-    # final summary
     run_elapsed = time.time() - run_start
     print("\n" + "=" * 80)
     print("RUN COMPLETE")
@@ -258,7 +236,6 @@ def main(batch_size=None):
         print(f"Avg time/paragraph:    {run_elapsed/n_processed_this_run:.1f}s")
     print(f"\nOutput: {OUTPUT_JSONL}")
 
-    # save run summary
     summary = {
         "run_completed_at": datetime.now().isoformat(),
         "n_processed_this_run": n_processed_this_run,
@@ -279,12 +256,7 @@ def main(batch_size=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run LLM claim extraction over paragraphs.")
-    parser.add_argument(
-        "--batch-size",
-        type=int,
-        default=None,
-        help="Process at most this many unprocessed paragraphs per run. "
-             "Overrides BATCH_SIZE constant. Omit for no cap.",
-    )
+    parser.add_argument("--batch-size", type=int, default=None,
+                        help="Process at most this many unprocessed paragraphs per run.")
     args = parser.parse_args()
     main(batch_size=args.batch_size)
