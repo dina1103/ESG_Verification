@@ -48,33 +48,48 @@ def call_llm(prompt_template, paragraph_text):
 
 
 def parse_llm_response(raw_text):
-    # repair_status: None on clean parse, "repaired_from_truncation" if recovered,
-    # or an error string if unrecoverable
+    if not raw_text:
+        return None, "empty response"
     text = raw_text.strip()
-    text = re.sub(r"^```(?:json)?\s*", "", text)
-    text = re.sub(r"\s*```$", "", text)
 
-    try:
-        return json.loads(text), None
-    except json.JSONDecodeError as e:
-        original_error = str(e)
+    # strip fences anywhere and any preamble before the first {
+    text = text.replace("```json", "").replace("```", "")
+    brace = text.find("{")
+    if brace > 0:
+        text = text[brace:]
 
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if match:
+    # escape stray control characters inside the JSON (raw newlines/tabs in strings)
+    # try strict first, then lenient
+    def try_load(s):
         try:
-            return json.loads(match.group(0)), None
+            return json.loads(s), None
         except json.JSONDecodeError:
-            pass
+            return None, "err"
 
-    last_complete = text.rfind("},")
-    if last_complete != -1:
-        repaired = text[:last_complete + 1] + "]}"
-        try:
-            return json.loads(repaired), "repaired_from_truncation"
-        except json.JSONDecodeError:
-            pass
+    parsed, _ = try_load(text)
+    if parsed is not None:
+        return parsed, None
 
-    return None, f"JSON decode error: {original_error}"
+    # lenient: re-encode control chars
+    cleaned = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
+    parsed, _ = try_load(cleaned)
+    if parsed is not None:
+        return parsed, "repaired_control_chars"
+
+    # truncation repair: cut to last complete claim object, close array+object
+    last = cleaned.rfind("}")
+    if last != -1:
+        for suffix in ("]}", "}]}", "}"):
+            p, _ = try_load(cleaned[:last+1] + suffix)
+            if p is not None:
+                return p, "repaired_from_truncation"
+        last_claim = cleaned.rfind("},")
+        if last_claim != -1:
+            p, _ = try_load(cleaned[:last_claim+1] + "]}")
+            if p is not None:
+                return p, "repaired_from_truncation"
+
+    return None, "unrecoverable"
 
 
 def load_processed_ids(output_path):
