@@ -1,13 +1,13 @@
 {
-  "run_completed_at": "2026-06-08T05:59:33.107656",
+  "run_completed_at": "2026-06-08T18:38:00.537692",
   "n_processed_this_run": 2000,
-  "n_parsed_ok": 1987,
-  "n_repaired": 25,
-  "n_failed": 13,
+  "n_parsed_ok": 1992,
+  "n_repaired": 32,
+  "n_failed": 8,
   "n_llm_errors": 0,
-  "total_claims_this_run": 13208,
-  "run_elapsed_seconds": 33736.06288409233,
-  "avg_seconds_per_paragraph": 16.868031442046167,
+  "total_claims_this_run": 13838,
+  "run_elapsed_seconds": 33886.73060250282,
+  "avg_seconds_per_paragraph": 16.94336530125141,
   "total_corpus_size": 8766,
-  "total_processed_overall": 4766
+  "total_processed_overall": 6766
 }
