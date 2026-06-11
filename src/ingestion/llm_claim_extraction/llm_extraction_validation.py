@@ -4,9 +4,9 @@ import time
 import requests
 from pathlib import Path
 
-INPUT_FILE  = r"C:\Users\dina_\Desktop\esg_verification\src\ingestion\ml_promise_dataset\English_test.json"
-PROMPT_FILE = r"C:\Users\dina_\Desktop\esg_verification\src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
-OUTPUT_FILE = r"C:\Users\dina_\Desktop\esg_verification\data\processed\llm_extraction_validation_results.json"
+INPUT_FILE  = r"src\ingestion\ml_promise_dataset\English_test.json"
+PROMPT_FILE = r"src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
+OUTPUT_FILE = r"data\processed\llm_extraction_validation_results.json"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.1:8b"
@@ -20,7 +20,7 @@ def call_llm(prompt_template, paragraph_text):
             "model": MODEL,
             "prompt": full_prompt,
             "stream": False,
-            "options": {"temperature": 0.0, "num_predict": 2048, "num_ctx": 8192},
+            "options": {"temperature": 0.0, "num_predict": 4096, "num_ctx": 8192},
         },
         timeout=450,
     )
@@ -29,26 +29,37 @@ def call_llm(prompt_template, paragraph_text):
 
 
 def parse_llm_response(raw_text):
+    if not raw_text:
+        return None, "empty response"
     text = raw_text.strip()
-    text = re.sub(r"^```(?:json)?\s*", "", text)
-    text = re.sub(r"\s*```$", "", text)
-    try:
-        return json.loads(text), None
-    except json.JSONDecodeError as e:
-        original_error = str(e)
-    m = re.search(r"\{.*\}", text, re.DOTALL)
-    if m:
+    text = text.replace("```json", "").replace("```", "")
+    brace = text.find("{")
+    if brace > 0:
+        text = text[brace:]
+    def try_load(s):
         try:
-            return json.loads(m.group(0)), None
+            return json.loads(s)
         except json.JSONDecodeError:
-            pass
-    last = text.rfind("},")
+            return None
+    parsed = try_load(text)
+    if parsed is not None:
+        return parsed, None
+    cleaned = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
+    parsed = try_load(cleaned)
+    if parsed is not None:
+        return parsed, "repaired_control_chars"
+    last = cleaned.rfind("}")
     if last != -1:
-        try:
-            return json.loads(text[:last + 1] + "]}"), "repaired_from_truncation"
-        except json.JSONDecodeError:
-            pass
-    return None, f"JSON decode error: {original_error}"
+        for suffix in ("]}", "}]}", "}"):
+            parsed = try_load(cleaned[:last + 1] + suffix)
+            if parsed is not None:
+                return parsed, "repaired_from_truncation"
+        last_claim = cleaned.rfind("},")
+        if last_claim != -1:
+            parsed = try_load(cleaned[:last_claim + 1] + "]}")
+            if parsed is not None:
+                return parsed, "repaired_from_truncation"
+    return None, "unrecoverable"
 
 
 def main():
