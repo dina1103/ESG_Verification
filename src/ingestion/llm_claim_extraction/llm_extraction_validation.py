@@ -11,6 +11,9 @@ OUTPUT_FILE = r"data\processed\llm_extraction_validation_results.json"
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.1:8b"
 
+# ML-Promise "promise" aligns with forward-looking claim types
+PROMISE_TYPES = {"target", "commitment"}
+
 
 def call_llm(prompt_template, paragraph_text):
     full_prompt = prompt_template.replace("{paragraph}", paragraph_text.replace('"', "'"))
@@ -62,6 +65,38 @@ def parse_llm_response(raw_text):
     return None, "unrecoverable"
 
 
+def confusion(records, pred_key):
+    tp = tn = fp = fn = 0
+    for r in records:
+        g, p = r["gold_yes"], r[pred_key]
+        if g and p: tp += 1
+        elif g and not p: fn += 1
+        elif not g and p: fp += 1
+        else: tn += 1
+    n = len(records)
+    acc  = (tp + tn) / n
+    prec = tp / (tp + fp) if (tp + fp) else 0
+    rec  = tp / (tp + fn) if (tp + fn) else 0
+    spec = tn / (tn + fp) if (tn + fp) else 0
+    f1   = 2 * prec * rec / (prec + rec) if (prec + rec) else 0
+    return {"tp": tp, "tn": tn, "fp": fp, "fn": fn, "accuracy": acc,
+            "recall": rec, "specificity": spec, "precision": prec, "f1": f1}
+
+
+def report(label, m, n):
+    print("\n" + "=" * 70)
+    print(label)
+    print("=" * 70)
+    print(f"                  pred claim   pred no-claim")
+    print(f"  gold promise     {m['tp']:4d} (TP)    {m['fn']:4d} (FN)")
+    print(f"  gold no-promise  {m['fp']:4d} (FP)    {m['tn']:4d} (TN)")
+    print(f"\nAccuracy:    {m['accuracy']:.3f}")
+    print(f"Recall:      {m['recall']:.3f}   <-- of real promises, fraction caught")
+    print(f"Specificity: {m['specificity']:.3f}")
+    print(f"Precision:   {m['precision']:.3f}")
+    print(f"F1:          {m['f1']:.3f}")
+
+
 def main():
     prompt_template = open(PROMPT_FILE, encoding="utf-8").read()
     print(f"Prompt: {len(prompt_template)} chars")
@@ -76,72 +111,53 @@ def main():
     print(f"Validating on {len(clean)} clean test paragraphs\n")
 
     results = []
-    tp = tn = fp = fn = 0
     parse_fail = 0
     run_start = time.time()
 
     for i, rec in enumerate(clean):
         gold_yes = (rec["promise_status"] == "Yes")
-        t0 = time.time()
         try:
             raw = call_llm(prompt_template, rec["data"])
             parsed, repair = parse_llm_response(raw)
         except Exception as e:
             raw, parsed, repair = None, None, f"llm_error: {e}"
-        elapsed = time.time() - t0
 
         if parsed is not None and isinstance(parsed, dict):
             claims = parsed.get("claims", [])
-            pred_yes = len(claims) > 0
             err = repair
         else:
-            claims, pred_yes, err = [], False, repair
+            claims, err = [], repair
             parse_fail += 1
 
-        if gold_yes and pred_yes: tp += 1
-        elif gold_yes and not pred_yes: fn += 1
-        elif not gold_yes and pred_yes: fp += 1
-        else: tn += 1
+        types = [str(c.get("claim_type", "")).lower() for c in claims]
+        pred_yes_full = len(claims) > 0
+        pred_yes_promise = any(t in PROMISE_TYPES for t in types)
 
         results.append({
             "url": rec["URL"], "page": rec["page_number"],
             "gold": rec["promise_status"], "gold_yes": gold_yes,
-            "pred_yes": pred_yes, "n_claims": len(claims),
-            "parse_error": err, "elapsed": elapsed,
+            "pred_yes": pred_yes_full,                # full taxonomy (any claim)
+            "pred_yes_promise": pred_yes_promise,     # target/commitment only
+            "n_claims": len(claims), "claim_types": types,
+            "parse_error": err,
         })
 
         if (i + 1) % 25 == 0:
             eta = (time.time() - run_start) / (i + 1) * (len(clean) - i - 1)
-            print(f"  [{i+1}/{len(clean)}] tp={tp} fn={fn} fp={fp} tn={tn} "
-                  f"parse_fail={parse_fail} eta={eta/60:.0f}min")
+            print(f"  [{i+1}/{len(clean)}] done, parse_fail={parse_fail}, eta={eta/60:.0f}min")
 
     n = len(clean)
-    acc  = (tp + tn) / n
-    prec = tp / (tp + fp) if (tp + fp) else 0          # of flagged, how many real
-    rec  = tp / (tp + fn) if (tp + fn) else 0          # of real promises, how many caught
-    spec = tn / (tn + fp) if (tn + fp) else 0          # of no-promise, how many correctly empty
-    f1   = 2 * prec * rec / (prec + rec) if (prec + rec) else 0
+    m_full = confusion(results, "pred_yes")
+    m_prom = confusion(results, "pred_yes_promise")
 
-    print("\n" + "=" * 70)
-    print("BINARY DETECTION vs ML-Promise promise_status")
-    print("=" * 70)
-    print(f"Clean test paragraphs: {n}  (Yes={tp+fn}, No={tn+fp})")
-    print(f"\n                  pred claim   pred no-claim")
-    print(f"  gold promise     {tp:4d} (TP)    {fn:4d} (FN)")
-    print(f"  gold no-promise  {fp:4d} (FP)    {tn:4d} (TN)")
-    print(f"\nAccuracy:    {acc:.3f}   (note: 67% Yes baseline — don't lead with this)")
-    print(f"Recall:      {rec:.3f}   <-- KEY: of real promises, fraction caught")
-    print(f"Specificity: {spec:.3f}   of no-promise paragraphs, fraction correctly left empty")
-    print(f"Precision:   {prec:.3f}   of flagged paragraphs, fraction that were real promises")
-    print(f"F1:          {f1:.3f}")
-    print(f"\nParse failures (counted as no-claim): {parse_fail}")
+    print(f"\nClean test paragraphs: {n}  (Yes={m_full['tp']+m_full['fn']}, No={m_full['tn']+m_full['fp']})")
+    report("FULL TAXONOMY (any extracted claim = Yes)", m_full, n)
+    report("PROMISE-RESTRICTED (target/commitment only = Yes)", m_prom, n)
+    print(f"\nParse failures: {parse_fail}")
     print(f"Total time: {(time.time()-run_start)/60:.0f} min")
 
-    summary = {"n": n, "tp": tp, "tn": tn, "fp": fp, "fn": fn,
-               "accuracy": acc, "recall": rec, "specificity": spec,
-               "precision": prec, "f1": f1, "parse_failures": parse_fail}
-    Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
-    json.dump({"summary": summary, "per_record": results},
+    json.dump({"summary_full": m_full, "summary_promise_restricted": m_prom,
+               "per_record": results},
               open(OUTPUT_FILE, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     print(f"\nSaved to {OUTPUT_FILE}")
 
