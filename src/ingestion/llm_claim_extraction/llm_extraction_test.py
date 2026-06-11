@@ -6,9 +6,9 @@ import requests
 import pandas as pd
 from pathlib import Path
 
-INPUT_PARQUET = r"C:\Users\olaya\Dina\ESG_Verification\data\processed\llm_paragraphs.parquet"
-PROMPT_FILE   = r"C:\Users\olaya\Dina\ESG_Verification\src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
-OUTPUT_FILE   = r"C:\Users\olaya\Dina\ESG_Verification\data\processed\llm_extraction_test_results.json"
+INPUT_PARQUET = r"data\processed\llm_paragraphs.parquet"
+PROMPT_FILE   = r"data\processed\llm_extraction_prompt.txt"
+OUTPUT_FILE   = r"data\processed\llm_extraction_test_results.json"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.1:8b"

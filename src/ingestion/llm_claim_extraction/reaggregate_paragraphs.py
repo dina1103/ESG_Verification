@@ -1,8 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-INPUT_PATH  = r"C:\Users\dina_\Desktop\esg_verification\data\processed\segments_esg_sdg.parquet"
-OUTPUT_PATH = r"C:\Users\dina_\Desktop\esg_verification\data\processed\llm_paragraphs.parquet"
+INPUT_PATH  = r"data\processed\segments_esg_sdg.parquet"
+OUTPUT_PATH = r"data\processed\llm_paragraphs.parquet"
 
 ESG_LABELS = {"Environmental", "Social", "Governance"}
 

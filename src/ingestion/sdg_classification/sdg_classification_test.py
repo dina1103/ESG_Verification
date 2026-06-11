@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_parquet(r"C:\Users\dell\ESG_Verification\data\processed\segments_esg_sdg.parquet")
+df = pd.read_parquet(r"data\processed\segments_esg_sdg.parquet")
 
 # basic shape and column check
 print("Shape:", df.shape)
