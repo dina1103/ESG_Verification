@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 
 INPUT_PARQUET = r"data\processed\llm_paragraphs.parquet"
-PROMPT_FILE   = r"data\processed\llm_extraction_prompt.txt"
+PROMPT_FILE   = r"src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
 OUTPUT_JSONL  = r"data\processed\llm_claim_extraction_result.jsonl"
 SUMMARY_FILE  = r"data\processed\llm_claim_extraction_summary.json"
 
