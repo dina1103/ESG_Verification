@@ -7,10 +7,10 @@ import pandas as pd
 from pathlib import Path
 from datetime import datetime, timedelta
 
-INPUT_PARQUET = r"C:\Users\olaya\Dina\ESG_Verification\data\processed\llm_paragraphs.parquet"
-PROMPT_FILE   = r"C:\Users\olaya\Dina\ESG_Verification\src\ingestion\llm_claim_extraction\llm_extraction_prompt.txt"
-OUTPUT_JSONL  = r"C:\Users\olaya\Dina\ESG_Verification\data\processed\llm_claim_extraction_result.jsonl"
-SUMMARY_FILE  = r"C:\Users\olaya\Dina\ESG_Verification\data\processed\llm_claim_extraction_summary.json"
+INPUT_PARQUET = r"data\processed\llm_paragraphs.parquet"
+PROMPT_FILE   = r"data\processed\llm_extraction_prompt.txt"
+OUTPUT_JSONL  = r"data\processed\llm_claim_extraction_result.jsonl"
+SUMMARY_FILE  = r"data\processed\llm_claim_extraction_summary.json"
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "llama3.1:8b"
