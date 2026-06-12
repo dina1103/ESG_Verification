@@ -7,9 +7,9 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-INPUT_JSONL    = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\llm_claim_extraction_result.jsonl"
-OUTPUT_CLAIMS  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\internal_consistency_claim_level.jsonl"
-OUTPUT_SUMMARY = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\internal_consistency_company_year.json"
+INPUT_JSONL    = r"data\processed\llm_claim_extraction_result.jsonl"
+OUTPUT_CLAIMS  = r"data\processed\internal_consistency_claim_level.jsonl"
+OUTPUT_SUMMARY = r"data\processed\internal_consistency_company_year.json"
 
 SBERT_MODEL = "sentence-transformers/all-mpnet-base-v2"
 SIMILARITY_THRESHOLD = 0.7
