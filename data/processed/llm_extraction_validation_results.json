@@ -1,6 +1,5 @@
 {
-  "summary": {
-    "n": 388,
+  "summary_full": {
     "tp": 194,
     "tn": 94,
     "fp": 33,
@@ -9,8 +8,18 @@
     "recall": 0.7432950191570882,
     "specificity": 0.7401574803149606,
     "precision": 0.8546255506607929,
-    "f1": 0.7950819672131147,
-    "parse_failures": 1
+    "f1": 0.7950819672131147
+  },
+  "summary_promise_restricted": {
+    "tp": 111,
+    "tn": 115,
+    "fp": 12,
+    "fn": 150,
+    "accuracy": 0.5824742268041238,
+    "recall": 0.42528735632183906,
+    "specificity": 0.905511811023622,
+    "precision": 0.9024390243902439,
+    "f1": 0.578125
   },
   "per_record": [
     {
@@ -19,9 +28,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 13.181055068969727
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -29,9 +39,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6920347213745117
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -39,9 +50,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 13.498570203781128
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative",
+        "achievement",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -49,9 +67,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.113039016723633
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -59,9 +83,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.089240789413452
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -69,9 +102,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5827274322509766
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -79,9 +113,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.642639636993408
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -89,9 +124,14 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.641580820083618
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -99,9 +139,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.49401068687439
+      "claim_types": [
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -109,9 +153,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.875440835952759
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -119,9 +168,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.661383628845215
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -129,9 +183,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5933191776275635
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -139,9 +194,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 18.039700269699097
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -149,9 +213,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.7330992221832275
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -159,9 +224,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 14.528078079223633
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "target",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -169,9 +241,20 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 9,
-      "parse_error": null,
-      "elapsed": 20.576148748397827
+      "claim_types": [
+        "target",
+        "achievement",
+        "achievement",
+        "target",
+        "target",
+        "commitment",
+        "narrative",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -179,9 +262,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.793286323547363
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -189,9 +279,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6973183155059814
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -199,9 +290,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5574629306793213
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -209,9 +301,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 19.669238805770874
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -219,9 +320,17 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 15.230612993240356
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -229,9 +338,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 21.375175952911377
+      "claim_types": [
+        "achievement",
+        "target",
+        "achievement",
+        "target",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -239,9 +358,20 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 9,
-      "parse_error": null,
-      "elapsed": 22.445032835006714
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "narrative",
+        "achievement",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -249,9 +379,22 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 11,
-      "parse_error": null,
-      "elapsed": 29.00825834274292
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -259,9 +402,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.976954698562622
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -269,9 +416,29 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 18,
-      "parse_error": null,
-      "elapsed": 42.038697957992554
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "target",
+        "target",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -279,9 +446,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.068029642105103
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -289,9 +463,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.414667129516602
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -299,9 +477,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.499538898468018
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -309,9 +492,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.074756860733032
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -319,9 +506,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.784218549728394
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "achievement",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -329,9 +522,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.724345207214355
+      "claim_types": [
+        "achievement",
+        "target",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -339,9 +539,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5840485095977783
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -349,9 +550,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.57162046432495
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "target",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -359,9 +569,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.239278078079224
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -369,9 +585,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 15.573871850967407
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -379,9 +605,24 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 13,
-      "parse_error": null,
-      "elapsed": 29.29823350906372
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "achievement",
+        "narrative",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "commitment",
+        "narrative",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -389,9 +630,12 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.636294364929199
+      "claim_types": [
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -399,9 +643,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.789129495620728
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative",
+        "achievement",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -409,9 +661,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 7.1258721351623535
+      "claim_types": [
+        "target",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -419,9 +675,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.213552713394165
+      "claim_types": [
+        "target",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -429,9 +689,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.365624666213989
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -439,9 +703,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.349599838256836
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -449,9 +717,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.9053871631622314
+      "claim_types": [
+        "target",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -459,9 +731,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.462094306945801
+      "claim_types": [
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -469,9 +744,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.39340615272522
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -479,9 +760,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 13.325765609741211
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -489,9 +777,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6440532207489014
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -499,9 +788,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.36226224899292
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -509,9 +803,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.167333602905273
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -519,9 +819,21 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 10,
-      "parse_error": null,
-      "elapsed": 21.467791318893433
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -529,9 +841,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.2500011920928955
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -539,9 +856,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.721637487411499
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -549,9 +867,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.410797119140625
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -559,9 +884,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.209667921066284
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -569,9 +901,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.442578554153442
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -579,9 +917,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.649574041366577
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -589,9 +931,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.720295190811157
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -599,9 +946,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.58987808227539
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -609,9 +961,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.821288108825684
+      "claim_types": [
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -619,9 +975,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.253042459487915
+      "claim_types": [
+        "target",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -629,9 +991,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 8.674432516098022
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -639,9 +1007,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 11.023784637451172
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -649,9 +1024,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.180828332901001
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -659,9 +1039,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.047799348831177
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -669,9 +1055,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5446314811706543
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -679,9 +1066,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.26949691772461
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -689,9 +1081,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 18.436230421066284
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -699,9 +1101,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6169321537017822
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -709,9 +1112,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5727286338806152
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -719,9 +1123,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6863527297973633
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.canadiansolar.com/wp-content/uploads/2022/07/Canadian-Solar_2021-ESG-Report_Final.pdf",
@@ -729,9 +1134,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.536717176437378
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -739,9 +1145,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5924370288848877
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -749,9 +1156,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.569401502609253
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -759,9 +1167,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5532801151275635
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -769,9 +1178,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.139553546905518
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -779,9 +1193,14 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.415715217590332
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -789,9 +1208,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.645486354827881
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -799,9 +1219,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5597941875457764
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -809,9 +1230,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.584848403930664
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -819,9 +1241,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.54624080657959
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -829,9 +1252,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5991737842559814
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -839,9 +1263,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 5.9641337394714355
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -849,9 +1277,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5605950355529785
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -859,9 +1288,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5513532161712646
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -869,9 +1299,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.349215745925903
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -879,9 +1315,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6134448051452637
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -889,9 +1326,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 13.607131004333496
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -899,9 +1343,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6604530811309814
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -909,9 +1354,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5753350257873535
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -919,9 +1365,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 18.93036651611328
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -929,9 +1385,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.723454236984253
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -939,9 +1396,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.544492244720459
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -949,9 +1407,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5627987384796143
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -959,9 +1418,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.556091070175171
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -969,9 +1429,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.708380937576294
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -979,9 +1440,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 7.089976787567139
+      "claim_types": [
+        "commitment",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -989,9 +1454,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.902746200561523
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -999,9 +1469,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.003473043441772
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1009,9 +1485,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.584907293319702
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1019,9 +1496,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.22963285446167
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1029,9 +1513,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.2361578941345215
+      "claim_types": [
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1039,9 +1526,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.595919132232666
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1049,9 +1537,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5446341037750244
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1059,9 +1548,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5549914836883545
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1069,9 +1559,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 13.522563457489014
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1079,9 +1577,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5504777431488037
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1089,9 +1588,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.606996297836304
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1099,9 +1603,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5086886882781982
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1109,9 +1614,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 5.438680410385132
+      "claim_types": [
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1119,9 +1628,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.58624529838562
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1129,9 +1643,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.574549674987793
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1139,9 +1654,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.249706268310547
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1149,9 +1669,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5774216651916504
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1159,9 +1680,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6106340885162354
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1169,9 +1691,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5376665592193604
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1179,9 +1702,23 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 12,
-      "parse_error": null,
-      "elapsed": 26.554336071014404
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1189,9 +1726,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.595172166824341
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1199,9 +1737,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.542118549346924
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1209,9 +1748,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.862518548965454
+      "claim_types": [
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1219,9 +1762,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 9.122509956359863
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1229,9 +1777,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.568006992340088
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1239,9 +1788,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.439691066741943
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.scotiabank.com/content/dam/scotiabank/corporate/Documents/Scotiabank_2023_ESG_Report_Final.pdf",
@@ -1249,9 +1805,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.525456190109253
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1259,9 +1816,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.022125720977783
+      "claim_types": [
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1269,9 +1830,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.594412088394165
+      "claim_types": [
+        "commitment",
+        "target",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1279,9 +1846,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": "unrecoverable",
-      "elapsed": 14.259109735488892
+      "claim_types": [],
+      "parse_error": "unrecoverable"
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1289,9 +1857,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5393075942993164
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1299,9 +1868,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.437088251113892
+      "claim_types": [
+        "target",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1309,9 +1883,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 15.938217163085938
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "target",
+        "achievement",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1319,9 +1901,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 5.792678356170654
+      "claim_types": [
+        "target",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1329,9 +1915,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.245173931121826
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1339,9 +1930,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.929921388626099
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1349,9 +1946,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5353806018829346
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1359,9 +1957,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.118612289428711
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1369,9 +1973,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5583298206329346
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1379,9 +1984,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5285592079162598
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1389,9 +1995,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.534940481185913
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1399,9 +2006,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5692861080169678
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1409,9 +2017,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.560875415802002
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1419,9 +2028,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 11.127388715744019
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1429,9 +2045,23 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 12,
-      "parse_error": null,
-      "elapsed": 27.16934370994568
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1439,9 +2069,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 12.434756517410278
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "target",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1449,9 +2085,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.150924205780029
+      "claim_types": [
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1459,9 +2099,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 7.120793342590332
+      "claim_types": [
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1469,9 +2113,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.566237688064575
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1479,9 +2124,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.578829765319824
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1489,9 +2135,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5582101345062256
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1499,9 +2146,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 13.793335199356079
+      "claim_types": [
+        "target",
+        "target",
+        "target",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1509,9 +2164,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.730062007904053
+      "claim_types": [
+        "achievement",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1519,9 +2179,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.812845706939697
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1529,9 +2193,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.731682777404785
+      "claim_types": [
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1539,9 +2206,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5244088172912598
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1549,9 +2217,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5680015087127686
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1559,9 +2228,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.628822088241577
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1569,9 +2239,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5647945404052734
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1579,9 +2250,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5755841732025146
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1589,9 +2261,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5419766902923584
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1599,9 +2272,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.525930881500244
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1609,9 +2283,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5416858196258545
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1619,9 +2294,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5384676456451416
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.wcap.ca/application/files/6916/9351/0185/2023_Whitecap_ESG_Report_FINAL.pdf",
@@ -1629,9 +2305,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 5.987971067428589
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1639,9 +2319,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.536681652069092
+      "claim_types": [
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1649,9 +2333,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.560737133026123
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1659,9 +2344,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5616438388824463
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1669,9 +2355,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 6.31154727935791
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1679,9 +2370,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6421711444854736
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1689,9 +2381,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.0956449508667
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1699,9 +2397,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.422001361846924
+      "claim_types": [
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1709,9 +2410,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.618513584136963
+      "claim_types": [
+        "target",
+        "target",
+        "target",
+        "target",
+        "narrative",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1719,9 +2429,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 18.261587381362915
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "target",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1729,9 +2449,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.181976318359375
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative",
+        "target",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1739,9 +2466,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.776677131652832
+      "claim_types": [
+        "target",
+        "target",
+        "target",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1749,9 +2482,19 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 18.651325225830078
+      "claim_types": [
+        "target",
+        "target",
+        "target",
+        "target",
+        "target",
+        "target",
+        "target",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1759,9 +2502,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.455739736557007
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1769,9 +2518,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.719226121902466
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1779,9 +2533,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.996800899505615
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1789,9 +2548,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.839556694030762
+      "claim_types": [
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1799,9 +2562,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.394377946853638
+      "claim_types": [
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1809,9 +2576,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.402591943740845
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1819,9 +2590,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.553040266036987
+      "claim_types": [
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1829,9 +2603,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.825608253479004
+      "claim_types": [
+        "target",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1839,9 +2621,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 5.053674936294556
+      "claim_types": [
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1849,9 +2635,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.249605178833008
+      "claim_types": [
+        "narrative",
+        "commitment",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1859,9 +2653,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 13.996565580368042
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1869,9 +2671,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.02599596977234
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "commitment",
+        "target",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1879,9 +2690,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.996697187423706
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1889,9 +2705,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 8.70797085762024
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1899,9 +2721,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.157025337219238
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1909,9 +2736,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.17912745475769
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1919,9 +2752,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.551268577575684
+      "claim_types": [
+        "target",
+        "achievement",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1929,9 +2768,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 9.267265319824219
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1939,9 +2783,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.679331541061401
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1949,9 +2798,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.896905899047852
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1959,9 +2812,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.720128774642944
+      "claim_types": [
+        "target",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1969,9 +2826,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.207558870315552
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1979,9 +2841,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 8.366760015487671
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://video.ralphlauren.com/202301/20230124-sustainability-citizenship-hub/2022-RL-GCSReport.pdf",
@@ -1989,9 +2857,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5945518016815186
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -1999,9 +2868,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.615063428878784
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2009,9 +2879,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5553317070007324
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2019,9 +2890,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.592486619949341
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2029,9 +2901,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.567207098007202
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2039,9 +2912,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5473134517669678
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2049,9 +2923,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.534860849380493
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2059,9 +2934,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5309484004974365
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2069,9 +2945,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 17.61697220802307
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "commitment",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2079,9 +2965,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.431862831115723
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2089,9 +2980,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 11.743451595306396
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2099,9 +2997,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.590754508972168
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2109,9 +3008,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5790293216705322
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2119,9 +3019,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.414826393127441
+      "claim_types": [
+        "achievement",
+        "target",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2129,9 +3035,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.833183526992798
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2139,9 +3051,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.65035080909729
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2149,9 +3062,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.668635845184326
+      "claim_types": [
+        "commitment",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2159,9 +3076,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.4468464851379395
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2169,9 +3091,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5599496364593506
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2179,9 +3102,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.585282564163208
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2189,9 +3113,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6006667613983154
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2199,9 +3124,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5628435611724854
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2209,9 +3135,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.370306015014648
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2219,9 +3150,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.3263773918151855
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2229,9 +3165,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6136865615844727
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2239,9 +3176,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5358970165252686
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2249,9 +3187,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.31439733505249
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2259,9 +3202,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.651663064956665
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2269,9 +3217,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.703697443008423
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2279,9 +3228,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.472728490829468
+      "claim_types": [
+        "target",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2289,9 +3242,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.37612509727478
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2299,9 +3257,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.5277180671691895
+      "claim_types": [
+        "target",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2309,9 +3271,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.776268243789673
+      "claim_types": [
+        "achievement",
+        "target",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2319,9 +3287,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.251322984695435
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2329,9 +3303,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 13.623358249664307
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "achievement",
+        "narrative",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.td.com/content/dam/tdcom/canada/about-td/pdf/esg/2022-esg-report.pdf",
@@ -2339,9 +3321,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6323671340942383
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2349,9 +3332,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.59667706489563
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2359,9 +3343,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.578674077987671
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2369,9 +3354,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5448904037475586
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2379,9 +3365,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5308563709259033
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2389,9 +3376,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5599069595336914
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2399,9 +3387,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.53967547416687
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2409,9 +3398,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.540175437927246
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2419,9 +3409,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.60781192779541
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2429,9 +3420,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5441668033599854
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2439,9 +3431,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5700836181640625
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2449,9 +3442,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5456483364105225
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2459,9 +3453,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.564190626144409
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2469,9 +3464,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5504093170166016
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2479,9 +3475,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.560906171798706
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2489,9 +3486,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5616438388824463
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2499,9 +3497,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.607773780822754
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2509,9 +3508,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.745185375213623
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2519,9 +3524,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.518644332885742
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2529,9 +3535,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.552872657775879
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2539,9 +3546,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5642082691192627
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2549,9 +3557,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5298619270324707
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2559,9 +3568,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.547938585281372
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2569,9 +3579,19 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 16.73199224472046
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2579,9 +3599,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5212066173553467
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2589,9 +3610,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5949158668518066
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2599,9 +3621,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.530482292175293
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2609,9 +3632,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5320842266082764
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2619,9 +3643,18 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.396329641342163
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2629,9 +3662,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.639566421508789
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2639,9 +3673,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 15.023184537887573
+      "claim_types": [
+        "achievement",
+        "commitment",
+        "target",
+        "target",
+        "target",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2649,9 +3691,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.416482448577881
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2659,9 +3705,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.456664323806763
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2669,9 +3720,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 11.213726043701172
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2679,9 +3738,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.422398090362549
+      "claim_types": [
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2689,9 +3751,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.428435325622559
+      "claim_types": [
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2699,9 +3764,14 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.09083366394043
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2709,9 +3779,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5592527389526367
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2719,9 +3790,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.871335983276367
+      "claim_types": [
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2729,9 +3803,21 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 10,
-      "parse_error": null,
-      "elapsed": 23.404436349868774
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2739,9 +3825,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.71913480758667
+      "claim_types": [
+        "achievement",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2749,9 +3839,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.726982116699219
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2759,9 +3853,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.173202753067017
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2769,9 +3867,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.736340522766113
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2779,9 +3882,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.4842565059661865
+      "claim_types": [
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2789,9 +3896,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.2975332736969
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2799,9 +3915,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.081480503082275
+      "claim_types": [
+        "commitment",
+        "achievement",
+        "achievement",
+        "narrative",
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2809,9 +3933,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.281816720962524
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2819,9 +3950,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.55331540107727
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2829,9 +3969,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 12.726393222808838
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "commitment",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2839,9 +3986,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.970947265625
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2849,9 +4000,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 17.491796731948853
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2859,9 +4019,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.721778154373169
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.richemont.com/media/zimbq1ew/richemont-esg-report-2023-en.pdf",
@@ -2869,9 +4035,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.641551971435547
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2879,9 +4051,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5769543647766113
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2889,9 +4062,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 8.721836805343628
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "achievement",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2899,9 +4078,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 9.352325201034546
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2909,9 +4093,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 15.92050838470459
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "achievement",
+        "achievement",
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2919,9 +4111,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.289265394210815
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2929,9 +4129,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.905069589614868
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2939,9 +4148,18 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 18.320873498916626
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2949,9 +4167,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6581969261169434
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2959,9 +4178,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.719003438949585
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2969,9 +4189,14 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.24428129196167
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2979,9 +4204,16 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 13.414929151535034
+      "claim_types": [
+        "narrative",
+        "achievement",
+        "commitment",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2989,9 +4221,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.558218240737915
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -2999,9 +4237,19 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 19.153059244155884
+      "claim_types": [
+        "narrative",
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3009,9 +4257,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 17.150445222854614
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3019,9 +4276,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.981451988220215
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3029,9 +4291,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.26892638206482
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3039,9 +4307,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 13.511398315429688
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3049,9 +4324,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5995635986328125
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3059,9 +4335,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.480384826660156
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3069,9 +4349,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 19.039706707000732
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "narrative",
+        "achievement",
+        "achievement",
+        "narrative",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3079,9 +4369,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 17.06678581237793
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3089,9 +4388,19 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 8,
-      "parse_error": null,
-      "elapsed": 18.68426275253296
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3099,9 +4408,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 16.306127786636353
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3109,9 +4427,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 9.76876187324524
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3119,9 +4443,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.529102563858032
+      "claim_types": [
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3129,9 +4457,26 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 15,
-      "parse_error": null,
-      "elapsed": 34.871543884277344
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3139,9 +4484,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.864554405212402
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3149,9 +4500,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5482022762298584
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3159,9 +4511,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 11.780127763748169
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3169,9 +4528,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 9.910387992858887
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3179,9 +4543,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6212470531463623
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3189,9 +4554,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 11.053359031677246
+      "claim_types": [
+        "target",
+        "commitment",
+        "commitment",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://cdn.shopify.com/s/files/1/0089/6027/8609/files/2022_House_of_Baukjen_Impact_Report_Risk_Matrix.pdf?v=1683877901",
@@ -3199,9 +4570,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 9.419863224029541
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3209,9 +4585,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.591276168823242
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3219,9 +4596,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.561720132827759
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3229,9 +4607,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5453567504882812
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3239,9 +4618,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.539499521255493
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3249,9 +4629,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.542853832244873
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3259,9 +4640,14 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.61487078666687
+      "claim_types": [
+        "achievement",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3269,9 +4655,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5527894496917725
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3279,9 +4666,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5439422130584717
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3289,9 +4677,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5620901584625244
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3299,9 +4688,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5401270389556885
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3309,9 +4699,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5504298210144043
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3319,9 +4710,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.553896188735962
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3329,9 +4721,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.116680383682251
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3339,9 +4736,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.033702373504639
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3349,9 +4752,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5144107341766357
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3359,9 +4763,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5246777534484863
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3369,9 +4774,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.507631540298462
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3379,9 +4785,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6121468544006348
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3389,9 +4796,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6058850288391113
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3399,9 +4807,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.311856746673584
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3409,9 +4822,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.288671493530273
+      "claim_types": [
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3419,9 +4835,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.317235231399536
+      "claim_types": [
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3429,9 +4849,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5365912914276123
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3439,9 +4860,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5377957820892334
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3449,9 +4871,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.557774305343628
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3459,9 +4882,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5257515907287598
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3469,9 +4893,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5533716678619385
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3479,9 +4904,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.553339958190918
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3489,9 +4915,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.204816579818726
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3499,9 +4930,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.102680444717407
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3509,9 +4948,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 5.3492865562438965
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3519,9 +4962,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.275766372680664
+      "claim_types": [
+        "achievement",
+        "achievement",
+        "achievement",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3529,9 +4978,15 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 4,
-      "parse_error": "repaired_from_truncation",
-      "elapsed": 12.063916683197021
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": "repaired_from_truncation"
     },
     {
       "url": "https://www.rbc.com/community-sustainability/_assets-custom/pdf/esg-progress-report-2023.pdf",
@@ -3539,9 +4994,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5520830154418945
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3549,9 +5005,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.2078680992126465
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3559,9 +5019,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.64270567893982
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3569,9 +5034,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.890713453292847
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3579,9 +5049,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.748120546340942
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3589,9 +5063,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.4902732372283936
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3599,9 +5074,12 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.284284591674805
+      "claim_types": [
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3609,9 +5087,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5839028358459473
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3619,9 +5098,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.668978691101074
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3629,9 +5109,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.533694744110107
+      "claim_types": [
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3639,9 +5122,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.565690517425537
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3649,9 +5133,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5461182594299316
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3659,9 +5144,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.289597272872925
+      "claim_types": [
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3669,9 +5158,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5726828575134277
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3679,9 +5169,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5548179149627686
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3689,9 +5180,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.53544020652771
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3699,9 +5191,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.715999126434326
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3709,9 +5202,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.533545732498169
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3719,9 +5213,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.5720205307006836
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3729,9 +5224,13 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.416339874267578
+      "claim_types": [
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3739,9 +5238,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.897649765014648
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "target"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3749,9 +5253,18 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 7,
-      "parse_error": null,
-      "elapsed": 13.820205211639404
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3759,9 +5272,14 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 7.60820460319519
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3769,9 +5287,10 @@
       "gold": "No",
       "gold_yes": false,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.503988027572632
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3779,9 +5298,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.557161808013916
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3789,9 +5309,16 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 5,
-      "parse_error": null,
-      "elapsed": 13.285143375396729
+      "claim_types": [
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3799,9 +5326,15 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 4,
-      "parse_error": null,
-      "elapsed": 10.735722541809082
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "narrative",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3809,9 +5342,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.6267826557159424
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3819,9 +5353,10 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": false,
+      "pred_yes_promise": false,
       "n_claims": 0,
-      "parse_error": null,
-      "elapsed": 2.543266773223877
+      "claim_types": [],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3829,9 +5364,17 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 6,
-      "parse_error": null,
-      "elapsed": 14.931833028793335
+      "claim_types": [
+        "commitment",
+        "narrative",
+        "achievement",
+        "narrative",
+        "narrative",
+        "achievement"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3839,9 +5382,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.396063804626465
+      "claim_types": [
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3849,9 +5396,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.50897765159607
+      "claim_types": [
+        "target",
+        "commitment",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3859,9 +5411,14 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 3,
-      "parse_error": null,
-      "elapsed": 8.19239592552185
+      "claim_types": [
+        "commitment",
+        "commitment",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3869,9 +5426,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": true,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.535999774932861
+      "claim_types": [
+        "achievement",
+        "commitment"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3879,9 +5440,13 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 2,
-      "parse_error": null,
-      "elapsed": 6.808126211166382
+      "claim_types": [
+        "achievement",
+        "narrative"
+      ],
+      "parse_error": null
     },
     {
       "url": "https://canadanickel.com/wp-content/uploads/2023/10/09.07.2023_CNC-ESG-Report2023-web-1.pdf",
@@ -3889,9 +5454,12 @@
       "gold": "Yes",
       "gold_yes": true,
       "pred_yes": true,
+      "pred_yes_promise": false,
       "n_claims": 1,
-      "parse_error": null,
-      "elapsed": 4.969987154006958
+      "claim_types": [
+        "achievement"
+      ],
+      "parse_error": null
     }
   ]
 }
