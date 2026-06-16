@@ -3,65 +3,127 @@ import re
 import time
 from pathlib import Path
 from collections import defaultdict
-import numpy as np
+import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 INPUT_JSONL    = r"data\processed\llm_claim_extraction_result.jsonl"
+INPUT_TABLES   = r"data\processed\tables_clean.parquet"
 OUTPUT_CLAIMS  = r"data\processed\internal_consistency_claim_level.jsonl"
 OUTPUT_SUMMARY = r"data\processed\internal_consistency_company_year.json"
 
 SBERT_MODEL = "sentence-transformers/all-mpnet-base-v2"
-SIMILARITY_THRESHOLD = 0.7
-
-# minimum directional verdicts (aligned+contradicted) required to compute a score
-# below this, the score rests on too few claims to be meaningful -> null
-MIN_VERDICTS_FOR_SCORE = 2
-
-# OPTION 1: minimum metric-field similarity to accept a qual->quant pairing
 METRIC_MATCH_THRESHOLD = 0.75
+MIN_VERDICTS_FOR_SCORE = 3
 
-# metric keyword -> direction that means "improvement"
-# applied when narrative uses ambiguous words like "improved", "progress"
-METRIC_IMPROVEMENT_DIRECTION = {
-    "emission": "down",
-    "ghg": "down",
-    "co2": "down",
-    "carbon": "down",
-    "water": "down",
-    "waste": "down",
-    "energy": "down",       # energy consumption
-    "incident": "down",
-    "injury": "down",
-    "accident": "down",
-    "spill": "down",
-    "violation": "down",
-    "renewable": "up",
-    "recycled": "up",
-    "recycling": "up",
-    "diversity": "up",
-    "women": "up",
-    "training": "up",
-    "certification": "up",
-    "efficiency": "up",
-    "saving": "up",
-}
+NULLISH = {"", "n/a", "none", "na", "null"}
 
-# directional verbs/adjectives
-DOWN_WORDS = ["reduced", "reducing", "decrease", "decreased", "lowered", "lower",
-              "cut", "declined", "declining", "minimized", "minimizing", "fell",
-              "dropped", "diminished"]
-UP_WORDS   = ["increased", "increasing", "grew", "growing", "expanded", "expanding",
-              "raised", "rose", "boosted", "doubled", "tripled"]
-AMBIGUOUS_IMPROVEMENT_WORDS = ["improved", "improving", "progress", "better", "enhanced",
-                                "advanced", "strengthened"]
-STABLE_WORDS = ["maintained", "sustained", "kept stable", "remained"]
+FAMILIES = [
+    ("ghg_emissions",      re.compile(r'(?i)\b(emission|co2|co\u2082|carbon|ghg|scope\s*[123]|decarboni)\b'), "down"),
+    ("energy_consumption", re.compile(r'(?i)\b(energy consumption|energy use|electricity consumption|'
+                                      r'power consumption|energy intensity|fuel consumption|specific energy)\b'), "down"),
+    ("renewable_energy",   re.compile(r'(?i)\b(renewable|solar|wind|green tariff|clean energy|green electricity)\b'), "up"),
+    ("water",              re.compile(r'(?i)\bwater\b'), "down"),
+    ("waste",              re.compile(r'(?i)\b(waste|landfill)\b'), "down"),
+    ("recycling",          re.compile(r'(?i)\b(recycl|circular|secondary material|reuse)\b'), "up"),
+    ("diversity",          re.compile(r'(?i)\b(diversity|women|gender|female|inclusion)\b'), "up"),
+    ("safety",             re.compile(r'(?i)\b(safety|injur|accident|incident|fatalit)\b'), "down"),
+]
 
-CONJUNCTION_PATTERN = r"\b(?:but|while|however|although|whereas|yet)\b"
+MEASURABLE = re.compile(r'(?i)\b(emission|co2|co\u2082|carbon|ghg|scope\s*[123]|energy|electricity|'
+                        r'fuel|water|waste|landfill|recycl|renewable|consumption|intensity|'
+                        r'spill|pollution|nox|sox|biodiversit|'
+                        r'diversity|women|gender|female|safety|injur|accident|incident|fatalit|turnover)\b')
+TARGET = re.compile(r'(?i)(\bby\s*20\d{2}|target|aim to|goal|will reduce|plan to|commit|'
+                    r'save an additional|reduce .* by \d)')
+NONDIRECTIONAL = re.compile(r'(?i)\b(measures|measured by|documents|defined as|refers to|'
+                            r'is calculated|are calculated|represents|comprises|consists of|'
+                            r'not directly comparable|not comparable|methodology|definition of)\b')
+# ---- false-positive filters (raise contradiction precision) ----
+RISK_FRAMING = re.compile(r'(?i)\b(could (significantly )?impact|categoris\w+ climate|'
+                          r'climate-related risks|risks and opportunities|impact demand|'
+                          r'demand for our|may affect|exposure to|could face|slower progress)\b')
+WRONG_SUBJECT = re.compile(r'(?i)\b(unit sales|business activities|growth in both unit|'
+                           r'continued growth|impact demand for|eu set|set new ambitious|'
+                           r'set new|governmental regulation|negative impact on earnings)\b')
+TEMP_FRAMING = re.compile(r'(?i)(keep the increase|global temperature|temperature .*1\.5|'
+                          r'aims to keep|do our part|aligned with the (united nations|paris))')
+TARGET_LANG = re.compile(r'(?i)\b(commit to|we commit|by 20[2-9]\d|net zero target|'
+                         r'we anticipate|will reduce|target set|intend to)\b')
+FRAMING = re.compile(r'(?i)\b(global leader|leader in|recognizes that|is one of the most|'
+                     r'most pressing|pressing global|we recognize|advancements)\b')
+ACTION = re.compile(r'(?i)\b(reduc\w+|cut|cutting|lower\w+|decreas\w+|minimi\w+|increas\w+|'
+                    r'expand\w+|improv\w+|grow\w+|switch\w+|avoid\w+|achiev\w+)\b')
+
+# evidence-side filters: exclude product comparisons and financial-only rows from being used as evidence
+PRODUCT_COMP = re.compile(r'(?i)(compared to conventional|lifecycle emissions of|all-in lifecycle|'
+                          r'less than a (conventional|gasoline)|vs\.? a (conventional|gasoline)|'
+                          r'well-to-wheels|greet|model [3sy]\b|leaf emits|than its gasoline|'
+                          r'conventional vehicles of the same)')
+FINANCIAL_EV = re.compile(r'(?i)(earning power|earnings|profit margin|revenue|invest)')
+EVID_MEASURABLE = re.compile(r'(?i)\b(emission|co2|ghg|carbon|scope|energy|electricity|water|waste|'
+                             r'renewable|recycl|women|gender|diversity|injur|incident|safety)\b')
+# ambiguous-intent qual words that are not a clear directional commitment on their own
+AMBIG_INTENT = re.compile(r'(?i)\b(control|maintain|manage)\b')
+CLEAR_INTENT = re.compile(r'(?i)\b(reduc|cut|lower|decreas|increas|expand|'
+                          r'improv\w+ (the )?(share|percentage|rate|intensity))\b')
+
+MACRO = re.compile(r'(?i)(\bthe world\b|world\u2019?s |\bglobal |\bworldwide\b|industry-wide|'
+                   r'\bthe planet\b|\bglobally\b|across the (sector|industry))')
+
+TBL_DOWN = re.compile(r'(?i)\b(decreas\w*|reduc\w*|lower\w*|fell|declin\w*|cut|fall)\b')
+TBL_UP   = re.compile(r'(?i)\b(increas\w*|grew|rose|higher|growth)\b')
+TBL_PCT  = re.compile(r'(\d+(?:\.\d+)?)\s*%')
+
+DOWN_WORDS = ["reduced","reducing","reduce","decrease","decreased","lowered","lower","cut","cutting",
+              "declined","declining","minimized","fell","dropped","diminished","lowering"]
+UP_WORDS   = ["increased","increasing","increase","grew","growing","grow","expanded","expanding",
+              "raised","rose","boosted","doubled","tripled","improving","improved"]
+
+
+def present(v):
+    return not (v is None or (isinstance(v, str) and v.strip().lower() in NULLISH))
+
+
+def metric_family(text):
+    for name, rx, improve in FAMILIES:
+        if rx.search(text):
+            return name, improve
+    return None, None
+
+
+def has_measurable_metric(c):
+    return c.get("metric") and bool(MEASURABLE.search(str(c["metric"])))
+
+
+def has_number(text):
+    return bool(re.search(r'\d', text))
+
+
+def stated_direction(text):
+    t = text.lower()
+    if any(w in t for w in DOWN_WORDS): return "down"
+    if any(w in t for w in UP_WORDS):   return "up"
+    return None
+
+
+def measured_direction(c):
+    if c.get("source") == "table":
+        return c.get("direction")
+    bv, qv = c.get("baseline_value"), c.get("quantified_value")
+    if present(bv) and present(qv):
+        try:
+            b, q = float(bv), float(qv)
+            return "down" if q < b else "up" if q > b else "stable"
+        except (ValueError, TypeError):
+            pass
+    t = c["claim_text"].lower()
+    if any(w in t for w in DOWN_WORDS): return "down"
+    if any(w in t for w in UP_WORDS):   return "up"
+    return None
 
 
 def load_claims(path):
-    # read jsonl, flatten to one record per claim
     rows = []
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
@@ -72,325 +134,230 @@ def load_claims(path):
                 rec = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            claims = rec.get("parsed_claims") or []
-            for claim in claims:
-                # attach parent record context
+            if rec.get("parse_error"):
+                continue
+            for claim in (rec.get("parsed_claims") or []):
                 rows.append({
-                    "block_id": rec["block_id"],
-                    "company_name": rec["company_name"],
-                    "year": rec["year"],
-                    "claim_text": claim.get("claim_text", ""),
-                    "claim_type": claim.get("claim_type", ""),
-                    "metric": claim.get("metric", "N/A"),
+                    "block_id": rec.get("block_id"),
+                    "company_name": rec.get("company_name"),
+                    "year": rec.get("year"),
+                    "claim_text": claim.get("claim_text", "") or "",
+                    "claim_type": (claim.get("claim_type") or "").lower(),
+                    "metric": claim.get("metric"),
                     "quantified_value": claim.get("quantified_value"),
-                    "unit": claim.get("unit"),
-                    "baseline_year": claim.get("baseline_year"),
                     "baseline_value": claim.get("baseline_value"),
-                    "target_year": claim.get("target_year"),
-                    "scope": claim.get("scope", "N/A"),
-                    "geography": claim.get("geography", "N/A"),
-                    "framework_reference": claim.get("framework_reference", "none"),
+                    "source": "claim",
                 })
     return rows
 
 
+def load_table_evidence(path):
+    t = pd.read_parquet(path)
+    ev = []
+    for _, r in t.iterrows():
+        txt = re.sub(r'\s+', ' ', str(r["text"])).strip()
+        if len(txt) > 160 or not MEASURABLE.search(txt):
+            continue
+        if not TBL_PCT.search(txt) or TARGET.search(txt) or MACRO.search(txt):
+            continue
+        has_down = bool(TBL_DOWN.search(txt)); has_up = bool(TBL_UP.search(txt))
+        if has_down == has_up:
+            continue
+        ev.append({
+            "block_id": r["table_row_id"], "company_name": r["company_name"], "year": r["year"],
+            "claim_text": txt, "metric": txt,
+            "direction": "down" if has_down else "up", "source": "table",
+        })
+    return ev
 
-def has_real_metric(c):
-    # a usable metric field - not N/A / None / empty
-    m = c.get("metric")
-    if m is None:
-        return False
-    m = str(m).strip().lower()
-    return m not in ("", "n/a", "none", "na")
 
 def is_qualitative(c):
-    # narrative/commitment without a number
-    return c["claim_type"] in ("narrative", "commitment") and c["quantified_value"] is None
+    if c["claim_type"] not in ("narrative", "commitment"):
+        return False
+    if present(c["quantified_value"]):
+        return False
+    if not has_measurable_metric(c):
+        return False
+    q = c["claim_text"]
+    if stated_direction(q) is None:
+        return False
+    if NONDIRECTIONAL.search(q):
+        return False
+    # false-positive filters: framing, risk-hedging, wrong-subject, temperature, targets, identity
+    if RISK_FRAMING.search(q) or WRONG_SUBJECT.search(q) or TEMP_FRAMING.search(q):
+        return False
+    if TARGET_LANG.search(q) or FRAMING.search(q):
+        return False
+    # require a first-person action verb on the metric (firm acting, not just topic mention)
+    if not ACTION.search(q):
+        return False
+    # ambiguous "control/maintain/manage" without a clear directional verb is not directional
+    if AMBIG_INTENT.search(q) and not CLEAR_INTENT.search(q):
+        return False
+    fam, _ = metric_family(q + " " + str(c["metric"]))
+    return fam is not None
 
 
-def is_quantitative_evidence(c):
-    # achievements with a real measured value (skip future targets)
-    return c["claim_type"] == "achievement" and c["quantified_value"] is not None
+def is_quant_evidence(c):
+    if c["claim_type"] != "achievement":
+        return False
+    if not has_measurable_metric(c):
+        return False
+    if not (present(c["quantified_value"]) or has_number(c["claim_text"])):
+        return False
+    if TARGET.search(c["claim_text"]):
+        return False
+    if MACRO.search(c["claim_text"]):
+        return False
+    # evidence-side filters: not a product comparison, not financial-only
+    if PRODUCT_COMP.search(c["claim_text"]):
+        return False
+    if FINANCIAL_EV.search(c["claim_text"]) and not EVID_MEASURABLE.search(c["claim_text"]):
+        return False
+    if measured_direction(c) is None:
+        return False
+    fam, _ = metric_family(c["claim_text"] + " " + str(c["metric"]))
+    return fam is not None
 
 
-def split_on_conjunctions(text):
-    # split on contrastive conjunctions for multi-direction narratives
-    parts = re.split(CONJUNCTION_PATTERN, text, flags=re.IGNORECASE)
-    return [p.strip() for p in parts if p.strip()]
+def dedupe(items):
+    seen, out = set(), []
+    for c in items:
+        key = (c["claim_text"].strip().lower(), str(c["metric"]).strip().lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(c)
+    return out
 
 
-def expected_direction_from_text(text, metric):
-    # extract directional intent from narrative text
-    text_lower = text.lower()
-    metric_lower = (metric or "").lower()
-
-    # check explicit direction words first
-    if any(w in text_lower for w in DOWN_WORDS):
-        return "down"
-    if any(w in text_lower for w in UP_WORDS):
-        return "up"
-    if any(w in text_lower for w in STABLE_WORDS):
-        return "stable"
-
-    # ambiguous "improvement" words resolved via metric lookup
-    if any(w in text_lower for w in AMBIGUOUS_IMPROVEMENT_WORDS):
-        for keyword, direction in METRIC_IMPROVEMENT_DIRECTION.items():
-            if keyword in metric_lower or keyword in text_lower:
-                return direction
-        return "unknown"
-
-    return "unknown"
-
-
-def actual_direction_from_quant(quant_claim):
-    # compute actual direction from quantitative claim
-    baseline = quant_claim.get("baseline_value")
-    current = quant_claim.get("quantified_value")
-
-    # if explicit baseline + current, compute directly
-    if baseline is not None and current is not None:
-        if current < baseline:
-            return "down"
-        elif current > baseline:
-            return "up"
-        else:
-            return "stable"
-
-    # otherwise infer from quantitative claim text (e.g., "reduced by 30%")
-    text_lower = quant_claim.get("claim_text", "").lower()
-    if any(w in text_lower for w in DOWN_WORDS):
-        return "down"
-    if any(w in text_lower for w in UP_WORDS):
-        return "up"
-    return "unknown"
-
-
-def assess_clause(qual_clause, qual_metric, quant_claim, similarity):
-    # full assessment of one qualitative clause vs its best quantitative match
-    if similarity < SIMILARITY_THRESHOLD:
-        return {
-            "verdict": "unsupported",
-            "expected_direction": None,
-            "actual_direction": None,
-            "reason": f"no quantitative match above threshold (best sim={similarity:.3f})",
-        }
-
-    expected = expected_direction_from_text(qual_clause, qual_metric)
-    actual = actual_direction_from_quant(quant_claim)
-
-    if expected == "unknown" or actual == "unknown":
-        return {
-            "verdict": "direction_unknown",
-            "expected_direction": expected,
-            "actual_direction": actual,
-            "reason": "could not determine direction",
-        }
-
-    if expected == actual:
-        verdict = "aligned"
-    else:
-        verdict = "contradicted"
-
-    return {
-        "verdict": verdict,
-        "expected_direction": expected,
-        "actual_direction": actual,
-        "reason": f"expected={expected}, actual={actual}",
-    }
+def assess(qc, ev):
+    qf, q_improve = metric_family(qc["claim_text"] + " " + str(qc["metric"]))
+    ef, e_improve = metric_family(ev["claim_text"] + " " + str(ev["metric"]))
+    if qf is None or ef is None or qf != ef:
+        return None
+    stated = stated_direction(qc["claim_text"])
+    measured = measured_direction(ev)
+    if stated is None or measured is None:
+        return None
+    stated_is_improvement = (stated == q_improve)
+    measured_is_improvement = (measured == e_improve)
+    if stated_is_improvement == measured_is_improvement:
+        return ("aligned", qf, stated, measured)
+    return ("contradicted", qf, stated, measured)
 
 
 def main():
     print(f"Loading claims from {INPUT_JSONL}...")
-    all_claims = load_claims(INPUT_JSONL)
-    print(f"  loaded {len(all_claims):,} claims total")
+    claims = load_claims(INPUT_JSONL)
+    print(f"  {len(claims):,} claims")
 
-    # group by (company, year)
-    groups = defaultdict(list)
-    for c in all_claims:
-        groups[(c["company_name"], c["year"])].append(c)
-    print(f"  grouped into {len(groups)} company-year combinations")
+    print(f"Loading table evidence from {INPUT_TABLES}...")
+    table_ev = load_table_evidence(INPUT_TABLES)
+    print(f"  {len(table_ev):,} directional table-evidence rows")
 
-    print(f"\nLoading SBERT model: {SBERT_MODEL}...")
+    by_group = defaultdict(lambda: {"claims": [], "tables": []})
+    for c in claims:
+        by_group[(c["company_name"], c["year"])]["claims"].append(c)
+    for e in table_ev:
+        by_group[(e["company_name"], e["year"])]["tables"].append(e)
+    print(f"  {len(by_group)} company-year groups")
+
+    print(f"\nLoading SBERT: {SBERT_MODEL}...")
     model = SentenceTransformer(SBERT_MODEL)
 
     Path(OUTPUT_CLAIMS).parent.mkdir(parents=True, exist_ok=True)
-
-    per_claim_results = []
-    per_group_summary = {}
-
-    print(f"\nProcessing company-year groups...\n")
+    per_claim, summary = [], {}
     t0 = time.time()
 
-    for i, ((company, year), claims) in enumerate(sorted(groups.items()), start=1):
-        qualitative = [c for c in claims if is_qualitative(c)]
-        quantitative = [c for c in claims if is_quantitative_evidence(c)]
+    for i, ((company, year), g) in enumerate(sorted(by_group.items()), 1):
+        quals = dedupe([c for c in g["claims"] if is_qualitative(c)])
+        claim_ev = dedupe([c for c in g["claims"] if is_quant_evidence(c)])
+        evidence = claim_ev + g["tables"]
 
-        # skip groups where consistency cannot be checked
-        if not qualitative or not quantitative:
-            per_group_summary[f"{company}__{year}"] = {
-                "company_name": company,
-                "year": year,
-                "n_qualitative": len(qualitative),
-                "n_quantitative": len(quantitative),
-                "n_aligned": 0,
-                "n_contradicted": 0,
-                "n_unsupported": 0,
-                "n_direction_unknown": 0,
-                "internal_consistency_score": None,
-                "note": "insufficient data" if not qualitative or not quantitative else None,
+        if not quals or not evidence:
+            summary[f"{company}__{year}"] = {
+                "company_name": company, "year": year,
+                "n_qualitative": len(quals), "n_evidence": len(evidence),
+                "n_evidence_claim": len(claim_ev), "n_evidence_table": len(g["tables"]),
+                "n_aligned": 0, "n_contradicted": 0, "n_directional_verdicts": 0,
+                "consistency_score": None, "contradiction_score": None,
+                "n_contradictions": 0, "note": "insufficient data",
             }
-            print(f"  [{i:3d}/{len(groups)}] {company} {year}: skipped (qual={len(qualitative)}, quant={len(quantitative)})")
+            print(f"  [{i:3d}/{len(by_group)}] {company} {year}: skip (qual={len(quals)} ev={len(evidence)})")
             continue
 
-        # embed both pools
-        quant_texts = [c["claim_text"] for c in quantitative]
-        quant_embeds = model.encode(quant_texts, show_progress_bar=False)
+        q_emb = model.encode([str(c["metric"]) for c in quals], show_progress_bar=False, batch_size=64)
+        e_emb = model.encode([str(c["metric"]) for c in evidence], show_progress_bar=False, batch_size=64)
+        sim = cosine_similarity(q_emb, e_emb)
 
-        n_aligned = 0
-        n_contradicted = 0
-        n_unsupported = 0
-        n_direction_unknown = 0
-
-        # OPTION 1: match qualitative -> quantitative on METRIC-FIELD similarity.
-        # only qualitative claims WITH a real metric are assessed; the rest are
-        # recorded as unsupported (no metric to match on).
-        qual_with_metric = [q for q in qualitative if has_real_metric(q)]
-        qual_no_metric   = [q for q in qualitative if not has_real_metric(q)]
-
-        # every no-metric qualitative claim is unsupported by construction
-        for q in qual_no_metric:
-            n_unsupported += 1
-            per_claim_results.append({
-                "company_name": company, "year": year,
-                "qualitative_block_id": q["block_id"],
-                "qualitative_clause": q["claim_text"],
-                "qualitative_metric": q.get("metric"),
-                "best_match_block_id": None, "best_match_text": None,
-                "best_match_metric": None, "similarity": None,
-                "expected_direction": None, "actual_direction": None,
-                "verdict": "unsupported",
-                "reason": "qualitative claim has no usable metric field",
-            })
-
-        if qual_with_metric:
-            qual_metric_texts = [str(q["metric"]) for q in qual_with_metric]
-            quant_metric_texts = [str(c.get("metric")) for c in quantitative]
-            qmet_embeds = model.encode(qual_metric_texts, show_progress_bar=False, batch_size=64)
-            cmet_embeds = model.encode(quant_metric_texts, show_progress_bar=False, batch_size=64)
-            metric_sim_matrix = cosine_similarity(qmet_embeds, cmet_embeds)
-        else:
-            metric_sim_matrix = None
-
-        for row_idx, qual_claim in enumerate(qual_with_metric):
-            clause = qual_claim["claim_text"]
-            msims = metric_sim_matrix[row_idx]
-            best_idx = int(msims.argmax())
-            best_sim = float(msims[best_idx])
-            best_quant = quantitative[best_idx]
-
-            # require metric-field similarity above METRIC_MATCH_THRESHOLD
-            if best_sim < METRIC_MATCH_THRESHOLD:
-                n_unsupported += 1
-                per_claim_results.append({
-                    "company_name": company, "year": year,
-                    "qualitative_block_id": qual_claim["block_id"],
-                    "qualitative_clause": clause,
-                    "qualitative_metric": qual_claim.get("metric"),
-                    "best_match_block_id": best_quant["block_id"],
-                    "best_match_text": best_quant["claim_text"],
-                    "best_match_metric": best_quant.get("metric"),
-                    "similarity": round(best_sim, 4),
-                    "expected_direction": None, "actual_direction": None,
-                    "verdict": "unsupported",
-                    "reason": f"no quantitative claim with matching metric (best metric sim={best_sim:.3f})",
-                })
+        n_al = n_con = 0
+        seen_pairs = set()
+        for r, qc in enumerate(quals):
+            j = int(sim[r].argmax())
+            s = float(sim[r][j])
+            if s < METRIC_MATCH_THRESHOLD:
                 continue
-
-            # already gated on metric match; pass 1.0 so assess_clause's own
-            # similarity gate does not re-reject
-            result = assess_clause(clause, qual_claim.get("metric"), best_quant, 1.0)
-
-            if result["verdict"] == "aligned":
-                n_aligned += 1
-            elif result["verdict"] == "contradicted":
-                n_contradicted += 1
-            elif result["verdict"] == "unsupported":
-                n_unsupported += 1
+            ev = evidence[j]
+            # skip self/near-self matches (a claim matched to itself is meaningless)
+            if qc["claim_text"].strip().lower()[:40] == ev["claim_text"].strip().lower()[:40]:
+                continue
+            pair_key = (qc["claim_text"].strip().lower(), ev["claim_text"].strip().lower())
+            if pair_key in seen_pairs:
+                continue
+            seen_pairs.add(pair_key)
+            verdict_info = assess(qc, ev)
+            if verdict_info is None:
+                continue
+            verdict, fam, stated, measured = verdict_info
+            if verdict == "aligned":
+                n_al += 1
             else:
-                n_direction_unknown += 1
-
-            per_claim_results.append({
-                "company_name": company,
-                "year": year,
-                "qualitative_block_id": qual_claim["block_id"],
-                "qualitative_clause": clause,
-                "qualitative_metric": qual_claim.get("metric"),
-                "best_match_block_id": best_quant["block_id"],
-                "best_match_text": best_quant["claim_text"],
-                "best_match_metric": best_quant.get("metric"),
-                "similarity": round(best_sim, 4),
-                "expected_direction": result["expected_direction"],
-                "actual_direction": result["actual_direction"],
-                "verdict": result["verdict"],
-                "reason": result["reason"],
+                n_con += 1
+            per_claim.append({
+                "company_name": company, "year": year, "metric_family": fam,
+                "qual_block_id": qc["block_id"], "qual_claim": qc["claim_text"],
+                "qual_metric": qc["metric"], "stated_direction": stated,
+                "evidence_source": ev["source"], "evidence_block_id": ev["block_id"],
+                "evidence_claim": ev["claim_text"], "evidence_metric": ev["metric"],
+                "measured_direction": measured, "metric_similarity": round(s, 4),
+                "verdict": verdict,
             })
 
-        # internal consistency score: aligned / (aligned + contradicted)
-        # excludes unsupported and direction_unknown from denominator
-        denom = n_aligned + n_contradicted
-
-        # minimum-evidence threshold: a score from <MIN_VERDICTS claims is noise,
-        # not a measurement - treat as insufficient evidence (null)
+        denom = n_al + n_con
         if denom < MIN_VERDICTS_FOR_SCORE:
-            score = None
-            score_note = f"insufficient_evidence (only {denom} directional verdicts)"
+            cons_score = contra_score = None
+            note = f"insufficient_evidence ({denom} verdicts)"
         else:
-            score = n_aligned / denom
-            score_note = None
+            cons_score = round(n_al / denom, 4)
+            contra_score = round(n_con / denom, 4)
+            note = None
 
-        per_group_summary[f"{company}__{year}"] = {
-            "company_name": company,
-            "year": year,
-            "n_qualitative": len(qualitative),
-            "n_quantitative": len(quantitative),
-            "n_aligned": n_aligned,
-            "n_contradicted": n_contradicted,
-            "n_unsupported": n_unsupported,
-            "n_direction_unknown": n_direction_unknown,
-            "n_directional_verdicts": denom,
-            "internal_consistency_score": round(score, 4) if score is not None else None,
-            "note": score_note,
+        summary[f"{company}__{year}"] = {
+            "company_name": company, "year": year,
+            "n_qualitative": len(quals), "n_evidence": len(evidence),
+            "n_evidence_claim": len(claim_ev), "n_evidence_table": len(g["tables"]),
+            "n_aligned": n_al, "n_contradicted": n_con, "n_directional_verdicts": denom,
+            "consistency_score": cons_score, "contradiction_score": contra_score,
+            "n_contradictions": n_con, "note": note,
         }
+        cs = f"{cons_score:.3f}" if cons_score is not None else "N/A"
+        print(f"  [{i:3d}/{len(by_group)}] {company} {year}: qual={len(quals)} "
+              f"ev={len(evidence)}(c{len(claim_ev)}/t{len(g['tables'])}) | "
+              f"aligned={n_al} contradicted={n_con} | consistency={cs}")
 
-        print(f"  [{i:3d}/{len(groups)}] {company} {year}: "
-              f"qual={len(qualitative)} quant={len(quantitative)} | "
-              f"aligned={n_aligned} contradicted={n_contradicted} "
-              f"unsupported={n_unsupported} unknown={n_direction_unknown} | "
-              f"score={score:.3f}" if score is not None else
-              f"  [{i:3d}/{len(groups)}] {company} {year}: "
-              f"qual={len(qualitative)} quant={len(quantitative)} | "
-              f"aligned={n_aligned} contradicted={n_contradicted} "
-              f"unsupported={n_unsupported} unknown={n_direction_unknown} | "
-              f"score=N/A")
-
-    # save per-claim results
     with open(OUTPUT_CLAIMS, "w", encoding="utf-8") as f:
-        for rec in per_claim_results:
+        for rec in per_claim:
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-
-    # save per-group summary
     with open(OUTPUT_SUMMARY, "w", encoding="utf-8") as f:
-        json.dump(per_group_summary, f, indent=2, ensure_ascii=False)
+        json.dump(summary, f, indent=2, ensure_ascii=False)
 
-    elapsed = time.time() - t0
-    print(f"\n{'='*80}")
-    print("COMPLETE")
-    print(f"{'='*80}")
-    print(f"Total time:            {elapsed:.0f}s")
-    print(f"Per-claim records:     {len(per_claim_results):,}")
-    print(f"Company-year groups:   {len(per_group_summary)}")
-    print(f"Per-claim output:      {OUTPUT_CLAIMS}")
-    print(f"Summary output:        {OUTPUT_SUMMARY}")
+    scored = sum(1 for v in summary.values() if v["consistency_score"] is not None)
+    total_con = sum(v["n_contradictions"] for v in summary.values())
+    print(f"\n{'='*70}\nCOMPLETE in {time.time()-t0:.0f}s")
+    print(f"company-years scored: {scored}/{len(summary)} | contradictions: {total_con}")
+    print(f"verdicts: {len(per_claim):,}")
+    print(f"  {OUTPUT_CLAIMS}\n  {OUTPUT_SUMMARY}")
 
 
 if __name__ == "__main__":
