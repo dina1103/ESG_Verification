@@ -1,0 +1,7775 @@
+{
+  "cluster_128": {
+    "metrics_in_cluster": [
+      "% female participation in Nissan Skills Foundation programs",
+      "Nissan Software Training Center graduation rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_263": {
+    "metrics_in_cluster": [
+      "AEB fitment rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_35": {
+    "metrics_in_cluster": [
+      "ASI certification rate",
+      "IATF 16949 certification rate",
+      "IATF 16949 certification rate for supplier locations",
+      "third-party certification rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_359": {
+    "metrics_in_cluster": [
+      "ASR recycling rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_66": {
+    "metrics_in_cluster": [
+      "ASTM Level One Rate",
+      "ASTM Level One Rate Fatalities"
+    ],
+    "n_claims": 6,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_341": {
+    "metrics_in_cluster": [
+      "AWD vehicle sales share"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_109": {
+    "metrics_in_cluster": [
+      "Absenteeism rate in Italy",
+      "absenteeism rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_28": {
+    "metrics_in_cluster": [
+      "Accident Frequency Rate (AFR)",
+      "Occupational health and safety performance (accident frequency rate)",
+      "TRIR (Total Recordable Incident Rate)",
+      "accident frequency rate",
+      "accident rate",
+      "occupational accident frequency rate",
+      "occupational safety rate",
+      "recordable work-related accident rate (TRIR)"
+    ],
+    "n_claims": 13,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "/100 workers",
+      "accidents/million miles",
+      "per 100 workers"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 12,
+    "n_claims_unflipped": 1
+  },
+  "cluster_332": {
+    "metrics_in_cluster": [
+      "Air emissions",
+      "Particulate matter emissions",
+      "VOC emissions",
+      "air emissions",
+      "air emissions rate",
+      "specific VOC emissions",
+      "vehicle emissions",
+      "volatile organic compound (VOC) emissions",
+      "volatile organic compound emissions",
+      "volatile organic compound emissions per vehicle"
+    ],
+    "n_claims": 19,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ford Motor Company",
+      "Tesla, Inc.",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "g/m2",
+      "kg/vehicle",
+      "metric tons/year",
+      "mg/m3"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 19,
+    "n_claims_unflipped": 0
+  },
+  "cluster_82": {
+    "metrics_in_cluster": [
+      "American Indian or Alaskan Native employee percentage",
+      "Black/African American employee percentage",
+      "Hispanic/Latino employee percentage",
+      "White employee percentage",
+      "underrepresented racial and ethnic representation in workforce (US)"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_18": {
+    "metrics_in_cluster": [
+      "Annual Total Compensation Ratio",
+      "CEO pay ratio",
+      "CEO-to-median-employee pay ratio",
+      "CEO-to-median-employee-compensation-ratio",
+      "Pay ratio",
+      "annual total compensation ratio",
+      "pay-out ratio"
+    ],
+    "n_claims": 7,
+    "n_companies": 4,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      ":1",
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_68": {
+    "metrics_in_cluster": [
+      "Anti-Corruption Compliance Training Completion Rate",
+      "anti-corruption qualification rate",
+      "anti-corruption training certification rate for permanent staff",
+      "anti-corruption training completion rate",
+      "training rate for high-risk functions in relation to anti-corruption"
+    ],
+    "n_claims": 7,
+    "n_companies": 3,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_74": {
+    "metrics_in_cluster": [
+      "Audit attendance rate",
+      "Supplier Audit Percentage",
+      "Supplier audit participation rate",
+      "audit completion rate",
+      "audit completion rate for mining practices",
+      "business partner due diligence audit completion rate",
+      "compliance audit rate",
+      "supplier audit completion rate",
+      "supplier audit participation rate"
+    ],
+    "n_claims": 13,
+    "n_companies": 3,
+    "companies": [
+      "Ford Motor Company",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 13
+  },
+  "cluster_400": {
+    "metrics_in_cluster": [
+      "Audits and assessments"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_327": {
+    "metrics_in_cluster": [
+      "Automatic Emergency Braking (AEB)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_97": {
+    "metrics_in_cluster": [
+      "Average hours of training per year per employee",
+      "Training and education performance (average hours of training per year per employee)",
+      "Training costs per employee",
+      "Training hours per employee",
+      "average annual training hours per employee",
+      "average number of training hours per employee",
+      "average training hours per employee",
+      "training expenses per employee",
+      "training hours per employee",
+      "training hours provided"
+    ],
+    "n_claims": 22,
+    "n_companies": 6,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "General Motors Company",
+      "Subaru Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "hours",
+      "hours/employee/year",
+      "¥",
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 22
+  },
+  "cluster_70": {
+    "metrics_in_cluster": [
+      "BEV market share",
+      "market share"
+    ],
+    "n_claims": 6,
+    "n_companies": 3,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Subaru Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_238": {
+    "metrics_in_cluster": [
+      "BLI score"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_119": {
+    "metrics_in_cluster": [
+      "BMW Group profit before financial result in automotive segment",
+      "BMW Group profit before tax",
+      "BMW Group profit before tax in financial services segment"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_150": {
+    "metrics_in_cluster": [
+      "Battery material suppliers audited",
+      "EV Battery Supply chain audits conducted"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%",
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_334": {
+    "metrics_in_cluster": [
+      "Battery recycling capacity",
+      "EV battery recycling rate",
+      "battery cell recycling rate",
+      "battery manufacturing waste recycling rate",
+      "battery metal recycling amounts",
+      "battery recycling capacity",
+      "battery recycling rate",
+      "high-voltage battery recycling efficiency",
+      "lithium-ion battery recycling rate",
+      "lithium-ion battery recycling rate for Tesla"
+    ],
+    "n_claims": 13,
+    "n_companies": 5,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "systems/year",
+      "tons/week",
+      "tons/year",
+      "units/year"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 12
+  },
+  "cluster_149": {
+    "metrics_in_cluster": [
+      "Board attendance",
+      "Board of Directors meeting frequency and participation rate",
+      "Supervisory Board attendance rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 3,
+    "companies": [
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_4": {
+    "metrics_in_cluster": [
+      "Board diversity",
+      "diversity",
+      "diversity and inclusion metrics",
+      "diversity and inclusion outcomes"
+    ],
+    "n_claims": 16,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 16
+  },
+  "cluster_30": {
+    "metrics_in_cluster": [
+      "Board gender diversity",
+      "Board of Directors gender diversity",
+      "Female representation on the Board",
+      "Women in management",
+      "Women in management positions",
+      "female employee representation",
+      "female leader representation",
+      "female leadership in committees",
+      "female manager ratio",
+      "female representation in early careers",
+      "female representation in early careers intake",
+      "female representation in leadership",
+      "female representation in leadership roles",
+      "female representation in management",
+      "female representation in the workforce",
+      "female representation in workforce",
+      "female representation in workforce (US)",
+      "female representation on Board",
+      "female workforce representation",
+      "female workforce representation (management)",
+      "gender and racial/ethnic diversity in Board committee chairs",
+      "gender diversity (manager ratio)",
+      "gender diversity in Board membership",
+      "gender diversity in Board representation",
+      "gender diversity in early careers intake",
+      "gender diversity in leadership",
+      "gender equity in leadership positions",
+      "number of female board members",
+      "percentage of women on Supervisory Board",
+      "proportion of women at top-management level",
+      "proportion of women in management",
+      "proportion of women in management positions",
+      "ratio of female general and higher-level managers",
+      "share of women in management positions",
+      "women in leadership",
+      "women in leadership positions",
+      "women in leadership roles",
+      "women in management",
+      "women in management positions",
+      "women in top management positions",
+      "women in workforce",
+      "women's representation in leadership positions"
+    ],
+    "n_claims": 60,
+    "n_companies": 8,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 60
+  },
+  "cluster_118": {
+    "metrics_in_cluster": [
+      "Business ethics",
+      "Business integrity"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_386": {
+    "metrics_in_cluster": [
+      "CDP Supply Chain Initiative participation rate",
+      "CDP Supply Chain programme participation rate",
+      "CDP participation rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_0": {
+    "metrics_in_cluster": [
+      "CO2 emissions",
+      "CO2 emissions (DKI)",
+      "CO2 emissions (decarbonization index)",
+      "CO2 emissions per km",
+      "CO2e carbon emissions",
+      "GHG emissions",
+      "GHG emissions (China)",
+      "GHG emissions (DCI)",
+      "GHG emissions (HEVs)",
+      "GHG emissions (Scope 1 and 2)",
+      "GHG emissions (Scope 1)",
+      "GHG emissions (Scope 1) per unit",
+      "GHG emissions (Scope 1+2)",
+      "GHG emissions (Scope 1-3)",
+      "GHG emissions (Scope 2)",
+      "GHG emissions (Scope 2) per unit",
+      "GHG emissions (Scope 3) - purchased goods and services",
+      "GHG emissions (US market)",
+      "GHG emissions (battery supply chain)",
+      "GHG emissions (business travel)",
+      "GHG emissions (capital goods)",
+      "GHG emissions (corporate activities)",
+      "GHG emissions (employee commuting)",
+      "GHG emissions (end-of-life treatment of sold products)",
+      "GHG emissions (energy use)",
+      "GHG emissions (franchises)",
+      "GHG emissions (fuel/energy)",
+      "GHG emissions (leased assets)",
+      "GHG emissions (manufacturing)",
+      "GHG emissions (purchased goods and services)",
+      "GHG emissions (total)",
+      "GHG emissions (use of sold products)",
+      "GHG emissions (waste generated in operations)",
+      "GHG emissions from downstream leased assets",
+      "GHG emissions from end-of-life treatment of sold products",
+      "GHG emissions from franchises",
+      "GHG emissions from purchased goods and services",
+      "GHG emissions from use of sold products",
+      "GHG emissions intensity",
+      "GHG emissions intensity (location-based)",
+      "GHG emissions intensity (market-based)",
+      "GHG emissions intensity (supply chain)",
+      "Greenhouse gas emissions",
+      "Scope 1 CO2 emissions per unit",
+      "Scope 1 GHG emissions",
+      "Scope 1 GHG emissions intensity",
+      "Scope 2 GHG emissions",
+      "Scope 2 GHG emissions intensity",
+      "carbon emissions (use phase)",
+      "specific CO2 emissions"
+    ],
+    "n_claims": 80,
+    "n_companies": 9,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Tesla, Inc.",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "gCO2/km",
+      "metric tons of co2",
+      "metric tons of co2/",
+      "t-co2/million ¥",
+      "tCO2/vehicle",
+      "tCO2e",
+      "tco2e/unit",
+      "tco2eq/€ million",
+      "tonnes co2/in%",
+      "tons co2e",
+      "tons of co2e",
+      "tons/year"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 77,
+    "n_claims_unflipped": 3
+  },
+  "cluster_114": {
+    "metrics_in_cluster": [
+      "CO2 emissions (car commuting)",
+      "CO2 emissions per car",
+      "CO2 emissions per km (fleet consumption in Europe)",
+      "CO2 emissions per vehicle",
+      "CO2 emissions per vehicle transported",
+      "CO2 fleet emissions",
+      "EU New Vehicle Fleet CO2 emissions",
+      "EU new light commercial vehicle fleet CO2 emissions per km",
+      "EU passenger car fleet CO2 emissions per km",
+      "GHG emissions (BMW Group locations) per vehicle produced",
+      "GHG emissions (EU new vehicle fleet)",
+      "GHG emissions (PRTR) per vehicle",
+      "GHG emissions (Scope 1) per vehicle",
+      "GHG emissions (Scope 1) per vehicle - Volkswagen AG",
+      "GHG emissions (Scope 2) per vehicle",
+      "GHG emissions (Scope 2) per vehicle - Volkswagen AG",
+      "GHG emissions (VOCs) per vehicle",
+      "GHG emissions (cars)",
+      "GHG emissions (delivery)",
+      "GHG emissions (fleet)",
+      "GHG emissions (light commercial vehicles)",
+      "GHG emissions (manufacturing) per vehicle",
+      "GHG emissions (new vehicle fleet)",
+      "GHG emissions (new vehicles)",
+      "GHG emissions (passenger car and light commercial vehicles)",
+      "GHG emissions (per mile)",
+      "GHG emissions (per vehicle)",
+      "GHG emissions (supply chain) per vehicle produced",
+      "GHG emissions (transportation and distribution)",
+      "GHG emissions (transportation)",
+      "GHG emissions (transported vehicles)",
+      "GHG emissions (vehicle life cycle)",
+      "GHG emissions (vehicles)",
+      "GHG emissions from transport",
+      "GHG emissions intensity (BMW Group locations)",
+      "GHG emissions per vehicle",
+      "GHG emissions per vehicle (Volkswagen AG)",
+      "GHG emissions per vehicle produced",
+      "Manufacturing CO2 emissions per vehicle produced",
+      "Manufacturing CO2 per Vehicle Produced",
+      "VOC emissions per vehicle",
+      "VOCs per vehicle produced",
+      "carbon emissions per vehicle produced",
+      "carbon fleet emissions (China)",
+      "carbon fleet emissions (EU)",
+      "carbon fleet emissions (USA)",
+      "carbon fleet emissions (worldwide)",
+      "fleet carbon emissions",
+      "fleet carbon emissions (China)",
+      "fleet carbon emissions (EU)",
+      "fleet carbon emissions (US)",
+      "fleet carbon emissions (global)",
+      "manufacturing CO2 emissions per vehicle",
+      "manufacturing CO2 emissions per vehicle produced",
+      "vehicle production CO2 emissions"
+    ],
+    "n_claims": 80,
+    "n_companies": 6,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "g co2e/mile",
+      "gCO2/km",
+      "grams co2e/mile",
+      "kg/vehicle",
+      "kton",
+      "ktons",
+      "tCO2/vehicle",
+      "tCO2e",
+      "tonnes",
+      "tonnes co2/in%",
+      "tons/vehicle"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 73,
+    "n_claims_unflipped": 7
+  },
+  "cluster_363": {
+    "metrics_in_cluster": [
+      "CO2 emissions per floor area"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 0
+  },
+  "cluster_319": {
+    "metrics_in_cluster": [
+      "CO2 offsets"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "tCO2e"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_72": {
+    "metrics_in_cluster": [
+      "COBE training completion rate",
+      "TPS training completion rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Tesla, Inc.",
+      "Toyota Motor Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_147": {
+    "metrics_in_cluster": [
+      "COVID-19 testing and vaccination rate",
+      "vaccination rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%",
+      "tests/vaccinations"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_14": {
+    "metrics_in_cluster": [
+      "CRT and Code of Conduct certification program completion rate",
+      "Code of Conduct training completion rate",
+      "Code of Conduct training participation",
+      "Code of conduct participation",
+      "Global Code of Conduct training completion rate (indirect employees)",
+      "antitrust compliance training completion rate",
+      "code of conduct training completion rate",
+      "compliance training completion rate"
+    ],
+    "n_claims": 15,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 15
+  },
+  "cluster_206": {
+    "metrics_in_cluster": [
+      "Carbon-free electricity share",
+      "carbon-free electricity share",
+      "carbon-free electricity sourcing"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_67": {
+    "metrics_in_cluster": [
+      "Child labor",
+      "Child labor prevalence",
+      "Forced labor",
+      "Forced labor presence",
+      "child labor prevalence",
+      "forced labor prevalence",
+      "presence of forced labor",
+      "prevalence of child labor"
+    ],
+    "n_claims": 8,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 8
+  },
+  "cluster_11": {
+    "metrics_in_cluster": [
+      "Childcare Leave Days Off",
+      "Childcare Leave Take-Up Rate",
+      "Special Childcare Leave Take-Up",
+      "male employee childcare leave duration",
+      "male employee childcare leave utilization rate",
+      "male employee parental leave acquisition rate"
+    ],
+    "n_claims": 6,
+    "n_companies": 2,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%",
+      "days"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_102": {
+    "metrics_in_cluster": [
+      "Climate Response supplier engagement rate",
+      "Supplier engagement",
+      "average supplier engagement rate",
+      "supplier engagement",
+      "supplier engagement and response rate",
+      "supplier engagement and supply chain management",
+      "supplier engagement and target setting",
+      "supplier engagement rate"
+    ],
+    "n_claims": 16,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 16
+  },
+  "cluster_55": {
+    "metrics_in_cluster": [
+      "Climate Response survey response rate",
+      "Climate Response target reporting rate",
+      "Water Response policy reporting rate",
+      "Water Response survey response rate",
+      "Water Response target reporting rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_393": {
+    "metrics_in_cluster": [
+      "CoC certification rate for permanent staff"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_69": {
+    "metrics_in_cluster": [
+      "Collective bargaining coverage",
+      "collective bargaining agreement coverage rate",
+      "collective bargaining agreements",
+      "collective bargaining agreements coverage",
+      "collective bargaining coverage"
+    ],
+    "n_claims": 8,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 8
+  },
+  "cluster_77": {
+    "metrics_in_cluster": [
+      "Committee meeting attendance",
+      "ESG Committee meeting attendance",
+      "committee meeting participation"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_357": {
+    "metrics_in_cluster": [
+      "Communication"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_265": {
+    "metrics_in_cluster": [
+      "Company commitment"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_134": {
+    "metrics_in_cluster": [
+      "Conflict Minerals Program response rate",
+      "conflict minerals program participation rate",
+      "conflict minerals reporting template submission rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_383": {
+    "metrics_in_cluster": [
+      "Connected Services subscribers"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "members"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_141": {
+    "metrics_in_cluster": [
+      "Corporate Average Fuel Economy (CAFE)",
+      "corporate average fuel economy",
+      "corporate average fuel economy (light-duty trucks)",
+      "fuel consumption (national average)"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%",
+      "km/l",
+      "l/100km"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_211": {
+    "metrics_in_cluster": [
+      "Corrective action process"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_279": {
+    "metrics_in_cluster": [
+      "DART (Days Away from Work, Restricted Activity Days)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_313": {
+    "metrics_in_cluster": [
+      "DAX performance index"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_411": {
+    "metrics_in_cluster": [
+      "DCI value"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "tCO2/vehicle"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_207": {
+    "metrics_in_cluster": [
+      "DEI program participation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "participants"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_172": {
+    "metrics_in_cluster": [
+      "Director independence",
+      "Independent Non-Executive Director representation",
+      "Independent Non-executive Director representation"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_182": {
+    "metrics_in_cluster": [
+      "Disclosure of information",
+      "disclosure of information rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_368": {
+    "metrics_in_cluster": [
+      "Diverse-Owned Media Spend",
+      "spend with Black-owned media organizations"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_345": {
+    "metrics_in_cluster": [
+      "Diversity Wins@Volkswagen participation rate",
+      "participation in Diversity Wins@Volkswagen program"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_407": {
+    "metrics_in_cluster": [
+      "Documentation and records"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_121": {
+    "metrics_in_cluster": [
+      "Driver Assist Technologies deployment rate",
+      "driver assist technologies adoption rate",
+      "vehicle safety feature adoption rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_252": {
+    "metrics_in_cluster": [
+      "EACs coverage"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_126": {
+    "metrics_in_cluster": [
+      "EBIT margin",
+      "operating margin"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_293": {
+    "metrics_in_cluster": [
+      "EBITDA target"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_307": {
+    "metrics_in_cluster": [
+      "EBT"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "usd"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_27": {
+    "metrics_in_cluster": [
+      "ELV recovery ratio",
+      "ELV recycling rate",
+      "effective recycling rate of ELVs",
+      "final recovery ratio for end-of-life vehicles (ELVs)",
+      "recyclability rate of ELVs"
+    ],
+    "n_claims": 7,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_154": {
+    "metrics_in_cluster": [
+      "ERGs membership rate among salaried employees",
+      "ESG performance in executive compensation"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_240": {
+    "metrics_in_cluster": [
+      "ESG-compliant asset management"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_377": {
+    "metrics_in_cluster": [
+      "EURO STOXX Automobiles & Parts performance index"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_61": {
+    "metrics_in_cluster": [
+      "EV adoption rate",
+      "Electric Vehicle (EV) market share",
+      "all-electric vehicle market share",
+      "all-electric vehicle production capacity at Volkswagen (Anhui)",
+      "all-electric vehicle sales",
+      "all-electric vehicle sales (Scope 3)",
+      "all-electric vehicle sales (units)",
+      "all-electric vehicle sales share",
+      "e-POWER vehicle sales share",
+      "electric vehicle adoption",
+      "electric vehicle adoption rate",
+      "electric vehicle market share",
+      "electric vehicle market share achievement",
+      "electric vehicle production",
+      "electric vehicle sales share",
+      "electric vehicle technology adoption",
+      "electric vehicle usage percentage",
+      "electric vehicle use",
+      "electric vehicles share in total sales",
+      "electric/hybrid vehicle sales",
+      "electrified vehicle production",
+      "electrified vehicle sales share",
+      "plug-in hybrid vehicle sales",
+      "plug-in hybrid vehicle sales (units)",
+      "share of battery electric vehicles in total sales",
+      "share of plugin hybrid vehicles in total sales",
+      "share of total electrified vehicles in total sales"
+    ],
+    "n_claims": 34,
+    "n_companies": 7,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "n/a",
+      "units/year",
+      "vehicles"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 34
+  },
+  "cluster_395": {
+    "metrics_in_cluster": [
+      "EV charging location"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_351": {
+    "metrics_in_cluster": [
+      "Eco-Friendly Retailer Program participation rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_53": {
+    "metrics_in_cluster": [
+      "EcoVadis participation rate",
+      "EcoVadis platform enrollment rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_379": {
+    "metrics_in_cluster": [
+      "EcoVadis platform supplier scores"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "out of 100"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_96": {
+    "metrics_in_cluster": [
+      "Emergency preparedness",
+      "Health and safety emergency preparedness",
+      "emergency preparedness rate",
+      "health and safety emergency preparedness"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_133": {
+    "metrics_in_cluster": [
+      "Employee Attitudes Survey participation rate",
+      "Employee Attitudes Survey satisfaction rate",
+      "Employee sentiment survey results",
+      "customer survey response rate",
+      "employee attitudes survey participation rate",
+      "employee engagement survey participation",
+      "employee engagement survey participation rate",
+      "employee survey response rate"
+    ],
+    "n_claims": 15,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Subaru Corporation",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%",
+      "employees"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 15
+  },
+  "cluster_92": {
+    "metrics_in_cluster": [
+      "Employee Development",
+      "Further training of employees and temp workers",
+      "employee training and education"
+    ],
+    "n_claims": 3,
+    "n_companies": 3,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%",
+      "days"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_25": {
+    "metrics_in_cluster": [
+      "Employee Share Programme expenses",
+      "share-based remuneration programme"
+    ],
+    "n_claims": 6,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%",
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_167": {
+    "metrics_in_cluster": [
+      "Employee Stock Ownership Association participation rate",
+      "share ownership plan participation rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%",
+      "euro"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_34": {
+    "metrics_in_cluster": [
+      "Employee engagement",
+      "business partner engagement",
+      "employee engagement"
+    ],
+    "n_claims": 6,
+    "n_companies": 4,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company",
+      "Subaru Corporation",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_59": {
+    "metrics_in_cluster": [
+      "Employee work-life balance survey results",
+      "employee work-life balance"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_54": {
+    "metrics_in_cluster": [
+      "Employment policies and management systems",
+      "Freely chosen employment policies and management systems",
+      "freely chosen employment policies and management systems",
+      "freely chosen employment policy coverage"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_99": {
+    "metrics_in_cluster": [
+      "Energy Storage Production Capacity",
+      "energy storage capacity",
+      "renewable energy capacity"
+    ],
+    "n_claims": 7,
+    "n_companies": 2,
+    "companies": [
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "gwh/year",
+      "kwh/year",
+      "mwh/acre",
+      "mwh/year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_23": {
+    "metrics_in_cluster": [
+      "Energy consumption and greenhouse gas emissions",
+      "GHG emissions (electricity/heating/cooling purchased)",
+      "electricity consumption",
+      "energy consumption and GHG emissions rate",
+      "energy consumption and greenhouse gas emissions",
+      "energy consumption of production",
+      "green electricity usage"
+    ],
+    "n_claims": 7,
+    "n_companies": 4,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "MWh",
+      "million mwh/year",
+      "tCO2e"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 5,
+    "n_claims_unflipped": 2
+  },
+  "cluster_181": {
+    "metrics_in_cluster": [
+      "Energy intensity",
+      "energy intensity"
+    ],
+    "n_claims": 5,
+    "n_companies": 4,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "kwh/€",
+      "megawatt hours/usd billion",
+      "mwh per unit",
+      "mwh/€ million"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_75": {
+    "metrics_in_cluster": [
+      "Environmental management",
+      "certified environmental management system"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_189": {
+    "metrics_in_cluster": [
+      "Environmental permits and reporting",
+      "environmental permits and reporting",
+      "environmental permits and reporting rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_33": {
+    "metrics_in_cluster": [
+      "Ethics and no improper advantage",
+      "No improper advantage",
+      "no improper advantage rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_404": {
+    "metrics_in_cluster": [
+      "EyeSight-equipped vehicle safety performance"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_155": {
+    "metrics_in_cluster": [
+      "FSC-certified wood usage",
+      "wood sourcing from FSC-certified suppliers"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_277": {
+    "metrics_in_cluster": [
+      "Fair business, advertising, and competition"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_171": {
+    "metrics_in_cluster": [
+      "Female employee percentage with a disability",
+      "Male employee percentage with a disability",
+      "Number of employees with disabilities",
+      "disability employment rate",
+      "disabled employment ratio",
+      "employment rate for people with disabilities",
+      "employment rate of persons with disabilities",
+      "number of employees with disabilities"
+    ],
+    "n_claims": 15,
+    "n_companies": 5,
+    "companies": [
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "employees"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 15
+  },
+  "cluster_112": {
+    "metrics_in_cluster": [
+      "Ferrari car sales",
+      "Ferrari car sales to existing clients",
+      "Ferrari's sales to existing clients"
+    ],
+    "n_claims": 5,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_76": {
+    "metrics_in_cluster": [
+      "Ferrari's supplier engagement on Conflict Minerals sourcing",
+      "Responsible sourcing of minerals",
+      "Supplier Audit Findings - Responsible Sourcing of Minerals",
+      "direct sourcing of minerals"
+    ],
+    "n_claims": 6,
+    "n_companies": 3,
+    "companies": [
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_51": {
+    "metrics_in_cluster": [
+      "Ferrous metal usage ratio",
+      "ferrous metal usage",
+      "ferrous metal usage percentage",
+      "ferrous metal use in vehicles"
+    ],
+    "n_claims": 7,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_230": {
+    "metrics_in_cluster": [
+      "Food, sanitation, and housing",
+      "access to water and sanitation",
+      "food, sanitation and housing",
+      "food, sanitation, and housing rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_397": {
+    "metrics_in_cluster": [
+      "Freedom of association",
+      "freedom of association"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_64": {
+    "metrics_in_cluster": [
+      "GHG emissions (cobalt, nickel, and lithium mines)",
+      "GHG emissions from steel production"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 0
+  },
+  "cluster_271": {
+    "metrics_in_cluster": [
+      "GHG intensity"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "t co2e/mn. €"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 0
+  },
+  "cluster_291": {
+    "metrics_in_cluster": [
+      "GPSNR membership in natural rubber supply chain"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_162": {
+    "metrics_in_cluster": [
+      "Gender Pay Ratio",
+      "Gender pay gap",
+      "Minority Pay Ratio",
+      "average pay ratio (female to male)",
+      "gender pay gap",
+      "gender pay ratio",
+      "minority pay ratio",
+      "salaried gender pay ratio",
+      "salaried minority pay ratio"
+    ],
+    "n_claims": 17,
+    "n_companies": 4,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 17
+  },
+  "cluster_45": {
+    "metrics_in_cluster": [
+      "Gender diversity",
+      "gender diversity in Japan",
+      "gender diversity in workforce",
+      "gender equality",
+      "workforce diversity"
+    ],
+    "n_claims": 9,
+    "n_companies": 5,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 9
+  },
+  "cluster_352": {
+    "metrics_in_cluster": [
+      "Global Code of Conduct reporting statistics"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_106": {
+    "metrics_in_cluster": [
+      "Global vehicle recall rate",
+      "U.S. vehicle recall rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_292": {
+    "metrics_in_cluster": [
+      "Goal achievement rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_202": {
+    "metrics_in_cluster": [
+      "HOP Training effectiveness",
+      "HOP Training satisfaction",
+      "HOP training completion rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_90": {
+    "metrics_in_cluster": [
+      "Hazardous substances",
+      "hazardous substances",
+      "hazardous substances rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 4,
+    "n_claims_unflipped": 0
+  },
+  "cluster_98": {
+    "metrics_in_cluster": [
+      "Health and safety communication",
+      "Health and safety management",
+      "Health and safety performance",
+      "health and safety communication",
+      "health and safety communication rate"
+    ],
+    "n_claims": 6,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_29": {
+    "metrics_in_cluster": [
+      "Human Rights Assessments",
+      "human rights awareness training completion rate",
+      "human rights risk assessment completion rate",
+      "human rights training participation rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 3,
+    "companies": [
+      "Ford Motor Company",
+      "Nissan Motor Co., Ltd.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "people"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_199": {
+    "metrics_in_cluster": [
+      "Humane treatment",
+      "humane treatment",
+      "humane treatment rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_361": {
+    "metrics_in_cluster": [
+      "I&C anchoring success rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_8": {
+    "metrics_in_cluster": [
+      "ISO 14001 certification rate",
+      "ISO 45001 certification coverage",
+      "ISO 45001 certifications by employee proportion",
+      "ISO 50001 certification",
+      "ISO 9001:2015 certification completion rate",
+      "proportion of sites certified in accordance with ISO 14001 or EMAS in terms of number of employees"
+    ],
+    "n_claims": 11,
+    "n_companies": 3,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 11
+  },
+  "cluster_2": {
+    "metrics_in_cluster": [
+      "ISO 14001:2015 environmental management standard compliance",
+      "production supplier compliance with ISO 14001:2015",
+      "responsible production standards compliance",
+      "supplier adoption of sustainability guidelines",
+      "supplier certification to IATF 16949 Quality Standard",
+      "supplier compliance (ISO 14001)",
+      "supplier compliance rate (ISO 14001)",
+      "supplier compliance with CSR Guidelines for Suppliers",
+      "supplier compliance with ISO 14001",
+      "supplier compliance with ISO 14001:2015",
+      "supplier compliance with social and environmental standards",
+      "supplier compliance with sustainability standards"
+    ],
+    "n_claims": 17,
+    "n_companies": 6,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 17
+  },
+  "cluster_186": {
+    "metrics_in_cluster": [
+      "Industrial hygiene",
+      "industrial hygiene",
+      "industrial hygiene rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_138": {
+    "metrics_in_cluster": [
+      "Intellectual property",
+      "intellectual property rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_111": {
+    "metrics_in_cluster": [
+      "Internal promotion rate",
+      "Promotion rate from underrepresented groups",
+      "leadership promotion rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_37": {
+    "metrics_in_cluster": [
+      "KPI scorecard weighting",
+      "reputation KPI"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_160": {
+    "metrics_in_cluster": [
+      "LCA coverage",
+      "LCA method application coverage",
+      "LCA method coverage",
+      "LCA model coverage"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_200": {
+    "metrics_in_cluster": [
+      "LGBT training participation rate",
+      "LGBTQ allyship program participation rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%",
+      "people"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_254": {
+    "metrics_in_cluster": [
+      "Leadership Development programme (Ignite) completion rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_264": {
+    "metrics_in_cluster": [
+      "Learning Team Facilitator training rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_342": {
+    "metrics_in_cluster": [
+      "Legal and customer requirements"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_13": {
+    "metrics_in_cluster": [
+      "LifeSteps employee wellness program incentive participation rate",
+      "Revved4Health wellness program participation rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_246": {
+    "metrics_in_cluster": [
+      "Lifetime GHG emissions of a model year 2021 ICE"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "tonnes"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_62": {
+    "metrics_in_cluster": [
+      "Machine safeguarding",
+      "machine safeguarding",
+      "machine safeguarding rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_175": {
+    "metrics_in_cluster": [
+      "Management accountability and responsibility"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_139": {
+    "metrics_in_cluster": [
+      "Materials restrictions",
+      "materials restrictions",
+      "materials restrictions rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_257": {
+    "metrics_in_cluster": [
+      "NHTSA VOQ complaint review rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_304": {
+    "metrics_in_cluster": [
+      "NOx and NMOG emissions",
+      "Nitrogen oxides emissions"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "g/mile",
+      "mg/m3"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 3,
+    "n_claims_unflipped": 0
+  },
+  "cluster_188": {
+    "metrics_in_cluster": [
+      "NPRI releases per vehicle",
+      "TRI releases per vehicle"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "metric tons/vehicle",
+      "pounds/vehicle"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 0
+  },
+  "cluster_333": {
+    "metrics_in_cluster": [
+      "Nickel sourcing",
+      "nickel sourcing"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_192": {
+    "metrics_in_cluster": [
+      "Non-discrimination",
+      "non-discrimination",
+      "non-discrimination rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_343": {
+    "metrics_in_cluster": [
+      "OTA software updates"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_71": {
+    "metrics_in_cluster": [
+      "Occupational Health and Safety Management System Coverage Program",
+      "health and safety coverage",
+      "health and safety management coverage",
+      "health and safety management coverage with external audit/certification",
+      "health and safety policies (coverage)",
+      "health and safety policies coverage",
+      "health and safety policies coverage rate",
+      "occupational health and safety management system coverage",
+      "percentage of employees covered by health and safety policies"
+    ],
+    "n_claims": 10,
+    "n_companies": 3,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 10
+  },
+  "cluster_31": {
+    "metrics_in_cluster": [
+      "Occupational Illness Frequency Rate Employees (number/million work hours)",
+      "Occupational injury and illness",
+      "lost days due to occupational accidents",
+      "occupational injury and illness",
+      "occupational injury and illness rate"
+    ],
+    "n_claims": 6,
+    "n_companies": 3,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%",
+      "/1m hours worked",
+      "/million work hours"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 5,
+    "n_claims_unflipped": 1
+  },
+  "cluster_86": {
+    "metrics_in_cluster": [
+      "Occupational safety",
+      "employee safety concerns logged",
+      "occupational safety",
+      "workplace safety"
+    ],
+    "n_claims": 5,
+    "n_companies": 3,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_275": {
+    "metrics_in_cluster": [
+      "PHEV engine variants"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_80": {
+    "metrics_in_cluster": [
+      "Participation rate",
+      "employee participation rate",
+      "internship program participation rate",
+      "manager participation rate",
+      "manager training participation rate",
+      "sustainability training participation rate",
+      "training program participation rate"
+    ],
+    "n_claims": 11,
+    "n_companies": 4,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 11
+  },
+  "cluster_159": {
+    "metrics_in_cluster": [
+      "Percentage of Employees Receiving Regular Performance and Career Development Reviews",
+      "Percentage of employees receiving regular performance and career development reviews",
+      "Training and education performance (percentage of employees receiving regular performance and career development reviews)"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_140": {
+    "metrics_in_cluster": [
+      "Percentage of Scope 1 GHG emissions from regulated ETS",
+      "Scope 1 GHG emissions share in regulated ETS",
+      "Scope 1 and 2 Emissions per Revenue",
+      "Scope 1 emissions coverage",
+      "Scope 3 emissions (logistics)",
+      "Scope 3 emissions (purchased goods and services and capital goods)",
+      "Scope 3 emissions (use of sold products)",
+      "Scope 3 emissions coverage",
+      "Scope 3 emissions share"
+    ],
+    "n_claims": 10,
+    "n_companies": 6,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "t-co2/million ¥",
+      "ton/million ¥"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 10,
+    "n_claims_unflipped": 0
+  },
+  "cluster_284": {
+    "metrics_in_cluster": [
+      "Physically demanding work",
+      "physically demanding work",
+      "physically demanding work rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_256": {
+    "metrics_in_cluster": [
+      "Pledge sign-ups among direct suppliers"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_259": {
+    "metrics_in_cluster": [
+      "Porsche sales in China"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_187": {
+    "metrics_in_cluster": [
+      "Privacy",
+      "privacy rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_337": {
+    "metrics_in_cluster": [
+      "ProPILOT/ ProPILOT Assist adoption"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_340": {
+    "metrics_in_cluster": [
+      "Proportion of suppliers with agreed preventive measures",
+      "Proportion of suppliers with implemented preventive measures"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_40": {
+    "metrics_in_cluster": [
+      "Protection of identity and non-retaliation",
+      "protection of identity rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_21": {
+    "metrics_in_cluster": [
+      "R&D expenditure on vehicles",
+      "vehicle production",
+      "vehicle production volume",
+      "vehicles manufactured"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "n/a",
+      "vehicles",
+      "vehicles/day"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_258": {
+    "metrics_in_cluster": [
+      "R&D ratio"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_44": {
+    "metrics_in_cluster": [
+      "R-1234yf adoption rate",
+      "science-based target adoption rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_9": {
+    "metrics_in_cluster": [
+      "Recycled plastic usage ratio",
+      "non-recycled waste",
+      "plastic recycling rate",
+      "plastic waste recycling",
+      "recycled and reused materials share",
+      "recycled manufacturing waste",
+      "recycled material usage",
+      "recycled materials usage",
+      "recycled plastic usage",
+      "recycled plastic usage in vehicles",
+      "reused and recycled materials share",
+      "sustainable material usage",
+      "waste from manufacturing"
+    ],
+    "n_claims": 21,
+    "n_companies": 7,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "t/year",
+      "tonnes"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 5,
+    "n_claims_unflipped": 16
+  },
+  "cluster_7": {
+    "metrics_in_cluster": [
+      "Recycling rate",
+      "catalytic converter recycling rate",
+      "hazardous waste recovery rate",
+      "material recycling rate",
+      "recyclability rate at Gigafactory Shanghai",
+      "recycled material production rate",
+      "recycling capacity",
+      "recycling efficiency rate",
+      "recycling rate",
+      "recycling rate (Gigafactory Shanghai)",
+      "solid waste rate",
+      "thermal recycling rate",
+      "waste diversion rate",
+      "waste recovery rate",
+      "waste recycling efficiency",
+      "waste recycling rate"
+    ],
+    "n_claims": 51,
+    "n_companies": 9,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "metric tons/week",
+      "t",
+      "tonnes",
+      "tons/week"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 33,
+    "n_claims_unflipped": 18
+  },
+  "cluster_360": {
+    "metrics_in_cluster": [
+      "Renewable Energy Credits (RECs)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_19": {
+    "metrics_in_cluster": [
+      "Renewable electricity share",
+      "renewable electricity share",
+      "renewable electricity share (manufacturing)",
+      "renewable electricity share in manufacturing",
+      "renewable energy share",
+      "renewable energy share (Energy Attribute Certificates)",
+      "renewable energy share (Supercharger)",
+      "renewable energy share (direct supply contracts)",
+      "renewable energy share (electricity)",
+      "renewable energy share (home charging)",
+      "renewable energy share for vehicle charging",
+      "renewable energy share of Supercharger network and home charging",
+      "renewable energy use (manufacturing plants)"
+    ],
+    "n_claims": 51,
+    "n_companies": 10,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Tesla, Inc.",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "mwh/year"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 49
+  },
+  "cluster_81": {
+    "metrics_in_cluster": [
+      "Return on Capital Employed (RoCE)",
+      "Return on capital employed (RoCE)",
+      "Return on equity (RoE)",
+      "return on investment"
+    ],
+    "n_claims": 6,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_325": {
+    "metrics_in_cluster": [
+      "Risk assessment and risk management"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_371": {
+    "metrics_in_cluster": [
+      "RoCE (Automotive segment)"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_95": {
+    "metrics_in_cluster": [
+      "S-Rating for direct suppliers",
+      "percentage of direct suppliers with A/B rating",
+      "supplier S rating (revenue share)"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_331": {
+    "metrics_in_cluster": [
+      "SAQ completion rate for direct suppliers",
+      "Supplier Self-Assessment Questionnaire (SAQ) participation rate",
+      "Supplier Self-Assessment Questionnaire (SAQ) response rate",
+      "supplier participation rate in self-verification surveys"
+    ],
+    "n_claims": 4,
+    "n_companies": 3,
+    "companies": [
+      "General Motors Company",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "supplier sites"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_247": {
+    "metrics_in_cluster": [
+      "SIF incident response effectiveness"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_255": {
+    "metrics_in_cluster": [
+      "SUBARU Vision Awareness Program effectiveness"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_320": {
+    "metrics_in_cluster": [
+      "Security personnel trained in human rights policies or procedures",
+      "security personnel trained in human rights policies or procedures"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_316": {
+    "metrics_in_cluster": [
+      "Severe disability quota"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_387": {
+    "metrics_in_cluster": [
+      "Site Checklist compliance rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_169": {
+    "metrics_in_cluster": [
+      "Smelter conformance rates (cobalt)",
+      "Smelter conformance rates (gold)",
+      "Smelter conformance rates (mica)",
+      "Smelter conformance rates (tantalum)",
+      "Smelter conformance rates (tin)",
+      "Smelter conformance rates (tungsten)"
+    ],
+    "n_claims": 6,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_16": {
+    "metrics_in_cluster": [
+      "Solid waste",
+      "Total Waste/Vehicle",
+      "Waste by type and disposal method (Landfill - Hazardous)",
+      "Waste by type and disposal method (Reuse - Hazardous)",
+      "hazardous waste generation",
+      "hazardous waste treatment",
+      "non-hazardous waste generation",
+      "solid waste",
+      "specific waste for disposal",
+      "waste diversion",
+      "waste management",
+      "waste recycling",
+      "waste to landfill"
+    ],
+    "n_claims": 18,
+    "n_companies": 7,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "metric tons/year",
+      "t",
+      "t/year",
+      "tonnes"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 18,
+    "n_claims_unflipped": 0
+  },
+  "cluster_321": {
+    "metrics_in_cluster": [
+      "Speak Up For Safety submissions"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "submissions per year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_110": {
+    "metrics_in_cluster": [
+      "Supercharger site uptime",
+      "Supercharger uptime"
+    ],
+    "n_claims": 13,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 13
+  },
+  "cluster_36": {
+    "metrics_in_cluster": [
+      "Supplier Audit Findings - Air Emissions",
+      "Supplier Audit Findings - Business Integrity",
+      "Supplier Audit Findings - Disclosure of Information",
+      "Supplier Audit Findings - Environment",
+      "Supplier Audit Findings - Environment Hazardous Substances",
+      "Supplier Audit Findings - Environmental Permits and Reporting",
+      "Supplier Audit Findings - Ethics",
+      "Supplier Audit Findings - Fair Business, Advertising and Competition",
+      "Supplier Audit Findings - Health and Safety",
+      "Supplier Audit Findings - Health and Safety Communication",
+      "Supplier Audit Findings - Health and Safety Emergency Preparedness",
+      "Supplier Audit Findings - Intellectual Property",
+      "Supplier Audit Findings - Labor",
+      "Supplier Audit Findings - Management System",
+      "Supplier Audit Findings - Management System Supplier Responsibility",
+      "Supplier Audit Findings - Materials Restrictions",
+      "Supplier Audit Findings - No Improper Advantage",
+      "Supplier Audit Findings - Privacy",
+      "Supplier Audit Findings - Protection of Identity and Non-Retaliation",
+      "Supplier Audit Findings - Solid Waste",
+      "Supplier audit findings",
+      "effective grievance mechanisms in supplier audits"
+    ],
+    "n_claims": 22,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 4,
+    "n_claims_unflipped": 18
+  },
+  "cluster_5": {
+    "metrics_in_cluster": [
+      "Supplier Audit Findings - Energy Consumption and Greenhouse Gas Emissions",
+      "sustainability audits"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 3
+  },
+  "cluster_145": {
+    "metrics_in_cluster": [
+      "Supplier Audit Findings - Water Management",
+      "Water Response supplier engagement rate",
+      "supplier engagement and water management",
+      "supplier water-related targets"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_125": {
+    "metrics_in_cluster": [
+      "Supplier Code of Conduct adoption rate",
+      "responsible procurement policy adoption rate",
+      "supplier adoption of responsible procurement policy",
+      "supplier policy adoption rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_91": {
+    "metrics_in_cluster": [
+      "Supplier responsibility",
+      "main production supplier agreement with responsible procurement policy",
+      "procurement from local suppliers"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_268": {
+    "metrics_in_cluster": [
+      "Supply chain management policy gaps identified"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_170": {
+    "metrics_in_cluster": [
+      "T4I program adoption rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "companies"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_215": {
+    "metrics_in_cluster": [
+      "TSR ranking"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_174": {
+    "metrics_in_cluster": [
+      "Taxonomy-aligned Capital Expenditures",
+      "Taxonomy-aligned capital expenditure",
+      "non-capitalized research and development costs as a percentage of taxonomy-aligned operating expenditure",
+      "proportion of CAPEX from non-taxonomy aligned economic activities",
+      "proportion of CAPEX from non-taxonomy eligible economic activities",
+      "proportion of CAPEX from taxonomy-aligned economic activities",
+      "taxonomy-aligned capital expenditure as % of total capital expenditure",
+      "taxonomy-aligned capital expenditure as a percentage of total capital expenditure",
+      "taxonomy-eligible capital expenditure as a percentage of total capital expenditure"
+    ],
+    "n_claims": 9,
+    "n_companies": 3,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "€ million"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 9
+  },
+  "cluster_78": {
+    "metrics_in_cluster": [
+      "Taxonomy-aligned Capital Expenditures (Manufacture of low-carbon technologies for transport)",
+      "share of taxonomy-aligned sales revenue from low-carbon technologies for transport",
+      "taxonomy-aligned capital expenditure for hydrogen equipment manufacturing",
+      "taxonomy-aligned capital expenditure for low-carbon technologies manufacturing"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "€",
+      "€ million"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_241": {
+    "metrics_in_cluster": [
+      "Taxonomy-aligned revenue share"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_294": {
+    "metrics_in_cluster": [
+      "Tesla START (pass rate)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_227": {
+    "metrics_in_cluster": [
+      "The Subaru Share the Love Event donation program"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "$"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_6": {
+    "metrics_in_cluster": [
+      "Total Water/Vehicle",
+      "freshwater use per vehicle",
+      "water discharge (per vehicle)",
+      "water input per vehicle",
+      "water use in EV production"
+    ],
+    "n_claims": 21,
+    "n_companies": 3,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "m3/vehicle"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 18,
+    "n_claims_unflipped": 3
+  },
+  "cluster_52": {
+    "metrics_in_cluster": [
+      "Training",
+      "Training and Education"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%",
+      "hours/employee/year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_389": {
+    "metrics_in_cluster": [
+      "Trust Index Score"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_203": {
+    "metrics_in_cluster": [
+      "U.S. Women Hourly Employees (percent)",
+      "U.S. Women Overall Employees (percent)",
+      "U.S. Women Salaried Employees (percent)",
+      "female employee percentage",
+      "proportion of women in the workforce",
+      "share of women in total workforce"
+    ],
+    "n_claims": 12,
+    "n_companies": 3,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 12
+  },
+  "cluster_224": {
+    "metrics_in_cluster": [
+      "Unconscious bias training",
+      "unconscious bias training"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_413": {
+    "metrics_in_cluster": [
+      "VOC destruction rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_84": {
+    "metrics_in_cluster": [
+      "VOC emissions (automobile coating process)",
+      "VOC emissions (paint lines)",
+      "VOC emissions from water-based paint lines"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "g/m2",
+      "grams/m²",
+      "grams/square meter"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 2
+  },
+  "cluster_318": {
+    "metrics_in_cluster": [
+      "Volkswagen's shareholding percentage"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_317": {
+    "metrics_in_cluster": [
+      "Wages and benefits",
+      "wages and benefits",
+      "wages and benefits rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_48": {
+    "metrics_in_cluster": [
+      "Water management",
+      "freshwater use",
+      "groundwater use",
+      "potable water use",
+      "rainwater use",
+      "specific water consumption",
+      "surface water use",
+      "water consumption",
+      "water management",
+      "water usage at high-risk locations",
+      "water use",
+      "water use (at high-risk sites)",
+      "water use (in areas with water stress)",
+      "water use intensity"
+    ],
+    "n_claims": 41,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "m3",
+      "m3/vehicle",
+      "m3/year",
+      "million m3/year"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 37,
+    "n_claims_unflipped": 4
+  },
+  "cluster_412": {
+    "metrics_in_cluster": [
+      "Worker feedback and participation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_39": {
+    "metrics_in_cluster": [
+      "Working Conditions Assessments",
+      "Working conditions and human rights management"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_83": {
+    "metrics_in_cluster": [
+      "Working hours",
+      "labor working hours",
+      "working hours rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_369": {
+    "metrics_in_cluster": [
+      "ZEV adoption rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_209": {
+    "metrics_in_cluster": [
+      "adjusted free cash flow distribution"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_403": {
+    "metrics_in_cluster": [
+      "advances deduction"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_146": {
+    "metrics_in_cluster": [
+      "age distribution of employees",
+      "average age of workforce",
+      "average employee age"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "years"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_93": {
+    "metrics_in_cluster": [
+      "airbag recycling rate",
+      "bumper recycling rate",
+      "effective recycling rate of end-of-life vehicles (ELVs)",
+      "recycling rate of end-of-life vehicles",
+      "vehicle part recycling rate",
+      "vehicle recycling age",
+      "vehicle recycling rate"
+    ],
+    "n_claims": 18,
+    "n_companies": 5,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%",
+      "years"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 18
+  },
+  "cluster_38": {
+    "metrics_in_cluster": [
+      "all-electric model deliveries",
+      "deliveries of all-electric models",
+      "electrified vehicles in deliveries",
+      "number of electrified models on the road",
+      "share of electrified models in total deliveries"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_46": {
+    "metrics_in_cluster": [
+      "alternative water sourcing",
+      "alternative water usage",
+      "alternative water usage in water-scarce regions",
+      "offsite alternative water use",
+      "reused water",
+      "water conservation through rainwater harvesting and reuse",
+      "water reuse",
+      "water savings",
+      "water savings from rainwater harvesting",
+      "water savings from rainwater harvesting and reuse",
+      "water sourcing"
+    ],
+    "n_claims": 14,
+    "n_companies": 5,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company",
+      "Subaru Corporation",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "gallons",
+      "m",
+      "m3/year"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 13
+  },
+  "cluster_56": {
+    "metrics_in_cluster": [
+      "aluminium recycling rate",
+      "aluminum alloy recovery",
+      "aluminum recycling",
+      "aluminum recycling efficiency",
+      "aluminum recycling energy savings",
+      "aluminum recycling rate",
+      "aluminum recycling rate in F-Series production",
+      "energy savings from aluminum recycling",
+      "metal recycling",
+      "steel and aluminum recycling"
+    ],
+    "n_claims": 15,
+    "n_companies": 5,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "metric tons/year",
+      "pounds",
+      "pounds/month",
+      "tonnes"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 15
+  },
+  "cluster_300": {
+    "metrics_in_cluster": [
+      "aluminum chip production",
+      "aluminum chip production rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "t/day",
+      "tons/day"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_41": {
+    "metrics_in_cluster": [
+      "anti-harassment training completion rate",
+      "anti-harassment training completion rate for supervisors",
+      "discrimination and harassment incidents",
+      "percentage of confirmed harassment allegations by region"
+    ],
+    "n_claims": 5,
+    "n_companies": 3,
+    "companies": [
+      "Ford Motor Company",
+      "Toyota Motor Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "employees"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 3
+  },
+  "cluster_315": {
+    "metrics_in_cluster": [
+      "apprenticeship rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_236": {
+    "metrics_in_cluster": [
+      "attendance fee",
+      "attendance fee for Supervisory Board members"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "€ p.a.",
+      "€ per meeting"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_378": {
+    "metrics_in_cluster": [
+      "attendance rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_365": {
+    "metrics_in_cluster": [
+      "automotive leasing cost of revenues"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_366": {
+    "metrics_in_cluster": [
+      "average CO2e savings"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "mt"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_354": {
+    "metrics_in_cluster": [
+      "average age of Board members"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "years"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_261": {
+    "metrics_in_cluster": [
+      "average annual salary"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "yen"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_353": {
+    "metrics_in_cluster": [
+      "average director age"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_166": {
+    "metrics_in_cluster": [
+      "average effective per-hour pay for manufacturing roles (including no-cost health plans)",
+      "average national wage for manufacturing jobs (including overtime and equity)"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "$/hour"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_242": {
+    "metrics_in_cluster": [
+      "average overtime hours/month"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_117": {
+    "metrics_in_cluster": [
+      "average reporting of water accounting",
+      "average reporting of water-related policies",
+      "reporting of water accounting",
+      "reporting of water-related policies"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_297": {
+    "metrics_in_cluster": [
+      "average selling price"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "gbp"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_43": {
+    "metrics_in_cluster": [
+      "average supplier response rate",
+      "certified supplier rate",
+      "new supplier screening rate",
+      "production supplier compliance rate",
+      "supplier compliance rate",
+      "supplier enrollment rate",
+      "supplier evaluation rate",
+      "supplier response rate",
+      "supplier social assessment rate"
+    ],
+    "n_claims": 16,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 16
+  },
+  "cluster_286": {
+    "metrics_in_cluster": [
+      "battery manufacturing emissions share"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_104": {
+    "metrics_in_cluster": [
+      "battery procurement capacity",
+      "lithium-ion battery production capacity"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "gwh/year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_328": {
+    "metrics_in_cluster": [
+      "battery technology (energy density)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_367": {
+    "metrics_in_cluster": [
+      "battery technology (quick charging)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_100": {
+    "metrics_in_cluster": [
+      "biodiversity action recognition/project count",
+      "biodiversity promotion/conservation project count"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_308": {
+    "metrics_in_cluster": [
+      "biodiversity intactness index"
+    ],
+    "n_claims": 12,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 12
+  },
+  "cluster_330": {
+    "metrics_in_cluster": [
+      "bonus payment percentage"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_324": {
+    "metrics_in_cluster": [
+      "business fleet customer market share",
+      "commercial fleet customer market share",
+      "commercial fleet customer share"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_3": {
+    "metrics_in_cluster": [
+      "business integrity rate",
+      "fair business rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_323": {
+    "metrics_in_cluster": [
+      "capex to sales revenue ratio"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_179": {
+    "metrics_in_cluster": [
+      "cash and marketable debt securities management"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_63": {
+    "metrics_in_cluster": [
+      "charitable donation",
+      "donation amount",
+      "donations to charities"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Subaru Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "$",
+      "$/vehicle",
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_390": {
+    "metrics_in_cluster": [
+      "charity project funding"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_298": {
+    "metrics_in_cluster": [
+      "climate-related variable remuneration"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_49": {
+    "metrics_in_cluster": [
+      "closed loop recycling system for F-Series",
+      "recycled materials recovery (F-series)"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "pounds"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_222": {
+    "metrics_in_cluster": [
+      "cobalt due diligence response rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_42": {
+    "metrics_in_cluster": [
+      "commercial fleet deliveries",
+      "deliveries",
+      "deliveries of Rolls-Royce brand vehicles",
+      "passenger car deliveries",
+      "vehicle deliveries"
+    ],
+    "n_claims": 7,
+    "n_companies": 3,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_391": {
+    "metrics_in_cluster": [
+      "conflict mineral supply chain due diligence participation rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_253": {
+    "metrics_in_cluster": [
+      "container fill rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_73": {
+    "metrics_in_cluster": [
+      "contracts signed",
+      "total contracts"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_399": {
+    "metrics_in_cluster": [
+      "corporate social engagement activities"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "projects/initiatives"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_350": {
+    "metrics_in_cluster": [
+      "corporate value awareness"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_274": {
+    "metrics_in_cluster": [
+      "cost of capital",
+      "total capital expense"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_228": {
+    "metrics_in_cluster": [
+      "courses offered to dealers"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_184": {
+    "metrics_in_cluster": [
+      "crash rate with Autopilot",
+      "crash rate without Autopilot",
+      "crashes per million miles driven with Autopilot",
+      "crashes per million miles driven without Autopilot"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "/million miles"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_249": {
+    "metrics_in_cluster": [
+      "customer acquisition",
+      "customer acquisition rate",
+      "customer retention rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_190": {
+    "metrics_in_cluster": [
+      "customer feedback volume",
+      "customer satisfaction"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%",
+      "comments/questions",
+      "comments/questions per year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_243": {
+    "metrics_in_cluster": [
+      "days payable outstanding (DPO)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "days"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_233": {
+    "metrics_in_cluster": [
+      "decarbonization rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_173": {
+    "metrics_in_cluster": [
+      "deployment of ProPILOT/ProPILOT Assist technology",
+      "vehicles equipped with ProPILOT/ProPILOT Assist"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "vehicles"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_245": {
+    "metrics_in_cluster": [
+      "deposit accounts managed"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_262": {
+    "metrics_in_cluster": [
+      "disaster relief contributions (India/Brazil)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "$"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_382": {
+    "metrics_in_cluster": [
+      "diverse talent in executive roles",
+      "diverse talent pipeline",
+      "diversity in leadership roles",
+      "leadership diversity",
+      "manager participation (Diversity Wins)"
+    ],
+    "n_claims": 5,
+    "n_companies": 4,
+    "companies": [
+      "Ford Motor Company",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_409": {
+    "metrics_in_cluster": [
+      "dividend payout"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_178": {
+    "metrics_in_cluster": [
+      "e-POWER drivetrain fuel efficiency",
+      "electric vehicle efficiency"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "epa miles/kwh",
+      "km/l"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_260": {
+    "metrics_in_cluster": [
+      "economic impact of electrical disturbances"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "$"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_347": {
+    "metrics_in_cluster": [
+      "effective tax rate (adjusted)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_212": {
+    "metrics_in_cluster": [
+      "electric vehicle range"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "miles"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_282": {
+    "metrics_in_cluster": [
+      "electric vehicle share",
+      "electrified MINI model share"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_276": {
+    "metrics_in_cluster": [
+      "electricity production mix"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_346": {
+    "metrics_in_cluster": [
+      "employee coverage rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_356": {
+    "metrics_in_cluster": [
+      "employee disability representation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_122": {
+    "metrics_in_cluster": [
+      "employee engagement with sustainability strategy"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_388": {
+    "metrics_in_cluster": [
+      "employee flexibility"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_26": {
+    "metrics_in_cluster": [
+      "employee retention",
+      "employee turnover rate",
+      "staff turnover rate (women)",
+      "voluntary employee turnover rate",
+      "voluntary employee turnover rate by reason"
+    ],
+    "n_claims": 6,
+    "n_companies": 4,
+    "companies": [
+      "Ferrari N.V.",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_152": {
+    "metrics_in_cluster": [
+      "employee satisfaction",
+      "employee satisfaction score",
+      "employee satisfaction with company as employer",
+      "employee satisfaction with company strategy"
+    ],
+    "n_claims": 11,
+    "n_companies": 3,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 11
+  },
+  "cluster_50": {
+    "metrics_in_cluster": [
+      "employee training completion rate",
+      "employee training percentage",
+      "software developer training completion rate",
+      "vocational training completion rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_176": {
+    "metrics_in_cluster": [
+      "employee willingness to speak up"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_151": {
+    "metrics_in_cluster": [
+      "energy consumption in the Volkswagen Group",
+      "energy consumption in the Volkswagen Group per vehicle",
+      "heat energy consumption for cars and light commercial vehicles"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "kwh/vehicle",
+      "mwh/year"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 3,
+    "n_claims_unflipped": 0
+  },
+  "cluster_79": {
+    "metrics_in_cluster": [
+      "energy efficiency",
+      "energy efficiency (Model S)",
+      "energy efficiency (Model Y AWD)",
+      "energy efficiency of Model Y AWD",
+      "energy savings"
+    ],
+    "n_claims": 7,
+    "n_companies": 2,
+    "companies": [
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "GJ",
+      "epa miles/kwh"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_290": {
+    "metrics_in_cluster": [
+      "engineering vacancy fill rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_398": {
+    "metrics_in_cluster": [
+      "entry-level salary ratio to local minimum wage"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_270": {
+    "metrics_in_cluster": [
+      "environmental policy adoption rate",
+      "health and safety policy adoption rate",
+      "social responsibility policy adoption rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_113": {
+    "metrics_in_cluster": [
+      "eurozone economic performance"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_136": {
+    "metrics_in_cluster": [
+      "exported car sales",
+      "high-performance vehicle sales",
+      "vehicle sales",
+      "vehicles sold",
+      "wholesale car exports",
+      "wholesale cars exported",
+      "wholesale vehicle sales",
+      "wholesale vehicle sales by region"
+    ],
+    "n_claims": 11,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG",
+      "Ferrari N.V.",
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "n/a",
+      "vehicles"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 11
+  },
+  "cluster_193": {
+    "metrics_in_cluster": [
+      "fair value of PSUs"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "€/share"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_15": {
+    "metrics_in_cluster": [
+      "female auditor ratio",
+      "female director ratio",
+      "female officer ratio",
+      "number of female auditors",
+      "number of female corporate officers"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_250": {
+    "metrics_in_cluster": [
+      "female car-life advisor ratio"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_60": {
+    "metrics_in_cluster": [
+      "fixed-term contract rate",
+      "fixed-term contract rate by gender"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_223": {
+    "metrics_in_cluster": [
+      "flood inundation and landslide risk"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_201": {
+    "metrics_in_cluster": [
+      "follow-up examination rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_335": {
+    "metrics_in_cluster": [
+      "foreign currency translation loss recategorization"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "$"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_22": {
+    "metrics_in_cluster": [
+      "fossil energy consumption (purchased)",
+      "fossil energy share",
+      "fossil fuel share",
+      "other fossil fuel consumption",
+      "renewable fuel consumption"
+    ],
+    "n_claims": 5,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%",
+      "megawatt hours"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 4
+  },
+  "cluster_358": {
+    "metrics_in_cluster": [
+      "freedom of association rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_12": {
+    "metrics_in_cluster": [
+      "fuel consumption",
+      "fuel consumption target",
+      "fuel economy",
+      "fuel efficiency",
+      "fuel efficiency (ICE)"
+    ],
+    "n_claims": 5,
+    "n_companies": 3,
+    "companies": [
+      "Ferrari N.V.",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "km/l",
+      "l/100km",
+      "mpg"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_1": {
+    "metrics_in_cluster": [
+      "full-time employment rate",
+      "permanent employment rate",
+      "reemployment rate"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Ferrari N.V.",
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_266": {
+    "metrics_in_cluster": [
+      "gain from convertible note measurement"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "€"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_244": {
+    "metrics_in_cluster": [
+      "global GDP contraction"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_57": {
+    "metrics_in_cluster": [
+      "graduate percentage",
+      "graduate rate in workforce"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_87": {
+    "metrics_in_cluster": [
+      "graduate representation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_251": {
+    "metrics_in_cluster": [
+      "grant funding for diverse communities"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_217": {
+    "metrics_in_cluster": [
+      "grievance mechanism implementation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_198": {
+    "metrics_in_cluster": [
+      "hazardous waste generation per vehicle",
+      "non-hazardous waste generation per vehicle",
+      "total waste generation per vehicle",
+      "waste generation per vehicle",
+      "waste per vehicle produced"
+    ],
+    "n_claims": 8,
+    "n_companies": 3,
+    "companies": [
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "kg/vehicle"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 6,
+    "n_claims_unflipped": 2
+  },
+  "cluster_344": {
+    "metrics_in_cluster": [
+      "hazardous waste shipped internationally"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_135": {
+    "metrics_in_cluster": [
+      "health checkup rate",
+      "health guidance rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_355": {
+    "metrics_in_cluster": [
+      "health seminar program satisfaction"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_406": {
+    "metrics_in_cluster": [
+      "hourly wage for Production Associates / Assemblers"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "/hour"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_177": {
+    "metrics_in_cluster": [
+      "human rights and environmental capacity building in the supply chain",
+      "human rights-aligned supplier relationships in the supply chain"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_32": {
+    "metrics_in_cluster": [
+      "inclusion",
+      "inclusion index"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_158": {
+    "metrics_in_cluster": [
+      "income tax provision (benefit)",
+      "provision for/(benefit from) income taxes"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "$m",
+      "usd"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_364": {
+    "metrics_in_cluster": [
+      "independence of shareholder representatives"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_306": {
+    "metrics_in_cluster": [
+      "indirect material/service assessment rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_116": {
+    "metrics_in_cluster": [
+      "injury rate",
+      "lost time injuries rate",
+      "lost time injury frequency rate",
+      "recorded working injury rate",
+      "total recordable injury rate"
+    ],
+    "n_claims": 11,
+    "n_companies": 3,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ferrari N.V.",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 10,
+    "n_claims_unflipped": 1
+  },
+  "cluster_216": {
+    "metrics_in_cluster": [
+      "innovation target"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_336": {
+    "metrics_in_cluster": [
+      "internationalization in top management"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_221": {
+    "metrics_in_cluster": [
+      "investment allocation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_394": {
+    "metrics_in_cluster": [
+      "jobs created/retained"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_148": {
+    "metrics_in_cluster": [
+      "land conservation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Toyota Motor Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_408": {
+    "metrics_in_cluster": [
+      "land sealing"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_232": {
+    "metrics_in_cluster": [
+      "lithium sourcing"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_248": {
+    "metrics_in_cluster": [
+      "litigation outcome probability",
+      "litigation outcomes and case resolution rates"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_302": {
+    "metrics_in_cluster": [
+      "local hiring rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_348": {
+    "metrics_in_cluster": [
+      "lost-time case rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_285": {
+    "metrics_in_cluster": [
+      "lump-sum bonuses (UAW agreement)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "usd"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_47": {
+    "metrics_in_cluster": [
+      "material usage in vehicles",
+      "new vehicle recyclability",
+      "recyclability of vehicles",
+      "recyclability rate of new vehicles",
+      "recyclable vehicle content",
+      "recyclable vehicle production",
+      "recycled and reused vehicle parts and materials",
+      "recycled material usage in vehicle production",
+      "vehicle recyclability"
+    ],
+    "n_claims": 13,
+    "n_companies": 5,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 13
+  },
+  "cluster_225": {
+    "metrics_in_cluster": [
+      "mean species abundance"
+    ],
+    "n_claims": 10,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 10
+  },
+  "cluster_309": {
+    "metrics_in_cluster": [
+      "media screening participation percentage"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_85": {
+    "metrics_in_cluster": [
+      "minority executive representation",
+      "representation in top management positions",
+      "representation in top management positions (american indian/alaskan native)",
+      "representation in top management positions (asian)",
+      "representation in top management positions (black/african american)",
+      "representation in top management positions (do not wish to identify)",
+      "representation in top management positions (hispanic/latino)",
+      "representation in top management positions (native hawaiian/pacific islander)",
+      "representation in top management positions (total racial and ethnic minority groups)",
+      "representation in top management positions (two or more races)",
+      "representation in top management positions (white)"
+    ],
+    "n_claims": 11,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 11
+  },
+  "cluster_269": {
+    "metrics_in_cluster": [
+      "motorcycle sales volume"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%",
+      "units"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_381": {
+    "metrics_in_cluster": [
+      "multi-Ferrari ownership rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_24": {
+    "metrics_in_cluster": [
+      "native tree/shrub planting",
+      "tree planting"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "trees"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_295": {
+    "metrics_in_cluster": [
+      "net revenue (high climate impact)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "usd billion"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_115": {
+    "metrics_in_cluster": [
+      "non-Japanese executives",
+      "non-Japanese in management positions"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_322": {
+    "metrics_in_cluster": [
+      "nuclear electricity share",
+      "nuclear energy share"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_234": {
+    "metrics_in_cluster": [
+      "number of children participating in monozukuri program in UK"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_283": {
+    "metrics_in_cluster": [
+      "number of clubs"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_296": {
+    "metrics_in_cluster": [
+      "number of participants in Kompass 2.0 program"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_392": {
+    "metrics_in_cluster": [
+      "number of participants in modular mentoring management program"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_218": {
+    "metrics_in_cluster": [
+      "number of students in innovative programming schools"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "students"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_349": {
+    "metrics_in_cluster": [
+      "operating result, including Chinese joint ventures (proportionate)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_305": {
+    "metrics_in_cluster": [
+      "operating return on sales",
+      "operating return on sales (RoS)",
+      "operational return on sales"
+    ],
+    "n_claims": 7,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_127": {
+    "metrics_in_cluster": [
+      "orders received"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_107": {
+    "metrics_in_cluster": [
+      "package delivery efficiency (FedEx)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_94": {
+    "metrics_in_cluster": [
+      "paid software attach rate",
+      "paid software subscriptions"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%",
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_213": {
+    "metrics_in_cluster": [
+      "pay equity"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_303": {
+    "metrics_in_cluster": [
+      "payback period of solar and storage systems"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "years"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_210": {
+    "metrics_in_cluster": [
+      "payment practices"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_142": {
+    "metrics_in_cluster": [
+      "penetration rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_108": {
+    "metrics_in_cluster": [
+      "pension benefits"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_124": {
+    "metrics_in_cluster": [
+      "percentage of budget spent on social projects",
+      "percentage of projects with positive impact at national/international level",
+      "percentage of projects with positive impact on local community"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_131": {
+    "metrics_in_cluster": [
+      "percentage of employees in Italy"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_168": {
+    "metrics_in_cluster": [
+      "percentage of female students participating in educational programs",
+      "share of women in student support programs",
+      "share of women in trainee program"
+    ],
+    "n_claims": 3,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_183": {
+    "metrics_in_cluster": [
+      "percentage of revenue-based direct suppliers with certified environmental management systems",
+      "percentage of suppliers with certified environmental management systems",
+      "social and environmental assessment for new suppliers",
+      "supplier environmental assessment"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_161": {
+    "metrics_in_cluster": [
+      "performance review consistency rate",
+      "performance review delivery rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_88": {
+    "metrics_in_cluster": [
+      "performance share plan grants",
+      "performance shares"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_287": {
+    "metrics_in_cluster": [
+      "precious metal recovery rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "tonnes"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_144": {
+    "metrics_in_cluster": [
+      "premature deaths due to air pollution",
+      "premature deaths due to air pollution in Europe"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "people/year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_120": {
+    "metrics_in_cluster": [
+      "primary pupils per year"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "pupils/year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_235": {
+    "metrics_in_cluster": [
+      "priority non-conformances"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_164": {
+    "metrics_in_cluster": [
+      "procurement volume share",
+      "supplier purchasing volume"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_105": {
+    "metrics_in_cluster": [
+      "product collection rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_163": {
+    "metrics_in_cluster": [
+      "production capacity"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "units/week"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_380": {
+    "metrics_in_cluster": [
+      "proportion of women (as per legal situation in Germany: Executive Positions Act)"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_362": {
+    "metrics_in_cluster": [
+      "propulsion efficiency"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_219": {
+    "metrics_in_cluster": [
+      "public opinion on ASTYBUS"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_157": {
+    "metrics_in_cluster": [
+      "public opinion on smart and green island transformation"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_375": {
+    "metrics_in_cluster": [
+      "ratio of returnees from parental leave"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_226": {
+    "metrics_in_cluster": [
+      "recognised quality standards (CSI/C-Sink)"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_288": {
+    "metrics_in_cluster": [
+      "recognition program metrics",
+      "recognition program usage"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%",
+      "n/a n/a n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_310": {
+    "metrics_in_cluster": [
+      "recordable incidents per 100 employees"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_214": {
+    "metrics_in_cluster": [
+      "recycled content of seat covers"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_384": {
+    "metrics_in_cluster": [
+      "remuneration"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_123": {
+    "metrics_in_cluster": [
+      "remuneration system approval rate",
+      "shareholder approval rate"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_10": {
+    "metrics_in_cluster": [
+      "renewable electricity (global)",
+      "renewable electricity introduction rate",
+      "renewable energy adoption",
+      "renewable energy consumption (purchased)",
+      "renewable energy deployment",
+      "renewable energy production",
+      "renewable energy usage (PPA)",
+      "renewable energy usage (wind and biomass)",
+      "renewable energy usage rate",
+      "renewable energy usage rate (biomass and wind)",
+      "renewable energy use",
+      "renewable material use"
+    ],
+    "n_claims": 19,
+    "n_companies": 6,
+    "companies": [
+      "Ferrari N.V.",
+      "Ford Motor Company",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd.",
+      "Subaru Corporation",
+      "Toyota Motor Corporation"
+    ],
+    "units_seen": [
+      "%",
+      "megawatt hours",
+      "n/a"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 17
+  },
+  "cluster_405": {
+    "metrics_in_cluster": [
+      "renewable energy sourcing",
+      "renewable energy sourcing for power generation"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "General Motors Company",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_103": {
+    "metrics_in_cluster": [
+      "reporting of active targets",
+      "reporting of active targets and/or goals"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_272": {
+    "metrics_in_cluster": [
+      "representation by workers' representatives"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_301": {
+    "metrics_in_cluster": [
+      "resin content in ASR"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_372": {
+    "metrics_in_cluster": [
+      "responsible sourcing rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_231": {
+    "metrics_in_cluster": [
+      "returnable packaging materials usage"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_205": {
+    "metrics_in_cluster": [
+      "reused water sampling efficiency",
+      "wastewater sampling efficiency",
+      "water sampling efficiency"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 2
+  },
+  "cluster_281": {
+    "metrics_in_cluster": [
+      "robotics teams in Nevada schools"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_338": {
+    "metrics_in_cluster": [
+      "safety audit performance"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_385": {
+    "metrics_in_cluster": [
+      "sales revenue"
+    ],
+    "n_claims": 18,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 18
+  },
+  "cluster_401": {
+    "metrics_in_cluster": [
+      "sanction likelihood"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_373": {
+    "metrics_in_cluster": [
+      "self-acceptance"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_17": {
+    "metrics_in_cluster": [
+      "share capital",
+      "share ownership",
+      "share ownership by employees",
+      "shareholding"
+    ],
+    "n_claims": 4,
+    "n_companies": 2,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_130": {
+    "metrics_in_cluster": [
+      "share of CO2e certificates from removal projects",
+      "share of CO2e certificates from removal projects with corresponding adjustments",
+      "share of CO2e certificates from removal projects within the EU"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 3,
+    "n_claims_unflipped": 0
+  },
+  "cluster_165": {
+    "metrics_in_cluster": [
+      "share repurchase",
+      "stockholder return"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Subaru Corporation",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%",
+      "yen"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_278": {
+    "metrics_in_cluster": [
+      "sickness rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_396": {
+    "metrics_in_cluster": [
+      "sink-type biochar"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_314": {
+    "metrics_in_cluster": [
+      "social media engagement"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "n/a"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_197": {
+    "metrics_in_cluster": [
+      "solar power generation capacity in Subaru Accessory Center",
+      "solar power generation capacity in Subaru Kohsan Co., Ltd."
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "mwh/year"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_191": {
+    "metrics_in_cluster": [
+      "solvent emissions per vehicle"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "tonnes"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_129": {
+    "metrics_in_cluster": [
+      "specific energy requirements"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_289": {
+    "metrics_in_cluster": [
+      "stakeholder trust"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_237": {
+    "metrics_in_cluster": [
+      "substance substitution progress"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Subaru Corporation"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_370": {
+    "metrics_in_cluster": [
+      "supercharger expansion"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "locations"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_180": {
+    "metrics_in_cluster": [
+      "supplier employee interview rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_194": {
+    "metrics_in_cluster": [
+      "supply chain auditing"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "count"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_311": {
+    "metrics_in_cluster": [
+      "supply chain mapping adoption rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_196": {
+    "metrics_in_cluster": [
+      "sustainability deficit identification rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_132": {
+    "metrics_in_cluster": [
+      "sustainability rating compliance rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_156": {
+    "metrics_in_cluster": [
+      "sustainability training completion rate for suppliers",
+      "sustainability training for suppliers completion rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_299": {
+    "metrics_in_cluster": [
+      "sustainably sourced biological materials",
+      "sustainably sourced biological materials share"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_239": {
+    "metrics_in_cluster": [
+      "talent development program"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_326": {
+    "metrics_in_cluster": [
+      "tariff-bound production employee rate"
+    ],
+    "n_claims": 6,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_229": {
+    "metrics_in_cluster": [
+      "tax credits for EVs"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "$"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_185": {
+    "metrics_in_cluster": [
+      "taxonomy-non-eligible operating expenditure"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_220": {
+    "metrics_in_cluster": [
+      "team performance"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_195": {
+    "metrics_in_cluster": [
+      "thermal efficiency of engines"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_273": {
+    "metrics_in_cluster": [
+      "third-party assessment coverage",
+      "third-party assessment coverage rate",
+      "third-party supplier assessment coverage"
+    ],
+    "n_claims": 5,
+    "n_companies": 1,
+    "companies": [
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_208": {
+    "metrics_in_cluster": [
+      "tools reconditioned"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_312": {
+    "metrics_in_cluster": [
+      "total workforce size"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_267": {
+    "metrics_in_cluster": [
+      "trade union membership rate",
+      "union representation rate",
+      "unionization rate"
+    ],
+    "n_claims": 6,
+    "n_companies": 3,
+    "companies": [
+      "Ferrari N.V.",
+      "General Motors Company",
+      "Nissan Motor Co., Ltd."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 6
+  },
+  "cluster_65": {
+    "metrics_in_cluster": [
+      "trademark registration rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_402": {
+    "metrics_in_cluster": [
+      "traineeship program outcomes"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_137": {
+    "metrics_in_cluster": [
+      "training attendance and completion rate",
+      "training program attendance"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_329": {
+    "metrics_in_cluster": [
+      "trigeneration plant efficiency"
+    ],
+    "n_claims": 3,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 3
+  },
+  "cluster_374": {
+    "metrics_in_cluster": [
+      "value added from suppliers"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Bayerische Motoren Werke AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_204": {
+    "metrics_in_cluster": [
+      "vehicle connectivity training for employees",
+      "vehicle connectivity training program completion"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ferrari N.V."
+    ],
+    "units_seen": [
+      "employees"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_58": {
+    "metrics_in_cluster": [
+      "vehicle fire rate",
+      "vehicle fires per billion miles driven for Tesla vehicles",
+      "vehicle fires per billion miles driven for Tesla vehicles (cumulative)",
+      "vehicle fires per billion miles travelled",
+      "vehicle fires per mile traveled"
+    ],
+    "n_claims": 7,
+    "n_companies": 1,
+    "companies": [
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "/19,000,000 miles",
+      "/205,000,000 miles",
+      "/billion miles"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 7
+  },
+  "cluster_89": {
+    "metrics_in_cluster": [
+      "vehicle longevity"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_143": {
+    "metrics_in_cluster": [
+      "waste intensity",
+      "zero waste rate"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Ford Motor Company",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "%",
+      "kg/vehicle"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 0
+  },
+  "cluster_20": {
+    "metrics_in_cluster": [
+      "water consumption at Gigafactory Berlin-Brandenburg",
+      "water consumption by industry",
+      "water consumption by sector",
+      "water use per unit of production"
+    ],
+    "n_claims": 9,
+    "n_companies": 3,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC",
+      "Nissan Motor Co., Ltd.",
+      "Tesla, Inc."
+    ],
+    "units_seen": [
+      "%",
+      "m3/yr"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 9,
+    "n_claims_unflipped": 0
+  },
+  "cluster_153": {
+    "metrics_in_cluster": [
+      "water intensity"
+    ],
+    "n_claims": 2,
+    "n_companies": 2,
+    "companies": [
+      "Bayerische Motoren Werke AG",
+      "General Motors Company"
+    ],
+    "units_seen": [
+      "m3/million €",
+      "m3/vehicle"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 2
+  },
+  "cluster_101": {
+    "metrics_in_cluster": [
+      "water management rate",
+      "water recycling rate",
+      "water reuse rate",
+      "water usage rate"
+    ],
+    "n_claims": 5,
+    "n_companies": 3,
+    "companies": [
+      "Ford Motor Company",
+      "Subaru Corporation",
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%",
+      "m3"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 5
+  },
+  "cluster_280": {
+    "metrics_in_cluster": [
+      "water withdrawal by region"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Volkswagen AG"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 1,
+    "n_claims_unflipped": 0
+  },
+  "cluster_339": {
+    "metrics_in_cluster": [
+      "whistleblowing report submission method",
+      "whistleblowing reports"
+    ],
+    "n_claims": 4,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 4
+  },
+  "cluster_410": {
+    "metrics_in_cluster": [
+      "wholesale car export rate"
+    ],
+    "n_claims": 1,
+    "n_companies": 1,
+    "companies": [
+      "Aston Martin Lagonda Global Holdings PLC"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": false,
+    "n_claims_flipped_sign": 0,
+    "n_claims_unflipped": 1
+  },
+  "cluster_376": {
+    "metrics_in_cluster": [
+      "zero waste to landfill facilities",
+      "zero waste to landfill share in manufacturing facilities"
+    ],
+    "n_claims": 2,
+    "n_companies": 1,
+    "companies": [
+      "Ford Motor Company"
+    ],
+    "units_seen": [
+      "%"
+    ],
+    "has_bad_topic": true,
+    "n_claims_flipped_sign": 2,
+    "n_claims_unflipped": 0
+  }
+}

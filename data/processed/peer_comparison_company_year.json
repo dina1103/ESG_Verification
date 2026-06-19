@@ -1,0 +1,625 @@
+{
+  "Ford Motor Company__2020": {
+    "company_name": "Ford Motor Company",
+    "year": 2020,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_45__%__level__reduction_or_good__nonneg": 1.6575,
+      "cluster_61__%__level__reduction_or_good__nonneg": 0.8583
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Tesla, Inc.__2020": {
+    "company_name": "Tesla, Inc.",
+    "year": 2020,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_45__%__level__reduction_or_good__nonneg": -0.0805,
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.9422,
+      "cluster_334__%__level__reduction_or_good__nonneg": 0.7071
+    },
+    "peer_deviation_score": 0.5621,
+    "peer_deviation_score_unweighted": 0.523,
+    "note": null
+  },
+  "General Motors Company__2020": {
+    "company_name": "General Motors Company",
+    "year": 2020,
+    "n_clusters_with_data": 7,
+    "z_scores_by_cluster": {
+      "cluster_45__%__level__reduction_or_good__nonneg": -0.8255,
+      "cluster_61__%__level__reduction_or_good__nonneg": -1.4025,
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.982,
+      "cluster_334__%__level__reduction_or_good__nonneg": 0.7071,
+      "cluster_30__%__level__reduction_or_good__nonneg": 1.3919,
+      "cluster_10__%__level__reduction_or_good__nonneg": -1.3903,
+      "cluster_47__%__level__reduction_or_good__nonneg": -0.7071
+    },
+    "peer_deviation_score": -0.4997,
+    "peer_deviation_score_unweighted": -0.4584,
+    "note": null
+  },
+  "Nissan Motor Co., Ltd.__2020": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2020,
+    "n_clusters_with_data": 5,
+    "z_scores_by_cluster": {
+      "cluster_45__%__level__reduction_or_good__nonneg": -0.7515,
+      "cluster_30__%__level__reduction_or_good__nonneg": -1.4004,
+      "cluster_7__%__level__level__nonneg": -0.7566,
+      "cluster_10__%__level__reduction_or_good__nonneg": -0.0236,
+      "cluster_47__%__level__reduction_or_good__nonneg": 1.4142
+    },
+    "peer_deviation_score": -0.4617,
+    "peer_deviation_score_unweighted": -0.3036,
+    "note": null
+  },
+  "Bayerische Motoren Werke AG__2020": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2020,
+    "n_clusters_with_data": 4,
+    "z_scores_by_cluster": {
+      "cluster_61__%__level__reduction_or_good__nonneg": 0.5443,
+      "cluster_334__%__level__reduction_or_good__nonneg": -1.4142,
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.2296,
+      "cluster_7__%__level__level__nonneg": -0.6564
+    },
+    "peer_deviation_score": -0.2134,
+    "peer_deviation_score_unweighted": -0.3242,
+    "note": null
+  },
+  "Toyota Motor Corporation__2020": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2020,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": -1.3635
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  },
+  "Volkswagen AG__2020": {
+    "company_name": "Volkswagen AG",
+    "year": 2020,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.3119,
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.221
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Ferrari N.V.__2020": {
+    "company_name": "Ferrari N.V.",
+    "year": 2020,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 1.0915,
+      "cluster_10__%__level__reduction_or_good__nonneg": 1.4374,
+      "cluster_47__%__level__reduction_or_good__nonneg": -0.7071
+    },
+    "peer_deviation_score": 0.907,
+    "peer_deviation_score_unweighted": 0.6073,
+    "note": null
+  },
+  "Ford Motor Company__2021": {
+    "company_name": "Ford Motor Company",
+    "year": 2021,
+    "n_clusters_with_data": 4,
+    "z_scores_by_cluster": {
+      "cluster_93__%__level__reduction_or_good__nonneg": -1.413,
+      "cluster_10__%__level__reduction_or_good__nonneg": -1.2614,
+      "cluster_56__%__level__reduction_or_good__nonneg": 0.7071,
+      "cluster_7__%__level__level__nonneg": 1.3958
+    },
+    "peer_deviation_score": -0.1429,
+    "peer_deviation_score_unweighted": -0.1429,
+    "note": null
+  },
+  "Nissan Motor Co., Ltd.__2021": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2021,
+    "n_clusters_with_data": 5,
+    "z_scores_by_cluster": {
+      "cluster_93__%__level__reduction_or_good__nonneg": 0.6548,
+      "cluster_10__%__level__reduction_or_good__nonneg": 0.0769,
+      "cluster_56__%__level__reduction_or_good__nonneg": -1.4142,
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.9312,
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.8841
+    },
+    "peer_deviation_score": -0.6229,
+    "peer_deviation_score_unweighted": -0.4996,
+    "note": null
+  },
+  "Subaru Corporation__2021": {
+    "company_name": "Subaru Corporation",
+    "year": 2021,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_93__%__level__reduction_or_good__nonneg": 0.7582,
+      "cluster_19__%__level__reduction_or_good__nonneg": -1.347
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Toyota Motor Corporation__2021": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2021,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_10__%__level__reduction_or_good__nonneg": 1.1845
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  },
+  "Volkswagen AG__2021": {
+    "company_name": "Volkswagen AG",
+    "year": 2021,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_56__%__level__reduction_or_good__nonneg": 0.7071,
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.5139
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2021": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2021,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_7__%__level__level__nonneg": -0.8951,
+      "cluster_19__%__level__reduction_or_good__nonneg": 1.0725,
+      "cluster_114__%__level__level__nonneg": -1.3126
+    },
+    "peer_deviation_score": 0.202,
+    "peer_deviation_score_unweighted": -0.3784,
+    "note": null
+  },
+  "General Motors Company__2021": {
+    "company_name": "General Motors Company",
+    "year": 2021,
+    "n_clusters_with_data": 4,
+    "z_scores_by_cluster": {
+      "cluster_7__%__level__level__nonneg": -0.5007,
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.1332,
+      "cluster_114__%__level__level__nonneg": 0.2004,
+      "cluster_30__%__level__reduction_or_good__nonneg": 1.398
+    },
+    "peer_deviation_score": 0.2496,
+    "peer_deviation_score_unweighted": 0.3077,
+    "note": null
+  },
+  "Tesla, Inc.__2021": {
+    "company_name": "Tesla, Inc.",
+    "year": 2021,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 1.0725,
+      "cluster_114__%__level__level__nonneg": 1.1122
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Ford Motor Company__2022": {
+    "company_name": "Ford Motor Company",
+    "year": 2022,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.2044,
+      "cluster_74__%__level__reduction_or_good__nonneg": -0.5514
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2022": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2022,
+    "n_clusters_with_data": 5,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": 2.2101,
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.8348,
+      "cluster_2__%__level__reduction_or_good__nonneg": 0.1355,
+      "cluster_0__%__level__level__nonneg": 1.4044,
+      "cluster_136__%__level__reduction_or_good__nonneg": 1.3541
+    },
+    "peer_deviation_score": 1.3538,
+    "peer_deviation_score_unweighted": 1.1878,
+    "note": null
+  },
+  "General Motors Company__2022": {
+    "company_name": "General Motors Company",
+    "year": 2022,
+    "n_clusters_with_data": 5,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.3742,
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.8348,
+      "cluster_136__%__level__reduction_or_good__nonneg": -0.3239,
+      "cluster_267__%__level__reduction_or_good__nonneg": 1.4142,
+      "cluster_9__%__level__reduction_or_good__nonneg": 1.3756
+    },
+    "peer_deviation_score": 0.6675,
+    "peer_deviation_score_unweighted": 0.735,
+    "note": null
+  },
+  "Bayerische Motoren Werke AG__2022": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2022,
+    "n_clusters_with_data": 4,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.6145,
+      "cluster_0__%__level__level__nonneg": -0.5585,
+      "cluster_136__%__level__reduction_or_good__nonneg": -1.0303,
+      "cluster_61__%__level__reduction_or_good__nonneg": 1.2096
+    },
+    "peer_deviation_score": -0.4315,
+    "peer_deviation_score_unweighted": -0.2484,
+    "note": null
+  },
+  "Nissan Motor Co., Ltd.__2022": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2022,
+    "n_clusters_with_data": 7,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": -1.0255,
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.8348,
+      "cluster_2__%__level__reduction_or_good__nonneg": 1.1514,
+      "cluster_0__%__level__level__nonneg": -0.846,
+      "cluster_267__%__level__reduction_or_good__nonneg": -0.7057,
+      "cluster_9__%__level__reduction_or_good__nonneg": -0.972,
+      "cluster_61__%__level__reduction_or_good__nonneg": 0.0298
+    },
+    "peer_deviation_score": -0.0913,
+    "peer_deviation_score_unweighted": -0.219,
+    "note": null
+  },
+  "Ferrari N.V.__2022": {
+    "company_name": "Ferrari N.V.",
+    "year": 2022,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.0301,
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.0723,
+      "cluster_267__%__level__reduction_or_good__nonneg": -0.7085
+    },
+    "peer_deviation_score": -0.1077,
+    "peer_deviation_score_unweighted": -0.2703,
+    "note": null
+  },
+  "Volkswagen AG__2022": {
+    "company_name": "Volkswagen AG",
+    "year": 2022,
+    "n_clusters_with_data": 5,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.7097,
+      "cluster_74__%__level__reduction_or_good__nonneg": 1.4035,
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.6041,
+      "cluster_9__%__level__reduction_or_good__nonneg": -0.4036,
+      "cluster_61__%__level__reduction_or_good__nonneg": -1.2394
+    },
+    "peer_deviation_score": -0.5295,
+    "peer_deviation_score_unweighted": -0.3107,
+    "note": null
+  },
+  "Tesla, Inc.__2022": {
+    "company_name": "Tesla, Inc.",
+    "year": 2022,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_74__%__level__reduction_or_good__nonneg": -0.8521,
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.8348,
+      "cluster_2__%__level__reduction_or_good__nonneg": -1.2868
+    },
+    "peer_deviation_score": 0.3587,
+    "peer_deviation_score_unweighted": -0.4347,
+    "note": null
+  },
+  "Toyota Motor Corporation__2022": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2022,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.5259
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  },
+  "Subaru Corporation__2022": {
+    "company_name": "Subaru Corporation",
+    "year": 2022,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": -2.1368
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  },
+  "Ford Motor Company__2023": {
+    "company_name": "Ford Motor Company",
+    "year": 2023,
+    "n_clusters_with_data": 6,
+    "z_scores_by_cluster": {
+      "cluster_9__%__level__reduction_or_good__nonneg": 1.358,
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.5835,
+      "cluster_47__%__level__reduction_or_good__nonneg": 0.9702,
+      "cluster_7__%__level__level__nonneg": 0.4435,
+      "cluster_30__%__level__reduction_or_good__nonneg": 1.5122,
+      "cluster_0__%__level__level__nonneg": 0.5018
+    },
+    "peer_deviation_score": 0.6484,
+    "peer_deviation_score_unweighted": 0.7004,
+    "note": null
+  },
+  "Nissan Motor Co., Ltd.__2023": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2023,
+    "n_clusters_with_data": 4,
+    "z_scores_by_cluster": {
+      "cluster_9__%__level__reduction_or_good__nonneg": -1.021,
+      "cluster_47__%__level__reduction_or_good__nonneg": -0.6278,
+      "cluster_2__%__level__reduction_or_good__nonneg": 1.2888,
+      "cluster_80__%__level__reduction_or_good__nonneg": 1.1112
+    },
+    "peer_deviation_score": 0.3858,
+    "peer_deviation_score_unweighted": 0.1878,
+    "note": null
+  },
+  "Volkswagen AG__2023": {
+    "company_name": "Volkswagen AG",
+    "year": 2023,
+    "n_clusters_with_data": 6,
+    "z_scores_by_cluster": {
+      "cluster_9__%__level__reduction_or_good__nonneg": -0.337,
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.1111,
+      "cluster_30__%__level__reduction_or_good__nonneg": -1.1578,
+      "cluster_2__%__level__reduction_or_good__nonneg": -1.5129,
+      "cluster_61__%__level__reduction_or_good__nonneg": 1.3157,
+      "cluster_80__%__level__reduction_or_good__nonneg": 0.202
+    },
+    "peer_deviation_score": -0.6402,
+    "peer_deviation_score_unweighted": -0.2668,
+    "note": null
+  },
+  "Tesla, Inc.__2023": {
+    "company_name": "Tesla, Inc.",
+    "year": 2023,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 1.0962,
+      "cluster_7__%__level__level__nonneg": 0.4409,
+      "cluster_0__%__level__level__nonneg": 0.8597
+    },
+    "peer_deviation_score": 0.7524,
+    "peer_deviation_score_unweighted": 0.799,
+    "note": null
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2023": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2023,
+    "n_clusters_with_data": 6,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 1.0962,
+      "cluster_47__%__level__reduction_or_good__nonneg": -1.3127,
+      "cluster_7__%__level__level__nonneg": 0.4674,
+      "cluster_30__%__level__reduction_or_good__nonneg": -0.5064,
+      "cluster_0__%__level__level__nonneg": 0.3396,
+      "cluster_2__%__level__reduction_or_good__nonneg": 0.8685
+    },
+    "peer_deviation_score": 0.2107,
+    "peer_deviation_score_unweighted": 0.1588,
+    "note": null
+  },
+  "Subaru Corporation__2023": {
+    "company_name": "Subaru Corporation",
+    "year": 2023,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": -1.4979,
+      "cluster_61__%__level__reduction_or_good__nonneg": -1.1069
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Ferrari N.V.__2023": {
+    "company_name": "Ferrari N.V.",
+    "year": 2023,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_47__%__level__reduction_or_good__nonneg": 0.9702,
+      "cluster_7__%__level__level__nonneg": -2.236
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "General Motors Company__2023": {
+    "company_name": "General Motors Company",
+    "year": 2023,
+    "n_clusters_with_data": 3,
+    "z_scores_by_cluster": {
+      "cluster_7__%__level__level__nonneg": 0.4444,
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.8054,
+      "cluster_2__%__level__reduction_or_good__nonneg": -0.5323
+    },
+    "peer_deviation_score": 0.3093,
+    "peer_deviation_score_unweighted": 0.2392,
+    "note": null
+  },
+  "Bayerische Motoren Werke AG__2023": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2023,
+    "n_clusters_with_data": 5,
+    "z_scores_by_cluster": {
+      "cluster_7__%__level__level__nonneg": 0.4397,
+      "cluster_30__%__level__reduction_or_good__nonneg": -1.1186,
+      "cluster_0__%__level__level__nonneg": -1.7011,
+      "cluster_61__%__level__reduction_or_good__nonneg": -0.2088,
+      "cluster_80__%__level__reduction_or_good__nonneg": -1.3132
+    },
+    "peer_deviation_score": -0.6366,
+    "peer_deviation_score_unweighted": -0.7804,
+    "note": null
+  },
+  "Toyota Motor Corporation__2023": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2023,
+    "n_clusters_with_data": 2,
+    "z_scores_by_cluster": {
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.4651,
+      "cluster_2__%__level__reduction_or_good__nonneg": -0.1121
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (2 cluster comparisons)"
+  },
+  "Ford Motor Company__2024": {
+    "company_name": "Ford Motor Company",
+    "year": 2024,
+    "n_clusters_with_data": 6,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": -1.2154,
+      "cluster_9__%__level__reduction_or_good__nonneg": 1.3911,
+      "cluster_56__%__level__reduction_or_good__nonneg": -1.4113,
+      "cluster_162__%__level__reduction_or_good__nonneg": 0.9154,
+      "cluster_69__%__level__reduction_or_good__nonneg": -1.0309,
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.9719
+    },
+    "peer_deviation_score": -0.0682,
+    "peer_deviation_score_unweighted": -0.0632,
+    "note": null
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2024": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2024,
+    "n_clusters_with_data": 6,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 1.5194,
+      "cluster_162__%__level__reduction_or_good__nonneg": -1.3913,
+      "cluster_69__%__level__reduction_or_good__nonneg": -0.6262,
+      "cluster_140__%__level__level__nonneg": 1.9169,
+      "cluster_28__None__level__level__nonneg": 0.9336,
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.3624
+    },
+    "peer_deviation_score": 0.6806,
+    "peer_deviation_score_unweighted": 0.4525,
+    "note": null
+  },
+  "Bayerische Motoren Werke AG__2024": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2024,
+    "n_clusters_with_data": 10,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": -0.4419,
+      "cluster_9__%__level__reduction_or_good__nonneg": -0.4752,
+      "cluster_69__%__level__reduction_or_good__nonneg": 0.0629,
+      "cluster_140__%__level__level__nonneg": -0.1085,
+      "cluster_28__None__level__level__nonneg": 0.4532,
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.1836,
+      "cluster_61__%__level__reduction_or_good__nonneg": -0.4803,
+      "cluster_114__tCO2/vehicle__level__level__nonneg": 0.7069,
+      "cluster_0__gCO2/km__level__level__nonneg": -1.0383,
+      "cluster_7__%__level__reduction_or_good__nonneg": -1.4048
+    },
+    "peer_deviation_score": -0.1913,
+    "peer_deviation_score_unweighted": -0.2542,
+    "note": null
+  },
+  "Nissan Motor Co., Ltd.__2024": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2024,
+    "n_clusters_with_data": 10,
+    "z_scores_by_cluster": {
+      "cluster_19__%__level__reduction_or_good__nonneg": 0.1379,
+      "cluster_9__%__level__reduction_or_good__nonneg": -0.9159,
+      "cluster_56__%__level__reduction_or_good__nonneg": 0.6273,
+      "cluster_162__%__level__reduction_or_good__nonneg": 0.4758,
+      "cluster_30__%__level__reduction_or_good__nonneg": -1.9291,
+      "cluster_61__%__level__reduction_or_good__nonneg": 1.6806,
+      "cluster_0__%__level__level__nonneg": -1.4142,
+      "cluster_114__tCO2/vehicle__level__level__nonneg": 0.7073,
+      "cluster_0__gCO2/km__level__level__nonneg": 1.3507,
+      "cluster_7__%__level__reduction_or_good__nonneg": 0.8436
+    },
+    "peer_deviation_score": -0.034,
+    "peer_deviation_score_unweighted": 0.1564,
+    "note": null
+  },
+  "Volkswagen AG__2024": {
+    "company_name": "Volkswagen AG",
+    "year": 2024,
+    "n_clusters_with_data": 9,
+    "z_scores_by_cluster": {
+      "cluster_56__%__level__reduction_or_good__nonneg": 0.7841,
+      "cluster_69__%__level__reduction_or_good__nonneg": 1.5941,
+      "cluster_140__%__level__level__nonneg": -0.4764,
+      "cluster_28__None__level__level__nonneg": -1.3867,
+      "cluster_30__%__level__reduction_or_good__nonneg": 0.4112,
+      "cluster_61__%__level__reduction_or_good__nonneg": -0.2652,
+      "cluster_0__%__level__level__nonneg": 0.7105,
+      "cluster_114__tCO2/vehicle__level__level__nonneg": -1.4142,
+      "cluster_0__gCO2/km__level__level__nonneg": -0.3124
+    },
+    "peer_deviation_score": 0.0562,
+    "peer_deviation_score_unweighted": -0.0395,
+    "note": null
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2020": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2020,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_7__%__level__level__nonneg": 1.413
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  },
+  "Ferrari N.V.__2024": {
+    "company_name": "Ferrari N.V.",
+    "year": 2024,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_140__%__level__level__nonneg": -0.3501
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  },
+  "Subaru Corporation__2024": {
+    "company_name": "Subaru Corporation",
+    "year": 2024,
+    "n_clusters_with_data": 4,
+    "z_scores_by_cluster": {
+      "cluster_140__%__level__level__nonneg": -0.9819,
+      "cluster_61__%__level__reduction_or_good__nonneg": -0.9352,
+      "cluster_0__%__level__level__nonneg": 0.7038,
+      "cluster_7__%__level__reduction_or_good__nonneg": 0.5612
+    },
+    "peer_deviation_score": -0.5073,
+    "peer_deviation_score_unweighted": -0.163,
+    "note": null
+  },
+  "Subaru Corporation__2020": {
+    "company_name": "Subaru Corporation",
+    "year": 2020,
+    "n_clusters_with_data": 1,
+    "z_scores_by_cluster": {
+      "cluster_10__%__level__reduction_or_good__nonneg": -0.0236
+    },
+    "peer_deviation_score": null,
+    "peer_deviation_score_unweighted": null,
+    "note": "insufficient_evidence (1 cluster comparisons)"
+  }
+}
