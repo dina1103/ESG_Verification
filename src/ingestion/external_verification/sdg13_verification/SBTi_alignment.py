@@ -4,41 +4,83 @@ from pathlib import Path
 from collections import defaultdict
 import pandas as pd
 
-INPUT_JSONL    = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\llm_claim_extraction_result.jsonl"
-SDG_PARQUET    = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\segmentation_esg_sdg"
-SBTI_XLSX      = r"C:\Users\dina_\Desktop\esg_verification_draft\src\ingestion\external_benchmarks\sdg13_verification\targets-excel.xlsx"
-COMPANY_MAP    = r"C:\Users\dina_\Desktop\esg_verification_draft\src\ingestion\external_benchmarks\sdg13_verification\sbti_company_mapping.json"
-OUTPUT_CLAIMS  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\sdg13_climate_claim_level.jsonl"
-OUTPUT_SUMMARY = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\sdg13_climate_company_year.json"
+INPUT_JSONL    = r"data\processed\llm_claim_extraction_result.jsonl"
+SDG_PARQUET    = r"data\processed\segments_esg_sdg.parquet"
+SBTI_XLSX      = r"src\ingestion\external_benchmarks\sdg13_verification\targets-excel.xlsx"
+COMPANY_MAP    = r"src\ingestion\external_benchmarks\sdg13_verification\sbti_company_mapping.json"
+OUTPUT_CLAIMS  = r"data\processed\sdg13_climate_claim_level.jsonl"
+OUTPUT_SUMMARY = r"data\processed\sdg13_climate_company_year.json"
 
 SBTI_SHEET = "WebsiteData"
 
 # tolerance bounds for matching to SBTi
-PCT_TOLERANCE = 5
-YEAR_TOLERANCE = 2
+PCT_TOLERANCE = 2
+YEAR_TOLERANCE = 1
+BASE_YEAR_TOLERANCE = 1   # claim baseline must align with the SBTi baseline for trajectory math
 
-# intensity indicators on the claim side
-INTENSITY_PATTERNS = [
-    r"\bper\b",
-    r"/",
-    r"\bintensity\b",
-    r"\bper vehicle\b",
-    r"\bper kilometer\b",
-    r"\bper km\b",
-    r"\bper unit\b",
-    r"\bper produced\b",
+# --- intensity detection -------------------------------------------------
+_INTENSITY_DENOM = (
+    r"(vehicles?|cars?|km|kilomet\w+|miles?|units?|produced|production|capita|"
+    r"employees?|fte|passengers?|products?|kwh|mwh|gj|m2|sqm|sales|revenue|turnover)"
+)
+_INTENSITY_RE = [
+    re.compile(r"\bintensity\b", re.I),
+    re.compile(r"\bper\s+" + _INTENSITY_DENOM + r"\b", re.I),
+    re.compile(r"/\s*" + _INTENSITY_DENOM + r"\b", re.I),
 ]
 
 
 def is_intensity_claim(claim):
-    metric_text = (claim.get("metric") or "").lower()
-    unit_text = (claim.get("unit") or "").lower().strip()
-    claim_text = (claim.get("claim_text") or "").lower()
-    combined = metric_text + " " + claim_text + " " + unit_text
-    for pat in INTENSITY_PATTERNS:
-        if re.search(pat, combined):
-            return True
-    return False
+    fields = (str(claim.get("metric") or "") + " " + str(claim.get("unit") or "")).strip()
+    return any(r.search(fields) for r in _INTENSITY_RE)
+
+
+# --- commensurability gate -----------------------------------------------
+_GHG_RE      = re.compile(r"(ghg|greenhouse|co2|co₂|carbon|emission)", re.I)
+_NONGHG_RE   = re.compile(r"(energy|water|waste|electricity|renewable|\bbev\b|\bev\b|battery|share|recycl|landfill)", re.I)
+_USEPHASE_RE = re.compile(r"(use[ -]?phase|per vehicle kilom|vehicles? sold|new vehicles?|tailpipe|well[- ]to[- ]wheel|tank[- ]to[- ]wheel|fleet|lifecycle|life cycle|sales network)", re.I)
+_ABSUNIT_RE  = re.compile(r"(g\s*co|/\s*km|/\s*vehicle|t\s*co|tonne|tco2|kwh|mwh|gwh|\bgj\b|kg\b|liter|litre)", re.I)
+
+
+_SCOPE3_RE = re.compile(r"\\b3\\b")
+
+def route_scope_group(claim):
+    # decide which SBTi scope a claim should be checked against
+    text = str(claim.get("metric") or "") + " " + str(claim.get("claim_text") or "")
+    scope = claim.get("scope") or "N/A"
+    if "3" in scope and "1+2" not in scope and "1 & 2" not in scope:
+        return "3"
+    if _USEPHASE_RE.search(text):
+        return "3"   # use-phase / sold-product / fleet emissions are scope 3 for an automaker
+    return "1+2"
+
+
+def pick_target(claim, candidates):
+    # among scope-matched candidates, pick the benchmark this claim most plausibly
+    # refers to: closest target_year, then closest reduction percentage
+    qv = claim.get("quantified_value")
+    cy = claim.get("target_year")
+    def key(t):
+        yd = abs((cy - t["target_year"])) if cy is not None else 0
+        pd_ = abs(qv - t["target_pct"]) if qv is not None else 0
+        return (yd, pd_)
+    return sorted(candidates, key=key)[0] if candidates else None
+
+
+def commensurability_reason(claim, target):
+    # returns None if the claim is comparable, else a short reason for the mismatch
+    text = str(claim.get("metric") or "") + " " + str(claim.get("claim_text") or "")
+    if not _GHG_RE.search(text) or _NONGHG_RE.search(str(claim.get("metric") or "")):
+        return "non-GHG metric (energy/water/waste/share)"
+    if is_intensity_claim(claim) != target.get("is_intensity", False):
+        return (f"intensity mismatch: claim={'intensity' if is_intensity_claim(claim) else 'absolute'}, "
+                f"target={'intensity' if target.get('is_intensity') else 'absolute'}")
+    qv = claim.get("quantified_value")
+    if qv is None or not (0 < qv <= 100):
+        return "value is not a reduction percentage in (0,100]"
+    if _ABSUNIT_RE.search(str(claim.get("unit") or "")):
+        return "value is an absolute level (e.g. g CO2/km), not a reduction %"
+    return None
 
 
 def load_claims(path):
@@ -109,6 +151,21 @@ def load_mapping(path):
         return json.load(f)
 
 
+def check_mapping_coverage(climate_claims, mapping):
+    # loud guard: any corpus company absent from the mapping would silently score no_sbti_target
+    corpus_companies = sorted({c["company_name"] for c in climate_claims})
+    unmapped = [c for c in corpus_companies if c not in mapping]
+    print(f"\nMapping coverage: {len(corpus_companies) - len(unmapped)}/{len(corpus_companies)} corpus companies mapped")
+    for c in corpus_companies:
+        print(f"  [{'OK' if c in mapping else '!! UNMAPPED'}] {c}")
+    if unmapped:
+        print("\n  WARNING: these companies are NOT in sbti_company_mapping.json and will all")
+        print("           score 'no_sbti_target'. Add them (use sbti_name=null if no SBTi record):")
+        for c in unmapped:
+            print(f"             - {c}")
+    return unmapped
+
+
 def load_sbti_data(xlsx_path, mapping):
     df = pd.read_excel(xlsx_path, sheet_name=SBTI_SHEET)
 
@@ -116,32 +173,45 @@ def load_sbti_data(xlsx_path, mapping):
     for our_name, entry in mapping.items():
         sbti_name = entry.get("sbti_name")
         if not sbti_name:
-            result[our_name] = {"target": None, "commitment_removed_year": None, "status": entry.get("status")}
+            result[our_name] = {"target": None, "targets": [], "validation_year": None, "commitment_removed_year": None, "status": entry.get("status")}
             continue
 
-        target_rows = df[
+        nt = df[
             (df["company_name"] == sbti_name)
             & (df["action"] == "Target")
             & (df["target"] == "Near-term")
-            & (df["scope"].astype(str) == "1+2")
         ]
 
-        target = None
-        if len(target_rows) > 0:
-            row = target_rows.iloc[0]
-            target_pct = float(row["target_value"]) * 100
-            date_pub = pd.to_datetime(row["date_published"])
-            target = {
-                "target_pct": target_pct,
+        # collect every near-term target row, tagged by scope group, so each claim
+        # can be routed to the benchmark that matches its scope (1+2 vs 3)
+        targets = []
+        for _, row in nt.iterrows():
+            sc = str(row["scope"])
+            if sc == "1+2":
+                grp = "1+2"
+            elif sc == "3":
+                grp = "3"
+            else:
+                continue  # ignore 1, 2, 1+2+3 standalone rows for routing
+            targets.append({
+                "scope_group": grp,
+                "target_pct": float(row["target_value"]) * 100,
                 "base_year": int(row["base_year"]),
                 "target_year": int(row["target_year"]),
                 "classification": str(row["target_classification_short"]),
                 "year_type": str(row["year_type"]),
-                "is_intensity": entry.get("is_intensity", False),
-                "intensity_unit": entry.get("intensity_unit"),
-                "validation_year": int(date_pub.year),
+                # scope 1+2 intensity flag comes from the mapping; scope-3 auto targets
+                # in this corpus are intensity-based (per the SBTi 'type' column)
+                "is_intensity": entry.get("is_intensity", False) if grp == "1+2" else (str(row["type"]) == "Intensity"),
+                "validation_year": int(pd.to_datetime(row["date_published"]).year),
                 "sbti_name": sbti_name,
-            }
+            })
+
+        target = None
+        s12 = [t for t in targets if t["scope_group"] == "1+2"]
+        if s12:
+            target = dict(s12[0])
+            target["intensity_unit"] = entry.get("intensity_unit")
 
         removed_rows = df[
             (df["company_name"] == sbti_name)
@@ -154,8 +224,11 @@ def load_sbti_data(xlsx_path, mapping):
             commit_date = pd.to_datetime(row["date_published"])
             commitment_removed_year = entry.get("commitment_removed_year") or (commit_date.year + 2)
 
+        validation_year = min((t["validation_year"] for t in targets), default=None)
         result[our_name] = {
-            "target": target,
+            "target": target,            # scope 1+2 primary, for summary fields
+            "targets": targets,          # all near-term targets, for routing
+            "validation_year": validation_year,
             "commitment_removed_year": commitment_removed_year,
             "status": entry.get("status"),
         }
@@ -163,96 +236,109 @@ def load_sbti_data(xlsx_path, mapping):
     return result
 
 
-def check_intensity_match(claim_is_intensity, target_is_intensity):
-    return claim_is_intensity == target_is_intensity
+def _no_target_verdict(sbti_data, report_year):
+    # shared abstain logic when no validated target exists; reason reflects SBTi status
+    status = sbti_data.get("status")
+    removed_year = sbti_data.get("commitment_removed_year")
+    if status == "Commitment removed" and removed_year and report_year >= removed_year:
+        return "commitment_removed", f"company's SBTi commitment was removed in {removed_year}"
+    if status == "Commitment removed":
+        return "no_sbti_target", f"SBTi commitment removed (effective {removed_year}); report year {report_year} precedes removal"
+    if status == "Committed":
+        return "no_sbti_target", "company committed to SBTi but has no validated target to assess against"
+    return "no_sbti_target", "no SBTi target on file for this company"
 
 
 def assess_target_claim(claim, sbti_data):
-    target = sbti_data.get("target")
-    status = sbti_data.get("status")
+    targets = sbti_data.get("targets") or []
     report_year = claim.get("year")
+    val_year = sbti_data.get("validation_year")
 
-    if not target:
-        removed_year = sbti_data.get("commitment_removed_year")
-        if status == "Commitment removed" and removed_year and report_year >= removed_year:
-            return "commitment_removed", f"company's SBTi commitment was removed in {removed_year}"
-        return "no_sbti_target", "no SBTi target on file for this company"
+    if not targets:
+        return _no_target_verdict(sbti_data, report_year)
 
-    if report_year < target["validation_year"]:
+    if val_year is not None and report_year < val_year:
         return "target_not_yet_validated", \
-               f"report year {report_year} predates SBTi validation in {target['validation_year']}"
+               f"report year {report_year} predates SBTi validation in {val_year}"
 
-    claim_is_intensity = is_intensity_claim(claim)
-    target_is_intensity = target.get("is_intensity", False)
+    grp = route_scope_group(claim)
+    candidates = [t for t in targets if t["scope_group"] == grp]
+    if not candidates:
+        return "not_commensurable", f"no SBTi scope-{grp} target for this company"
+    target = pick_target(claim, candidates)
 
-    if not check_intensity_match(claim_is_intensity, target_is_intensity):
-        reason = (f"intensity mismatch: claim={'intensity' if claim_is_intensity else 'absolute'}, "
-                  f"target={'intensity' if target_is_intensity else 'absolute'}")
-        return "different_metric", reason
+    reason = commensurability_reason(claim, target)
+    if reason:
+        return "not_commensurable", reason
 
     claim_pct = claim.get("quantified_value")
     claim_year = claim.get("target_year")
+    if claim_year is None:
+        return "no_quantification", "missing target year"
 
-    if claim_pct is None or claim_year is None:
-        return "no_quantification", "missing reduction % or target year"
+    if abs(claim_year - target["target_year"]) > YEAR_TOLERANCE:
+        return "not_commensurable", f"target_year diff = {abs(claim_year - target['target_year'])} (>{YEAR_TOLERANCE})"
 
     pct_diff = claim_pct - target["target_pct"]
-    year_diff = abs(claim_year - target["target_year"])
-
-    if year_diff > YEAR_TOLERANCE:
-        return "different_metric", f"target_year diff = {year_diff} (>{YEAR_TOLERANCE})"
-
+    tag = f"[scope {grp}]"
     if abs(pct_diff) <= PCT_TOLERANCE:
-        return "matches_sbti", f"pct_diff = {round(pct_diff, 2)}, year_diff = {year_diff}"
-
+        return "matches_sbti", f"{tag} pct_diff = {round(pct_diff, 2)}"
     if pct_diff > 0:
-        return "stronger_than_sbti", f"claim {claim_pct}% vs sbti {target['target_pct']}%"
-    return "weaker_than_sbti", f"claim {claim_pct}% vs sbti {target['target_pct']}%"
+        return "stronger_than_sbti", f"{tag} claim {claim_pct}% vs sbti {target['target_pct']}%"
+    return "weaker_than_sbti", f"{tag} claim {claim_pct}% vs sbti {target['target_pct']}%"
 
 
 def assess_achievement_claim(claim, sbti_data):
-    target = sbti_data.get("target")
-    status = sbti_data.get("status")
+    targets = sbti_data.get("targets") or []
     report_year = claim.get("year")
+    val_year = sbti_data.get("validation_year")
 
-    if not target:
-        removed_year = sbti_data.get("commitment_removed_year")
-        if status == "Commitment removed" and removed_year and report_year >= removed_year:
-            return "commitment_removed", f"company's SBTi commitment was removed in {removed_year}"
-        return "no_sbti_target", "no SBTi target on file for this company"
+    if not targets:
+        return _no_target_verdict(sbti_data, report_year)
 
-    if report_year < target["validation_year"]:
+    if val_year is not None and report_year < val_year:
         return "target_not_yet_validated", \
-               f"report year {report_year} predates SBTi validation in {target['validation_year']}"
+               f"report year {report_year} predates SBTi validation in {val_year}"
 
-    claim_is_intensity = is_intensity_claim(claim)
-    target_is_intensity = target.get("is_intensity", False)
+    grp = route_scope_group(claim)
+    candidates = [t for t in targets if t["scope_group"] == grp]
+    if not candidates:
+        return "not_commensurable", f"no SBTi scope-{grp} target for this company"
+    target = pick_target(claim, candidates)
 
-    if not check_intensity_match(claim_is_intensity, target_is_intensity):
-        reason = (f"intensity mismatch: claim={'intensity' if claim_is_intensity else 'absolute'}, "
-                  f"target={'intensity' if target_is_intensity else 'absolute'}")
-        return "different_metric", reason
+    reason = commensurability_reason(claim, target)
+    if reason:
+        return "not_commensurable", reason
 
     claim_pct = claim.get("quantified_value")
-    baseline_year = claim.get("baseline_year") or target["base_year"]
+    baseline_year = claim.get("baseline_year")
 
-    if claim_pct is None or baseline_year is None:
-        return "no_quantification", "missing reduction % or baseline year"
+    # the linear-trajectory check is only meaningful for a cumulative reduction
+    # measured from the SBTi baseline; otherwise the claim can't be placed on the path
+    if baseline_year is None:
+        return "not_commensurable", "achievement has no baseline year; cannot place on SBTi trajectory"
+    if abs(baseline_year - target["base_year"]) > BASE_YEAR_TOLERANCE:
+        return "not_commensurable", f"baseline {baseline_year} != SBTi baseline {target['base_year']}"
+    # a reported "achievement" >= the full target reduction, years before the target
+    # year, is almost always a restated target mislabeled as an achievement
+    if claim_pct >= target["target_pct"]:
+        return "not_commensurable", \
+               f"claimed reduction {claim_pct}% >= full target {target['target_pct']}%; likely a restated target"
 
     years_elapsed = report_year - baseline_year
     target_duration = target["target_year"] - baseline_year
-
     if target_duration <= 0 or years_elapsed < 0:
-        return "different_metric", "invalid year math"
+        return "not_commensurable", "invalid year math"
 
     expected_pct = target["target_pct"] * years_elapsed / target_duration
     diff = claim_pct - expected_pct
+    tag = f"[scope {grp}]"
 
     if abs(diff) <= PCT_TOLERANCE:
-        return "on_track", f"claim {claim_pct}% vs expected {round(expected_pct, 1)}% at year {report_year}"
+        return "on_track", f"{tag} claim {claim_pct}% vs expected {round(expected_pct, 1)}% at year {report_year}"
     if diff > 0:
-        return "ahead", f"claim {claim_pct}% vs expected {round(expected_pct, 1)}% (ahead by {round(diff, 1)})"
-    return "behind", f"claim {claim_pct}% vs expected {round(expected_pct, 1)}% (behind by {round(-diff, 1)})"
+        return "ahead", f"{tag} claim {claim_pct}% vs expected {round(expected_pct, 1)}% (ahead by {round(diff, 1)})"
+    return "behind", f"{tag} claim {claim_pct}% vs expected {round(expected_pct, 1)}% (behind by {round(-diff, 1)})"
 
 
 def main():
@@ -270,7 +356,9 @@ def main():
     print(f"\nLoading SBTi mapping from {COMPANY_MAP}...")
     mapping = load_mapping(COMPANY_MAP)
 
-    print(f"Loading SBTi data from {SBTI_XLSX}...")
+    check_mapping_coverage(climate_claims, mapping)
+
+    print(f"\nLoading SBTi data from {SBTI_XLSX}...")
     sbti_data = load_sbti_data(SBTI_XLSX, mapping)
     for company, data in sbti_data.items():
         target = data.get("target")
@@ -337,29 +425,53 @@ def main():
         n_ahead = sum(1 for v in verdicts if v == "ahead")
         n_behind = sum(1 for v in verdicts if v == "behind")
         n_different = sum(1 for v in verdicts if v == "different_metric")
+        n_not_comm = sum(1 for v in verdicts if v == "not_commensurable")
         n_no_quant = sum(1 for v in verdicts if v == "no_quantification")
         n_no_sbti = sum(1 for v in verdicts if v == "no_sbti_target")
         n_not_yet = sum(1 for v in verdicts if v == "target_not_yet_validated")
         n_commit_removed = sum(1 for v in verdicts if v == "commitment_removed")
 
         n_aligned = n_matches + n_on_track + n_ahead + n_stronger
-        n_unassessable = n_no_sbti + n_no_quant + n_different + n_not_yet + n_commit_removed
+        n_unassessable = (n_no_sbti + n_no_quant + n_different + n_not_yet
+                          + n_commit_removed + n_not_comm)
         denom = n_climate - n_unassessable
 
-        if n_commit_removed > 0 and n_commit_removed == n_climate:
+        # ---- status-driven scoring ----------------------------------------
+        # The score FLOOR is set by the company's SBTi status, not by counting how
+        # many individual claims happen to carry a given verdict. Per-claim alignment
+        # (aligned/denom) only applies to firms that actually hold a validated target.
+        status = data.get("status")
+        removed_year = data.get("commitment_removed_year")
+
+        if status == "Commitment removed" and removed_year and year >= removed_year:
+            # commitment withdrawn by this report year -> bad score
             score = 0.0
             score_note = "commitment_removed_penalty"
+        elif status == "Commitment removed":
+            # report year precedes removal: commitment still active, no validated
+            # target yet -> insufficient info (do NOT back-date the penalty: that
+            # would use future information the report could not have reflected)
+            score = None
+            score_note = "commitment_active_no_validated_target"
+        elif status == "Committed":
+            # promised a target but none validated -> nothing external to assess
+            score = None
+            score_note = "committed_no_validated_target"
+        elif status == "No commitment":
+            # no SBTi engagement at all -> insufficient info
+            score = None
+            score_note = "no_sbti_commitment"
         elif denom > 0:
+            # validated target with >=1 commensurable claim this year
             score = round(n_aligned / denom, 4)
             score_note = None
         else:
+            # validated target but no commensurable claim this year
             score = None
             if n_not_yet > 0 and n_not_yet == n_climate:
                 score_note = "all_claims_predate_validation"
-            elif n_no_sbti > 0 and n_no_sbti == n_climate:
-                score_note = "no_sbti_target_for_company"
             else:
-                score_note = "no_assessable_claims"
+                score_note = "no_commensurable_claim_this_year"
 
         per_group_summary[f"{company}__{year}"] = {
             "company_name": company,
@@ -381,6 +493,7 @@ def main():
             "n_ahead": n_ahead,
             "n_behind": n_behind,
             "n_different_metric": n_different,
+            "n_not_commensurable": n_not_comm,
             "n_no_quantification": n_no_quant,
             "n_no_sbti_target": n_no_sbti,
             "n_target_not_yet_validated": n_not_yet,

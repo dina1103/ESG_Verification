@@ -4,35 +4,71 @@
     "is_intensity": true,
     "intensity_unit": "per vehicle produced",
     "status": "Targets set",
-    "notes": "Intensity-based scope 1+2 target. Validated 2022-02-24."
-  },
-  "Mercedes-Benz Group AG": {
-    "sbti_name": "Mercedes-Benz AG",
-    "is_intensity": false,
-    "intensity_unit": null,
-    "status": "Targets set",
-    "notes": "Absolute scope 1+2 target. Validated 2019-11-22."
+    "notes": "Intensity scope 1+2 near-term target, 80% reduction by 2030 (base 2019, 1.5C). Validated 2022-02-24. type=Intensity per SBTi WebsiteData."
   },
   "Volkswagen AG": {
     "sbti_name": "Volkswagen AG",
     "is_intensity": false,
     "intensity_unit": null,
     "status": "Targets set",
-    "notes": "Absolute scope 1+2 target. Validated 2022-04-21."
+    "notes": "Absolute scope 1+2 near-term target, 50.4% reduction by 2030 (base 2018, 1.5C). Validated 2022-04-21."
   },
-  "Tesla Inc": {
+  "Ford Motor Company": {
+    "sbti_name": "Ford Motor Company",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute scope 1+2 near-term target, 76% reduction by 2035 (base 2017, 1.5C). Validated 2021-03-31."
+  },
+  "General Motors Company": {
+    "sbti_name": "General Motors",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute scope 1+2 near-term target, 72% reduction by 2035 (base 2018, 1.5C). Validated 2021-05-20. SBTi master name is 'General Motors' (no 'Company')."
+  },
+  "Nissan Motor Co., Ltd.": {
+    "sbti_name": "Nissan Motor Co., Ltd.",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute scope 1+2 near-term target, 30% reduction by 2030 (base 2018, Well-below 2C). Validated 2021-08-26."
+  },
+  "Toyota Motor Corporation": {
+    "sbti_name": "Toyota Motor Corporation",
+    "is_intensity": false,
+    "intensity_unit": null,
+    "status": "Targets set",
+    "notes": "Absolute scope 1+2 near-term target, 68% reduction by 2035 (base 2019, 1.5C). Validated 2022-11-03. Distinct entity from Toyota Industries Corporation (development corpus)."
+  },
+  "Tesla, Inc.": {
     "sbti_name": "Tesla Inc.",
     "is_intensity": null,
     "intensity_unit": null,
     "status": "Commitment removed",
     "commitment_removed_year": 2023,
-    "notes": "Committed 2021-10, removed 2023 after 24-month window expired."
+    "notes": "Committed 2021-10; removed after the 24-month validation window expired. No validated target."
   },
-  "Toyota Industries Corp": {
-    "sbti_name": "Toyota Industries Corporation",
-    "is_intensity": false,
+  "Ferrari N.V.": {
+    "sbti_name": "Ferrari N.V.",
+    "is_intensity": null,
     "intensity_unit": null,
-    "status": "Targets set",
-    "notes": "Absolute FY-basis scope 1+2 target. Validated 2024-10-31. Industrial equipment sector."
+    "status": "Commitment removed",
+    "commitment_removed_year": 2024,
+    "notes": "Committed 2022-06; removed after the 24-month validation window expired. No validated target."
+  },
+  "Aston Martin Lagonda Global Holdings PLC": {
+    "sbti_name": "Aston Martin Lagonda Global Holdings PLC",
+    "is_intensity": null,
+    "intensity_unit": null,
+    "status": "Committed",
+    "notes": "near_term_status='Committed' (active commitment, Automakers pathway, dated 2022-01-26); no validated near-term target on file. Abstains downstream (no_sbti_target): no quantified target to assess against. Distinct from removed-commitment companies."
+  },
+  "Subaru Corporation": {
+    "sbti_name": null,
+    "is_intensity": null,
+    "intensity_unit": null,
+    "status": "No commitment",
+    "notes": "No record in the SBTi companies master list. Abstains downstream (no_sbti_target)."
   }
 }
