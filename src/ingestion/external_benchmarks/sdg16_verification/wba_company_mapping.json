@@ -1,22 +1,42 @@
 {
+  "Aston Martin Lagonda Global Holdings PLC": {
+    "wba_name": null,
+    "notes": "Not in WBA Social Benchmark 2025 (44 companies assessed; Aston Martin is not among them). Abstains -> no_wba_data."
+  },
   "Bayerische Motoren Werke AG": {
     "wba_name": "BMW",
-    "notes": "Listed as 'BMW' in WBA CSI-2025."
+    "notes": "Listed as 'BMW' in WBA Social Benchmark 2025."
   },
-  "Mercedes-Benz Group AG": {
-    "wba_name": "Mercedes-Benz",
-    "notes": "Listed as 'Mercedes-Benz' in CSI-2025 (previously 'Daimler' in older data)."
+  "Ferrari N.V.": {
+    "wba_name": null,
+    "notes": "Not in WBA Social Benchmark 2025. Abstains -> no_wba_data."
+  },
+  "Ford Motor Company": {
+    "wba_name": "Ford",
+    "notes": "Listed as 'Ford' in WBA Social Benchmark 2025."
+  },
+  "General Motors Company": {
+    "wba_name": "General Motors",
+    "notes": "Listed as 'General Motors' in WBA Social Benchmark 2025."
+  },
+  "Nissan Motor Co., Ltd.": {
+    "wba_name": "Nissan Motor",
+    "notes": "WBA lists the entity as 'Nissan Motor'."
+  },
+  "Subaru Corporation": {
+    "wba_name": "Subaru Corporation",
+    "notes": "Listed as 'Subaru Corporation' in WBA Social Benchmark 2025."
+  },
+  "Tesla, Inc.": {
+    "wba_name": "Tesla",
+    "notes": "Listed as 'Tesla' in WBA Social Benchmark 2025."
+  },
+  "Toyota Motor Corporation": {
+    "wba_name": "Toyota",
+    "notes": "WBA lists Toyota Motor Corporation as 'Toyota'. Distinct from Toyota Industries (the earlier dev-corpus entity), which is not in WBA."
   },
   "Volkswagen AG": {
     "wba_name": "Volkswagen",
-    "notes": "Listed as 'Volkswagen' in WBA CSI-2025."
-  },
-  "Tesla Inc": {
-    "wba_name": "Tesla",
-    "notes": "Lowest Acting Ethically score in corpus."
-  },
-  "Toyota Industries Corp": {
-    "wba_name": null,
-    "notes": "Not in WBA Social Benchmark. Toyota Motor is assessed but Toyota Industries is a separate legal entity (industrial equipment)."
+    "notes": "Listed as 'Volkswagen' in WBA Social Benchmark 2025."
   }
 }

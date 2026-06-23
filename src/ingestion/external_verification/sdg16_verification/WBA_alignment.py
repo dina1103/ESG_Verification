@@ -3,12 +3,12 @@ from pathlib import Path
 from collections import defaultdict
 import pandas as pd
 
-INPUT_JSONL    = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\llm_claim_extraction_result.jsonl"
-SDG_PARQUET    = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\segmentation_esg_sdg"
-WBA_CSV        = r"C:\Users\dina_\Desktop\esg_verification_draft\src\ingestion\external_benchmarks\sdg16_verification\indicators.csv"
-COMPANY_MAP    = r"C:\Users\dina_\Desktop\esg_verification_draft\src\ingestion\external_benchmarks\sdg16_verification\wba_company_mapping.json"
-OUTPUT_CLAIMS  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\sdg16_governance_claim_level.jsonl"
-OUTPUT_SUMMARY = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\sdg16_governance_company_year.json"
+INPUT_JSONL    = r"data\processed\llm_claim_extraction_result.jsonl"
+SDG_PARQUET    = r"data\processed\segments_esg_sdg.parquet"
+WBA_CSV        = r"src\ingestion\external_benchmarks\sdg16_verification\indicators.csv"
+COMPANY_MAP    = r"src\ingestion\external_benchmarks\sdg16_verification\wba_company_mapping.json"
+OUTPUT_CLAIMS  = r"data\processed\sdg16_governance_claim_level.jsonl"
+OUTPUT_SUMMARY = r"data\processed\sdg16_governance_company_year.json"
 
 # WBA 'Acting Ethically' indicators (measurement_area_id == 'C')
 TARGET_AREA_ID = "C"
@@ -47,14 +47,6 @@ STRONG_POSITIVE_KEYWORDS = [
 
 
 def is_assessable_governance_claim(claim):
-    # a claim is assessable (a substantive governance assertion, not vague
-    # aspiration) if ANY of the following holds:
-    #  Type A - quantitative zero on an incident-type metric (e.g. "zero breaches")
-    #  Type B - contains a strong-positive leadership marker
-    #  Type C - claim_type is achievement or commitment (Step 6 classification)
-    #  Type D - carries any quantified value
-    #  Type E - cites a reporting framework / standard / code
-    # only pure vague narrative ("we value integrity") is excluded.
 
     # Type A - quantitative zero on incident-type metric
     qv = claim.get("quantified_value")
@@ -167,7 +159,7 @@ def load_mapping(path):
 
 def load_wba_indicators(csv_path, mapping):
     # read WBA indicators CSV, filter to Acting Ethically area
-    # return: company → indicator_id → score
+    # return: company -> indicator_id -> score
     df = pd.read_csv(csv_path)
     df = df[df["measurement_area_id"] == TARGET_AREA_ID]
 
@@ -201,31 +193,24 @@ def load_wba_indicators(csv_path, mapping):
 
 
 def assess_governance_claim(claim, wba_data):
-    # B1 logic: the gate is whether a governance claim matches a WBA Acting-Ethically
-    # indicator. The earlier "strong positive" lexical/quantitative gate rejected
-    # ~99% of claims and produced no discriminating score, so it is removed.
-    # A matched claim is then verified against WBA's independent indicator score:
-    # plausible if WBA rates the company well on that indicator, flagged if poorly.
+ 
     if not wba_data:
-        return "no_wba_data", None, "company not in WBA Social Benchmark"
+        return "no_wba_data", None, None, "company not in WBA Social Benchmark"
 
-    # inclusive assessability gate - excludes only vague narrative claims
     if not is_assessable_governance_claim(claim):
-        return "weak_claim", None, "vague/narrative claim - not a substantive governance assertion"
+        return "weak_claim", None, None, "vague/narrative claim - not a substantive governance assertion"
 
     indicator_id = match_indicator(claim)
     if indicator_id is None:
-        return "no_indicator_match", None, "claim does not match any Acting Ethically indicator topic"
+        return "no_indicator_match", None, None, "claim does not match any Acting Ethically indicator topic"
 
     indicators = wba_data.get("indicators", {})
     ind = indicators.get(indicator_id)
     if not ind:
-        return "no_indicator_score", indicator_id, f"company has no score for indicator {indicator_id}"
+        return "no_indicator_score", indicator_id, None, f"company has no score for indicator {indicator_id}"
 
     score = ind["score"]
-    if score >= INDICATOR_THRESHOLD:
-        return "plausible", indicator_id, f"governance claim matches WBA Indicator {indicator_id}, which WBA scores {score:.2f}/1.0 (>= {INDICATOR_THRESHOLD})"
-    return "flagged", indicator_id, f"governance claim matches WBA Indicator {indicator_id}, but WBA scores it only {score:.2f}/1.0 (< {INDICATOR_THRESHOLD})"
+    return "matched", indicator_id, score, f"matches WBA Indicator {indicator_id}, WBA score {score:.2f}/1.0"
 
 
 def main():
@@ -266,10 +251,21 @@ def main():
     for (company, year), claims in sorted(groups.items()):
         data = wba_data.get(company)
 
-        verdicts = []
+        matched_indicator_scores = {}  # indicator_id -> WBA score (distinct, each once)
+        n_weak = n_no_match = n_no_score = n_no_wba = n_matched = 0
         for claim in claims:
-            verdict, indicator_id, reason = assess_governance_claim(claim, data)
-            verdicts.append(verdict)
+            verdict, indicator_id, ind_score, reason = assess_governance_claim(claim, data)
+            if verdict == "weak_claim":
+                n_weak += 1
+            elif verdict == "no_indicator_match":
+                n_no_match += 1
+            elif verdict == "no_indicator_score":
+                n_no_score += 1
+            elif verdict == "no_wba_data":
+                n_no_wba += 1
+            elif verdict == "matched":
+                n_matched += 1
+                matched_indicator_scores[indicator_id] = ind_score
             per_claim_results.append({
                 "company_name": company,
                 "year": year,
@@ -277,29 +273,22 @@ def main():
                 "claim_text": claim.get("claim_text"),
                 "claim_type": claim.get("claim_type"),
                 "metric": claim.get("metric"),
-                "quantified_value": claim.get("quantified_value"),
                 "is_assessable": is_assessable_governance_claim(claim),
                 "matched_indicator": indicator_id,
+                "indicator_score": ind_score,
                 "verdict": verdict,
                 "reason": reason,
             })
 
         n_total = len(claims)
-        n_plausible = sum(1 for v in verdicts if v == "plausible")
-        n_flagged = sum(1 for v in verdicts if v == "flagged")
-        n_weak = sum(1 for v in verdicts if v == "weak_claim")
-        n_no_match = sum(1 for v in verdicts if v == "no_indicator_match")
-        n_no_score = sum(1 for v in verdicts if v == "no_indicator_score")
-        n_no_wba = sum(1 for v in verdicts if v == "no_wba_data")
-
-        denom = n_plausible + n_flagged
-        if denom > 0:
-            score = round(n_plausible / denom, 4)
+        # company-year score = mean of WBA scores over the DISTINCT matched indicators
+        if matched_indicator_scores:
+            score = round(sum(matched_indicator_scores.values()) / len(matched_indicator_scores), 4)
             score_note = None
         elif n_no_wba == n_total:
             score, score_note = None, "no_wba_data_for_company"
         elif n_weak == n_total:
-            score, score_note = None, "no_strong_positive_claims"
+            score, score_note = None, "all_claims_weak_narrative"
         elif n_no_match == n_total:
             score, score_note = None, "no_claims_matched_indicators"
         else:
@@ -312,8 +301,8 @@ def main():
             "wba_methodology_year": data["methodology_year"] if data else None,
             "wba_indicator_scores": {f"ind_{i}": data["indicators"][i]["score"] for i in sorted(data["indicators"])} if data else None,
             "n_governance_claims": n_total,
-            "n_plausible": n_plausible,
-            "n_flagged": n_flagged,
+            "matched_indicators": {f"ind_{i}": matched_indicator_scores[i] for i in sorted(matched_indicator_scores)},
+            "n_matched_claims": n_matched,
             "n_weak_claim": n_weak,
             "n_no_indicator_match": n_no_match,
             "n_no_indicator_score": n_no_score,

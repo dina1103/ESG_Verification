@@ -1,0 +1,443 @@
+{
+  "Aston Martin Lagonda Global Holdings PLC__2020": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2020,
+    "wba_alignment_score": null,
+    "penalty_score": null,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "no_signal"
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2021": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2021,
+    "wba_alignment_score": null,
+    "penalty_score": null,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "no_signal"
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2022": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2022,
+    "wba_alignment_score": null,
+    "penalty_score": null,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "no_signal"
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2023": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2023,
+    "wba_alignment_score": null,
+    "penalty_score": null,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "no_signal"
+  },
+  "Aston Martin Lagonda Global Holdings PLC__2024": {
+    "company_name": "Aston Martin Lagonda Global Holdings PLC",
+    "year": 2024,
+    "wba_alignment_score": null,
+    "penalty_score": null,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "no_signal"
+  },
+  "Bayerische Motoren Werke AG__2020": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2020,
+    "wba_alignment_score": 1.0,
+    "penalty_score": 0.5738,
+    "n_governance_penalties": 1,
+    "sdg16_combined_score": 0.6804,
+    "score_note": null
+  },
+  "Bayerische Motoren Werke AG__2021": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2021,
+    "wba_alignment_score": null,
+    "penalty_score": 0.1127,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Bayerische Motoren Werke AG__2022": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2022,
+    "wba_alignment_score": 1.0,
+    "penalty_score": 0.1127,
+    "n_governance_penalties": 3,
+    "sdg16_combined_score": 0.3345,
+    "score_note": null
+  },
+  "Bayerische Motoren Werke AG__2023": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2023,
+    "wba_alignment_score": null,
+    "penalty_score": 0.1087,
+    "n_governance_penalties": 5,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Bayerische Motoren Werke AG__2024": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "year": 2024,
+    "wba_alignment_score": 1.0,
+    "penalty_score": 0.1086,
+    "n_governance_penalties": 6,
+    "sdg16_combined_score": 0.3315,
+    "score_note": null
+  },
+  "Ferrari N.V.__2020": {
+    "company_name": "Ferrari N.V.",
+    "year": 2020,
+    "wba_alignment_score": null,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Ferrari N.V.__2021": {
+    "company_name": "Ferrari N.V.",
+    "year": 2021,
+    "wba_alignment_score": null,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Ferrari N.V.__2022": {
+    "company_name": "Ferrari N.V.",
+    "year": 2022,
+    "wba_alignment_score": null,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Ferrari N.V.__2023": {
+    "company_name": "Ferrari N.V.",
+    "year": 2023,
+    "wba_alignment_score": null,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Ferrari N.V.__2024": {
+    "company_name": "Ferrari N.V.",
+    "year": 2024,
+    "wba_alignment_score": null,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Ford Motor Company__2020": {
+    "company_name": "Ford Motor Company",
+    "year": 2020,
+    "wba_alignment_score": 0.25,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.8125,
+    "score_note": null
+  },
+  "Ford Motor Company__2021": {
+    "company_name": "Ford Motor Company",
+    "year": 2021,
+    "wba_alignment_score": 0.25,
+    "penalty_score": 0.6762,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": 0.5696,
+    "score_note": null
+  },
+  "Ford Motor Company__2022": {
+    "company_name": "Ford Motor Company",
+    "year": 2022,
+    "wba_alignment_score": 0.25,
+    "penalty_score": 0.5146,
+    "n_governance_penalties": 5,
+    "sdg16_combined_score": 0.4484,
+    "score_note": null
+  },
+  "Ford Motor Company__2023": {
+    "company_name": "Ford Motor Company",
+    "year": 2023,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.5146,
+    "n_governance_penalties": 5,
+    "sdg16_combined_score": 0.511,
+    "score_note": null
+  },
+  "Ford Motor Company__2024": {
+    "company_name": "Ford Motor Company",
+    "year": 2024,
+    "wba_alignment_score": 0.1667,
+    "penalty_score": 0.1351,
+    "n_governance_penalties": 6,
+    "sdg16_combined_score": 0.143,
+    "score_note": null
+  },
+  "General Motors Company__2020": {
+    "company_name": "General Motors Company",
+    "year": 2020,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.875,
+    "score_note": null
+  },
+  "General Motors Company__2021": {
+    "company_name": "General Motors Company",
+    "year": 2021,
+    "wba_alignment_score": null,
+    "penalty_score": 0.7236,
+    "n_governance_penalties": 1,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "General Motors Company__2022": {
+    "company_name": "General Motors Company",
+    "year": 2022,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.6192,
+    "n_governance_penalties": 5,
+    "sdg16_combined_score": 0.5894,
+    "score_note": null
+  },
+  "General Motors Company__2023": {
+    "company_name": "General Motors Company",
+    "year": 2023,
+    "wba_alignment_score": null,
+    "penalty_score": 0.6185,
+    "n_governance_penalties": 6,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "General Motors Company__2024": {
+    "company_name": "General Motors Company",
+    "year": 2024,
+    "wba_alignment_score": null,
+    "penalty_score": 0.6185,
+    "n_governance_penalties": 6,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Nissan Motor Co., Ltd.__2020": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2020,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.7405,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": 0.6804,
+    "score_note": null
+  },
+  "Nissan Motor Co., Ltd.__2021": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2021,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.737,
+    "n_governance_penalties": 3,
+    "sdg16_combined_score": 0.6777,
+    "score_note": null
+  },
+  "Nissan Motor Co., Ltd.__2022": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2022,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.6666,
+    "n_governance_penalties": 4,
+    "sdg16_combined_score": 0.625,
+    "score_note": null
+  },
+  "Nissan Motor Co., Ltd.__2023": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2023,
+    "wba_alignment_score": 0.5567,
+    "penalty_score": 0.6666,
+    "n_governance_penalties": 4,
+    "sdg16_combined_score": 0.6391,
+    "score_note": null
+  },
+  "Nissan Motor Co., Ltd.__2024": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "year": 2024,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.6666,
+    "n_governance_penalties": 4,
+    "sdg16_combined_score": 0.625,
+    "score_note": null
+  },
+  "Subaru Corporation__2020": {
+    "company_name": "Subaru Corporation",
+    "year": 2020,
+    "wba_alignment_score": 0.0,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.75,
+    "score_note": null
+  },
+  "Subaru Corporation__2021": {
+    "company_name": "Subaru Corporation",
+    "year": 2021,
+    "wba_alignment_score": 0.25,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.8125,
+    "score_note": null
+  },
+  "Subaru Corporation__2022": {
+    "company_name": "Subaru Corporation",
+    "year": 2022,
+    "wba_alignment_score": 0.0,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.75,
+    "score_note": null
+  },
+  "Subaru Corporation__2023": {
+    "company_name": "Subaru Corporation",
+    "year": 2023,
+    "wba_alignment_score": 0.0,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.75,
+    "score_note": null
+  },
+  "Subaru Corporation__2024": {
+    "company_name": "Subaru Corporation",
+    "year": 2024,
+    "wba_alignment_score": 0.1667,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.7917,
+    "score_note": null
+  },
+  "Tesla, Inc.__2020": {
+    "company_name": "Tesla, Inc.",
+    "year": 2020,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.95,
+    "n_governance_penalties": 1,
+    "sdg16_combined_score": 0.8375,
+    "score_note": null
+  },
+  "Tesla, Inc.__2021": {
+    "company_name": "Tesla, Inc.",
+    "year": 2021,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.95,
+    "n_governance_penalties": 1,
+    "sdg16_combined_score": 0.8375,
+    "score_note": null
+  },
+  "Tesla, Inc.__2022": {
+    "company_name": "Tesla, Inc.",
+    "year": 2022,
+    "wba_alignment_score": null,
+    "penalty_score": 0.95,
+    "n_governance_penalties": 1,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Tesla, Inc.__2023": {
+    "company_name": "Tesla, Inc.",
+    "year": 2023,
+    "wba_alignment_score": null,
+    "penalty_score": 0.8265,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Tesla, Inc.__2024": {
+    "company_name": "Tesla, Inc.",
+    "year": 2024,
+    "wba_alignment_score": null,
+    "penalty_score": 0.8265,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": null,
+    "score_note": "insufficient_info_single_signal"
+  },
+  "Toyota Motor Corporation__2021": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2021,
+    "wba_alignment_score": 0.75,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.9375,
+    "score_note": null
+  },
+  "Toyota Motor Corporation__2022": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2022,
+    "wba_alignment_score": 0.75,
+    "penalty_score": 1.0,
+    "n_governance_penalties": 0,
+    "sdg16_combined_score": 0.9375,
+    "score_note": null
+  },
+  "Toyota Motor Corporation__2023": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2023,
+    "wba_alignment_score": 0.75,
+    "penalty_score": 0.388,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": 0.4785,
+    "score_note": null
+  },
+  "Toyota Motor Corporation__2024": {
+    "company_name": "Toyota Motor Corporation",
+    "year": 2024,
+    "wba_alignment_score": 0.5,
+    "penalty_score": 0.3879,
+    "n_governance_penalties": 3,
+    "sdg16_combined_score": 0.4159,
+    "score_note": null
+  },
+  "Volkswagen AG__2020": {
+    "company_name": "Volkswagen AG",
+    "year": 2020,
+    "wba_alignment_score": 0.4167,
+    "penalty_score": 0.4813,
+    "n_governance_penalties": 2,
+    "sdg16_combined_score": 0.4652,
+    "score_note": null
+  },
+  "Volkswagen AG__2021": {
+    "company_name": "Volkswagen AG",
+    "year": 2021,
+    "wba_alignment_score": 0.75,
+    "penalty_score": 0.0559,
+    "n_governance_penalties": 7,
+    "sdg16_combined_score": 0.2294,
+    "score_note": null
+  },
+  "Volkswagen AG__2022": {
+    "company_name": "Volkswagen AG",
+    "year": 2022,
+    "wba_alignment_score": 0.625,
+    "penalty_score": 0.0549,
+    "n_governance_penalties": 9,
+    "sdg16_combined_score": 0.1974,
+    "score_note": null
+  },
+  "Volkswagen AG__2023": {
+    "company_name": "Volkswagen AG",
+    "year": 2023,
+    "wba_alignment_score": 0.625,
+    "penalty_score": 0.053,
+    "n_governance_penalties": 13,
+    "sdg16_combined_score": 0.196,
+    "score_note": null
+  },
+  "Volkswagen AG__2024": {
+    "company_name": "Volkswagen AG",
+    "year": 2024,
+    "wba_alignment_score": 0.375,
+    "penalty_score": 0.0365,
+    "n_governance_penalties": 19,
+    "sdg16_combined_score": 0.1211,
+    "score_note": null
+  }
+}

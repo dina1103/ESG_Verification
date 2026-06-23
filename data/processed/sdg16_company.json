@@ -1,0 +1,50 @@
+{
+  "Bayerische Motoren Werke AG": {
+    "company_name": "Bayerische Motoren Werke AG",
+    "n_scored_years": 3,
+    "sdg16_company_score": 0.4488,
+    "thin_coverage": false
+  },
+  "Ford Motor Company": {
+    "company_name": "Ford Motor Company",
+    "n_scored_years": 5,
+    "sdg16_company_score": 0.4969,
+    "thin_coverage": false
+  },
+  "General Motors Company": {
+    "company_name": "General Motors Company",
+    "n_scored_years": 2,
+    "sdg16_company_score": 0.7322,
+    "thin_coverage": true
+  },
+  "Nissan Motor Co., Ltd.": {
+    "company_name": "Nissan Motor Co., Ltd.",
+    "n_scored_years": 5,
+    "sdg16_company_score": 0.6494,
+    "thin_coverage": false
+  },
+  "Subaru Corporation": {
+    "company_name": "Subaru Corporation",
+    "n_scored_years": 5,
+    "sdg16_company_score": 0.7708,
+    "thin_coverage": false
+  },
+  "Tesla, Inc.": {
+    "company_name": "Tesla, Inc.",
+    "n_scored_years": 2,
+    "sdg16_company_score": 0.8375,
+    "thin_coverage": true
+  },
+  "Toyota Motor Corporation": {
+    "company_name": "Toyota Motor Corporation",
+    "n_scored_years": 4,
+    "sdg16_company_score": 0.6924,
+    "thin_coverage": false
+  },
+  "Volkswagen AG": {
+    "company_name": "Volkswagen AG",
+    "n_scored_years": 5,
+    "sdg16_company_score": 0.2418,
+    "thin_coverage": false
+  }
+}
