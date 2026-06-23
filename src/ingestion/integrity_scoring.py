@@ -2,13 +2,19 @@ import json
 import math
 from pathlib import Path
 
-SDG13_JSON   = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\sdg13_climate_company_year.json"
-SDG16_JSON   = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\sdg16_governance_company_year.json"
-INTCON_JSON  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\internal_consistency_company_year.json"
-PEER_JSON    = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\peer_comparison_company_year.json"
+SDG13_JSON   = r"data\processed\sdg13_climate_company_year.json"
+SDG16_JSON   = r"data\processed\sdg16_company_year.json"   
+INTCON_JSON  = r"data\processed\internal_consistency_company_year.json"
+PEER_JSON    = r"data\processed\peer_comparison_company_year.json"
 
-OUTPUT_JSON  = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\integrity_score_company_year.json"
-OUTPUT_CSV   = r"C:\Users\dina_\Desktop\esg_verification_draft\data\processed\integrity_score_company_year.csv"
+OUTPUT_JSON  = r"data\processed\integrity_score_company_year.json"
+OUTPUT_CSV   = r"data\processed\integrity_score_company_year.csv"
+
+# field names carrying each layer's 0-1 score (higher = more integrity)
+SDG13_FIELD  = "sdg13_alignment_score"
+SDG16_FIELD  = "sdg16_combined_score"      # was sdg16_alignment_score (WBA-only); now the combined score
+INTCON_FIELD = "consistency_score"         # was internal_consistency_score, which does not exist in the file
+PEER_FIELD   = "peer_deviation_score"      # a z-score -> mapped to 0-1 via sigmoid
 
 
 def load_json(path):
@@ -57,10 +63,10 @@ def main():
     results = {}
     for key in all_keys:
         # pull each layer's score; absent key or null both -> None
-        s13 = (sdg13.get(key)  or {}).get("sdg13_alignment_score")
-        s16 = (sdg16.get(key)  or {}).get("sdg16_alignment_score")
-        sic = (intcon.get(key) or {}).get("internal_consistency_score")
-        zpeer = (peer.get(key) or {}).get("peer_deviation_score")
+        s13 = (sdg13.get(key)  or {}).get(SDG13_FIELD)
+        s16 = (sdg16.get(key)  or {}).get(SDG16_FIELD)
+        sic = (intcon.get(key) or {}).get(INTCON_FIELD)
+        zpeer = (peer.get(key) or {}).get(PEER_FIELD)
 
         # peer z-score -> 0-1 via sigmoid (only if present)
         speer = sigmoid(zpeer) if zpeer is not None else None
@@ -68,7 +74,7 @@ def main():
         # collect available layers
         components = {
             "sdg13_alignment": s13,
-            "sdg16_alignment": s16,
+            "sdg16_combined": s16,
             "internal_consistency": sic,
             "peer_comparison": speer,
         }
@@ -88,7 +94,7 @@ def main():
             "company_name": src.get("company_name"),
             "year": src.get("year"),
             "sdg13_alignment": s13,
-            "sdg16_alignment": s16,
+            "sdg16_combined": s16,
             "internal_consistency": sic,
             "peer_comparison_raw_z": zpeer,
             "peer_comparison_sigmoid": round(speer, 4) if speer is not None else None,
@@ -100,16 +106,18 @@ def main():
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
-    # flat CSV for the Phase 5 modelling step
-    cols = ["company_name", "year", "sdg13_alignment", "sdg16_alignment",
+    # flat CSV for the Phase 5 modelling step (csv.writer quotes fields that
+    # contain commas, e.g. "Nissan Motor Co., Ltd.", so columns stay aligned)
+    import csv
+    cols = ["company_name", "year", "sdg13_alignment", "sdg16_combined",
             "internal_consistency", "peer_comparison_sigmoid",
             "n_layers_available", "integrity_score"]
-    with open(OUTPUT_CSV, "w", encoding="utf-8") as f:
-        f.write(",".join(cols) + "\n")
+    with open(OUTPUT_CSV, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(cols)
         for key in all_keys:
             r = results[key]
-            row = [r.get(c) for c in cols]
-            f.write(",".join("" if v is None else str(v) for v in row) + "\n")
+            writer.writerow(["" if r.get(c) is None else r.get(c) for c in cols])
 
     # console summary
     scored = [r for r in results.values() if r["integrity_score"] is not None]

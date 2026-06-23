@@ -1,0 +1,51 @@
+company_name,year,sdg13_alignment,sdg16_combined,internal_consistency,peer_comparison_sigmoid,n_layers_available,integrity_score
+Aston Martin Lagonda Global Holdings PLC,2020,,,1.0,,1,1.0
+Aston Martin Lagonda Global Holdings PLC,2021,,,1.0,0.5503,2,0.7752
+Aston Martin Lagonda Global Holdings PLC,2022,,,1.0,0.7948,2,0.8974
+Aston Martin Lagonda Global Holdings PLC,2023,,,1.0,0.5525,2,0.7762
+Aston Martin Lagonda Global Holdings PLC,2024,,,0.3333,0.6639,2,0.4986
+Bayerische Motoren Werke AG,2020,,0.6804,,0.4469,2,0.5636
+Bayerische Motoren Werke AG,2021,,,0.5,,1,0.5
+Bayerische Motoren Werke AG,2022,,0.3345,1.0,0.3938,3,0.5761
+Bayerische Motoren Werke AG,2023,,,0.4,0.346,2,0.373
+Bayerische Motoren Werke AG,2024,,0.3315,0.5714,0.4523,3,0.4517
+Ferrari N.V.,2020,,,,0.7124,1,0.7124
+Ferrari N.V.,2021,,,,,0,
+Ferrari N.V.,2022,,,1.0,0.4731,2,0.7366
+Ferrari N.V.,2023,,,1.0,,1,1.0
+Ferrari N.V.,2024,0.0,,1.0,,2,0.5
+Ford Motor Company,2020,,0.8125,,,1,0.8125
+Ford Motor Company,2021,1.0,0.5696,,0.4643,3,0.678
+Ford Motor Company,2022,1.0,0.4484,0.75,,3,0.7328
+Ford Motor Company,2023,0.3333,0.511,0.9,0.6566,4,0.6002
+Ford Motor Company,2024,0.5,0.143,0.9167,0.483,4,0.5107
+General Motors Company,2020,,0.875,0.9,0.3776,3,0.7175
+General Motors Company,2021,,,0.5,0.5621,2,0.531
+General Motors Company,2022,1.0,0.5894,0.0,0.6609,4,0.5626
+General Motors Company,2023,,,,0.5767,1,0.5767
+General Motors Company,2024,,,,,0,
+"Nissan Motor Co., Ltd.",2020,,0.6804,1.0,0.3866,3,0.689
+"Nissan Motor Co., Ltd.",2021,,0.6777,1.0,0.3491,3,0.6756
+"Nissan Motor Co., Ltd.",2022,,0.625,1.0,0.4772,3,0.7007
+"Nissan Motor Co., Ltd.",2023,,0.6391,1.0,0.5953,3,0.7448
+"Nissan Motor Co., Ltd.",2024,,0.625,1.0,0.4915,3,0.7055
+Subaru Corporation,2020,,0.75,0.8571,,2,0.8035
+Subaru Corporation,2021,,0.8125,1.0,,2,0.9062
+Subaru Corporation,2022,,0.75,,,1,0.75
+Subaru Corporation,2023,,0.75,1.0,,2,0.875
+Subaru Corporation,2024,,0.7917,0.75,0.3758,3,0.6392
+"Tesla, Inc.",2020,,0.8375,,0.6369,2,0.7372
+"Tesla, Inc.",2021,,0.8375,,,1,0.8375
+"Tesla, Inc.",2022,,,,0.5887,1,0.5887
+"Tesla, Inc.",2023,0.0,,,0.6797,2,0.3399
+"Tesla, Inc.",2024,,,,,0,
+Toyota Motor Corporation,2020,,,1.0,,1,1.0
+Toyota Motor Corporation,2021,,0.9375,,,1,0.9375
+Toyota Motor Corporation,2022,,0.9375,,,1,0.9375
+Toyota Motor Corporation,2023,1.0,0.4785,,,2,0.7392
+Toyota Motor Corporation,2024,,0.4159,1.0,,2,0.7079
+Volkswagen AG,2020,,0.4652,1.0,,2,0.7326
+Volkswagen AG,2021,,0.2294,,,1,0.2294
+Volkswagen AG,2022,0.0,0.1974,1.0,0.3706,4,0.392
+Volkswagen AG,2023,0.8333,0.196,1.0,0.3452,4,0.5936
+Volkswagen AG,2024,1.0,0.1211,1.0,0.514,4,0.6588
