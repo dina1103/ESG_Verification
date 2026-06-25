@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-JSON_DIR = r"C:\Users\dina_\Desktop\esg_verification\data\processed\json"
+JSON_DIR = r"data\processed\json"
 
 json_paths = list(Path(JSON_DIR).rglob("*.json"))
 print(f"Found {len(json_paths)} JSON files\n")
