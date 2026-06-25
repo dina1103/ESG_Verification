@@ -1,4 +1,4 @@
-company_name,year,integrity_score,n_layers_available,forward_year,idiosyncratic_vol
+company_name,year,integrity_score,n_layers_available,window_year,idiosyncratic_vol
 Aston Martin Lagonda Global Holdings PLC,2020,1.0,1,2021,0.3955
 Aston Martin Lagonda Global Holdings PLC,2021,0.7752,2,2022,0.8917
 Aston Martin Lagonda Global Holdings PLC,2022,0.8974,2,2023,0.5477

@@ -9,21 +9,22 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 INTEGRITY_JSON = r"data\processed\integrity_score_company_year.json"
-OUTPUT_CSV_Y   = r"data\processed\idiosyncratic_volatility_y.csv"
-OUTPUT_PLOT_Y  = r"data\processed\idiosyncratic_volatility_y_scatter.png"
-OUTPUT_CSV_Y1  = r"data\processed\idiosyncratic_volatility_y+1.csv"
-OUTPUT_PLOT_Y1 = r"data\processed\idiosyncratic_volatility_y+1_scatter.png"
+OUTPUT_CSV_Y   = r"data\processed\annual_return_y.csv"
+OUTPUT_PLOT_Y  = r"data\processed\annual_return_y_scatter.png"
+OUTPUT_CSV_Y1  = r"data\processed\annual_return_y+1.csv"
+OUTPUT_PLOT_Y1 = r"data\processed\annual_return_y+1_scatter.png"
 
-# one (csv, scatter) pair per window: same-year (Y) and forward (Y+1)
+# annual stock return. hypothesis: higher integrity -> higher return -> POSITIVE rho.
+# same-year (Y) = contemporaneous association; forward (Y+1) = predictive test.
 WINDOWS = {
     0: {"tag": "year Y (same-year)",
         "csv": OUTPUT_CSV_Y,
         "plot": OUTPUT_PLOT_Y,
-        "title": "Idiosyncratic Volatility (year Y)"},
+        "title": "Annual Stock Return (year Y)"},
     1: {"tag": "year Y+1 (forward-year)",
         "csv": OUTPUT_CSV_Y1,
         "plot": OUTPUT_PLOT_Y1,
-        "title": "Forward Idiosyncratic Volatility (year Y+1)"},
+        "title": "Annual Stock Return (year Y+1)"},
 }
 
 TICKERS = {
@@ -40,7 +41,6 @@ TICKERS = {
 }
 
 MIN_DAYS = 60
-TRADING_DAYS = 252
 TODAY = date.today()
 
 
@@ -56,19 +56,10 @@ def get_series(ticker, start, end):
     return close.dropna()
 
 
-def idiosyncratic_vol(close, idx_close):
-    if close is None or len(close) < MIN_DAYS or idx_close is None:
+def annual_return(close):
+    if close is None or len(close) < MIN_DAYS:
         return None
-    ret = close.pct_change().dropna()
-    ir = idx_close.pct_change().dropna()
-    j = pd.concat([ret, ir], axis=1, join="inner").dropna()
-    if len(j) < MIN_DAYS:
-        return None
-    y = j.iloc[:, 0].values
-    x = j.iloc[:, 1].values
-    X = np.column_stack([np.ones(len(x)), x])
-    beta, *_ = np.linalg.lstsq(X, y, rcond=None)
-    return float((y - X @ beta).std(ddof=2) * np.sqrt(TRADING_DAYS))
+    return round(float(close.iloc[-1] / close.iloc[0] - 1), 4)
 
 
 def build_window(integ, cache, offset):
@@ -83,13 +74,12 @@ def build_window(integ, cache, offset):
         stk, idx = TICKERS[c]
         s0, s1 = f"{wy}-01-01", f"{wy + 1}-01-01"
         cl = cache[stk][(cache[stk].index >= s0) & (cache[stk].index < s1)] if cache[stk] is not None else None
-        ic = cache[idx][(cache[idx].index >= s0) & (cache[idx].index < s1)] if cache[idx] is not None else None
-        iv = idiosyncratic_vol(cl, ic)
-        if iv is None:
+        ar = annual_return(cl)
+        if ar is None:
             continue
         rows.append({"company_name": c, "year": y, "integrity_score": sc,
                      "n_layers_available": v.get("n_layers_available", 0),
-                     "window_year": wy, "idiosyncratic_vol": round(iv, 4)})
+                     "window_year": wy, "annual_return": ar})
     return pd.DataFrame(rows)
 
 
@@ -98,20 +88,22 @@ def make_scatter(df, plot_path, title):
     fig, ax = plt.subplots(figsize=(8, 6))
     for nl in sorted(df["n_layers_available"].unique()):
         g = df[df["n_layers_available"] == nl]
-        ax.scatter(g["integrity_score"], g["idiosyncratic_vol"], s=80, c=cmap.get(nl, "#000"),
+        ax.scatter(g["integrity_score"], g["annual_return"], s=80, c=cmap.get(nl, "#000"),
                    edgecolor="black", linewidth=0.5, label=f"{nl} layer(s)", zorder=3)
     for _, r in df.iterrows():
         ax.annotate(f"{r['company_name'].split()[0]} {str(r['year'])[2:]}",
-                    (r["integrity_score"], r["idiosyncratic_vol"]), fontsize=6,
-                    alpha=0.7, xytext=(3, 3), textcoords="offset points")
-    rho, p = spearmanr(df["integrity_score"], df["idiosyncratic_vol"])
-    b = np.polyfit(df["integrity_score"], df["idiosyncratic_vol"], 1)
+                    (r["integrity_score"], r["annual_return"]), fontsize=6, alpha=0.7,
+                    xytext=(3, 3), textcoords="offset points")
+    rho, p = spearmanr(df["integrity_score"], df["annual_return"])
+    b = np.polyfit(df["integrity_score"], df["annual_return"], 1)
     xs = np.linspace(df["integrity_score"].min(), df["integrity_score"].max(), 50)
     ax.plot(xs, b[0] * xs + b[1], "--", color="#d62728", linewidth=1.2, zorder=2)
+    ax.axhline(0, color="grey", linewidth=0.6, zorder=1)
     ax.set_xlabel("ESG Integrity Score")
-    ax.set_ylabel("Idiosyncratic Volatility")
+    ax.set_ylabel("Annual Stock Return")
+    ax.set_title(f"{title}\nrho = {rho:+.2f}  p = {p:.3f}  n = {len(df)}  "
+                 , fontsize=10)
     ax.legend(title="layers (full sample)", fontsize=8)
-    ax.set_title(f"{title}\nrho = {rho:+.2f}  p = {p:.3f}  n = {len(df)}", fontsize=10)
     ax.grid(True, alpha=0.3, zorder=0)
     fig.tight_layout()
     fig.savefig(plot_path, dpi=150)
@@ -128,14 +120,15 @@ def main():
         df = build_window(integ, cache, offset)
         df.to_csv(cfg["csv"], index=False)
         print("\n" + "=" * 64)
-        print(f"IDIOSYNCRATIC VOLATILITY  ({cfg['tag']}, full sample)  hypothesis: rho < 0")
+        print(f"ANNUAL RETURN  ({cfg['tag']}, full sample)  hypothesis: rho > 0")
         print("=" * 64)
         print(f"saved: {cfg['csv']}  ({len(df)} company-years)")
-        rho, p = spearmanr(df["integrity_score"], df["idiosyncratic_vol"])
+        rho, p = spearmanr(df["integrity_score"], df["annual_return"])
         print(f"   n={len(df):>2} ({df['company_name'].nunique()} firms)   rho = {rho:+.3f}  (p = {p:.3f})")
         make_scatter(df, cfg["plot"], cfg["title"])
         print(f"saved scatter: {cfg['plot']}")
-    print("\nNote: no statistical inference (small n)")
+    print("\nNote: same-year = association; forward = predictive")
+    print("no statistical inference (small n)")
 
 
 if __name__ == "__main__":

@@ -9,8 +9,22 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 INTEGRITY_JSON = r"data\processed\integrity_score_company_year.json"
-OUTPUT_CSV     = r"data\processed\crash_risk.csv"
-OUTPUT_PLOT    = r"data\processed\crash_risk_scatter.png"
+OUTPUT_CSV_Y   = r"data\processed\crash_risk_y.csv"
+OUTPUT_PLOT_Y  = r"data\processed\crash_risk_y_scatter.png"
+OUTPUT_CSV_Y1  = r"data\processed\crash_risk_y+1.csv"
+OUTPUT_PLOT_Y1 = r"data\processed\crash_risk_y+1_scatter.png"
+
+# one (csv, scatter) pair per window: same-year (Y) and forward (Y+1)
+WINDOWS = {
+    0: {"tag": "year Y (same-year)",
+        "csv": OUTPUT_CSV_Y,
+        "plot": OUTPUT_PLOT_Y,
+        "title": "Crash Risk (year Y)"},
+    1: {"tag": "year Y+1 (forward-year)",
+        "csv": OUTPUT_CSV_Y1,
+        "plot": OUTPUT_PLOT_Y1,
+        "title": "Forward Crash Risk (year Y+1)"},
+}
 
 TICKERS = {
     "Aston Martin Lagonda Global Holdings PLC": ("AML.L",   "^FTSE"),
@@ -25,7 +39,6 @@ TICKERS = {
     "Volkswagen AG":                            ("VOW3.DE", "^GDAXI"),
 }
 
-FORWARD = 1            # window = the single forward year t+1
 MIN_WEEKS = 30
 TODAY = date.today()
 MEASURES = ["NCSKEW", "DUVOL"]
@@ -71,22 +84,17 @@ def duvol(W):
                         ((len(down) - 1) * np.sum(up ** 2))))
 
 
-def main():
-    integ = json.load(open(INTEGRITY_JSON, encoding="utf-8"))
-    need = {t for pair in TICKERS.values() for t in pair}
-    print(f"Downloading {len(need)} series...")
-    cache = {t: get_series(t, "2019-06-01", f"{TODAY.year}-{TODAY.month:02d}-{TODAY.day:02d}") for t in need}
-
+def build_window(integ, cache, offset):
     rows = []
     for key, v in sorted(integ.items()):
         c, y, sc = v.get("company_name"), v.get("year"), v.get("integrity_score")
         if sc is None or c not in TICKERS:
             continue
-        we = y + FORWARD
-        if date(we, 12, 31) > TODAY:
+        wy = y + offset                       # window year (Y for offset 0, Y+1 for offset 1)
+        if date(wy, 12, 31) > TODAY:
             continue
         stk, idx = TICKERS[c]
-        s0, s1 = f"{we}-01-01", f"{we + 1}-01-01"
+        s0, s1 = f"{wy}-01-01", f"{wy + 1}-01-01"
         cl = cache[stk][(cache[stk].index >= s0) & (cache[stk].index < s1)] if cache[stk] is not None else None
         ic = cache[idx][(cache[idx].index >= s0) & (cache[idx].index < s1)] if cache[idx] is not None else None
         if cl is None or ic is None:
@@ -97,24 +105,13 @@ def main():
         dv = duvol(W)
         rows.append({"company_name": c, "year": y, "integrity_score": sc,
                      "n_layers_available": v.get("n_layers_available", 0),
-                     "forward_year": we, "n_weeks": len(W),
+                     "window_year": wy, "n_weeks": len(W),
                      "NCSKEW": round(ncskew(W), 4),
                      "DUVOL": round(dv, 4) if dv is not None else None})
-    df = pd.DataFrame(rows)
-    df.to_csv(OUTPUT_CSV, index=False)
-    print(f"saved: {OUTPUT_CSV}  ({len(df)} company-years)\n")
+    return pd.DataFrame(rows)
 
-    print("=" * 64)
-    print("CRASH RISK  (forward year t+1, full sample)  hypothesis: rho < 0")
-    print("=" * 64)
-    for col in MEASURES:
-        sub = df.dropna(subset=[col])
-        rho, p = spearmanr(sub["integrity_score"], sub[col])
-        print(f"   {col:8s}  n={len(sub):>2} ({sub['company_name'].nunique()} firms)   rho = {rho:+.3f}  (p = {p:.3f})")
-    print("\nNote: no statistical inference (small n)")
 
-    # scatter: one panel per crash measure, FULL SAMPLE, points shaded by layer count
-    # (correlation is full-sample; shading only lets you SEE the layer differences)
+def make_scatter(df, plot_path, title):
     cmap = {1: "#d9d9d9", 2: "#9ecae1", 3: "#4292c6", 4: "#08519c"}
     fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
     for ax, col in zip(axes, MEASURES):
@@ -136,11 +133,32 @@ def main():
         ax.set_title(f"{col}   rho = {rho:+.2f}  p = {p:.3f}  n = {len(s)}", fontsize=10)
         ax.grid(True, alpha=0.3, zorder=0)
     axes[0].legend(title="layers (full sample)", fontsize=8)
-    fig.suptitle("Forward Crash Risk (t+1)",
-                 fontsize=11)
+    fig.suptitle(title, fontsize=11)
     fig.tight_layout()
-    fig.savefig(OUTPUT_PLOT, dpi=150)
-    print(f"saved scatter: {OUTPUT_PLOT}")
+    fig.savefig(plot_path, dpi=150)
+    plt.close(fig)
+
+
+def main():
+    integ = json.load(open(INTEGRITY_JSON, encoding="utf-8"))
+    need = {t for pair in TICKERS.values() for t in pair}
+    print(f"Downloading {len(need)} series...")
+    cache = {t: get_series(t, "2019-06-01", f"{TODAY.year}-{TODAY.month:02d}-{TODAY.day:02d}") for t in need}
+
+    for offset, cfg in WINDOWS.items():
+        df = build_window(integ, cache, offset)
+        df.to_csv(cfg["csv"], index=False)
+        print("\n" + "=" * 64)
+        print(f"CRASH RISK  ({cfg['tag']}, full sample)  hypothesis: rho < 0")
+        print("=" * 64)
+        print(f"saved: {cfg['csv']}  ({len(df)} company-years)")
+        for col in MEASURES:
+            sub = df.dropna(subset=[col])
+            rho, p = spearmanr(sub["integrity_score"], sub[col])
+            print(f"   {col:8s}  n={len(sub):>2} ({sub['company_name'].nunique()} firms)   rho = {rho:+.3f}  (p = {p:.3f})")
+        make_scatter(df, cfg["plot"], cfg["title"])
+        print(f"saved scatter: {cfg['plot']}")
+    print("\nNote: no statistical inference (small n)")
 
 
 if __name__ == "__main__":
