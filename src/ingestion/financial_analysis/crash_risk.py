@@ -122,18 +122,18 @@ def make_scatter(df, plot_path, title):
                        edgecolor="black", linewidth=0.4, label=f"{nl} layer(s)", zorder=3)
         for _, r in s.iterrows():
             ax.annotate(f"{r['company_name'].split()[0]} {str(r['year'])[2:]}",
-                        (r["integrity_score"], r[col]), fontsize=6, alpha=0.7,
+                        (r["integrity_score"], r[col]), fontsize=8, alpha=0.7,
                         xytext=(3, 3), textcoords="offset points")
         rho, p = spearmanr(s["integrity_score"], s[col])
         b = np.polyfit(s["integrity_score"], s[col], 1)
         xs = np.linspace(s["integrity_score"].min(), s["integrity_score"].max(), 50)
         ax.plot(xs, b[0] * xs + b[1], "--", color="#d62728", linewidth=1.2, zorder=2)
-        ax.set_xlabel("ESG Integrity Score")
-        ax.set_ylabel(f"{col} ")
-        ax.set_title(f"{col}   rho = {rho:+.2f}  p = {p:.3f}  n = {len(s)}", fontsize=10)
+        ax.set_xlabel("ESG Integrity Score", fontsize=12)
+        ax.set_ylabel(f"{col} ", fontsize=12)
+        ax.set_title(f"{col}   rho = {rho:+.2f}  p = {p:.3f}  n = {len(s)}", fontsize=12)
         ax.grid(True, alpha=0.3, zorder=0)
-    axes[0].legend(title="layers (full sample)", fontsize=8)
-    fig.suptitle(title, fontsize=11)
+    axes[0].legend(title="layers (full sample)", fontsize=14, title_fontsize=14)
+    fig.suptitle(title, fontsize=14)
     fig.tight_layout()
     fig.savefig(plot_path, dpi=150)
     plt.close(fig)

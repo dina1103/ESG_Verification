@@ -92,18 +92,18 @@ def make_scatter(df, plot_path, title):
                    edgecolor="black", linewidth=0.5, label=f"{nl} layer(s)", zorder=3)
     for _, r in df.iterrows():
         ax.annotate(f"{r['company_name'].split()[0]} {str(r['year'])[2:]}",
-                    (r["integrity_score"], r["annual_return"]), fontsize=6, alpha=0.7,
+                    (r["integrity_score"], r["annual_return"]), fontsize=8, alpha=0.7,
                     xytext=(3, 3), textcoords="offset points")
     rho, p = spearmanr(df["integrity_score"], df["annual_return"])
     b = np.polyfit(df["integrity_score"], df["annual_return"], 1)
     xs = np.linspace(df["integrity_score"].min(), df["integrity_score"].max(), 50)
     ax.plot(xs, b[0] * xs + b[1], "--", color="#d62728", linewidth=1.2, zorder=2)
     ax.axhline(0, color="grey", linewidth=0.6, zorder=1)
-    ax.set_xlabel("ESG Integrity Score")
-    ax.set_ylabel("Annual Stock Return")
+    ax.set_xlabel("ESG Integrity Score", fontsize=12)
+    ax.set_ylabel("Annual Stock Return", fontsize=12)
     ax.set_title(f"{title}\nrho = {rho:+.2f}  p = {p:.3f}  n = {len(df)}  "
-                 , fontsize=10)
-    ax.legend(title="layers (full sample)", fontsize=8)
+                 , fontsize=14)
+    ax.legend(title="layers (full sample)", fontsize=14)
     ax.grid(True, alpha=0.3, zorder=0)
     fig.tight_layout()
     fig.savefig(plot_path, dpi=150)
